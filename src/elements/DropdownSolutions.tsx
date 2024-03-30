@@ -1,57 +1,67 @@
 import clsx from 'clsx';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 export const DropdownSolutions = () => {
+  const t = useTranslations('Header');
+  const locale = useLocale();
   const column1 = [
     {
-      title: 'For those who park',
+      title: t('For-those-who-park'),
       href: '#',
     },
     {
-      title: 'How PARKIO app works',
+      title: t('How-PARKIO-app-works'),
       href: '#',
     },
     {
-      title: 'Short time parking',
+      title: t('Short-time-parking'),
       href: '#',
     },
     {
-      title: 'Digital permit',
+      title: t('Digital-permit'),
       href: '#',
     },
     {
-      title: 'Business parking',
+      title: t('Business-parking'),
       href: '#',
     },
     {
-      title: 'Family account',
+      title: t('Family-account'),
       href: '#',
     },
     {
-      title: 'Guest parking',
+      title: t('Guest-parking'),
       href: '#',
     },
     {
-      title: "Resident's parking",
+      title: t("Resident's-parking"),
       href: '#',
     },
     {
-      title: 'SMS parking',
+      title: t('SMS-parking'),
       href: '#',
     },
   ];
   const column2 = [
     {
-      title: 'For those who own parking spaces',
+      title: t('For-those-who-own-parking-spaces'),
       href: '#',
     },
     {
-      title: 'Parking for municipalities and property owners',
+      title: t('Parking-for-municipalities-and-property-owners'),
       href: '#',
     },
   ];
   return (
-    <div className="mt-9 flex h-[458px] w-[608px] gap-8 rounded-lg border-[1px] border-gray-200 bg-[#fff] p-4 shadow-select">
+    <div
+      className={clsx(
+        'mt-9 flex h-[458px] w-[608px] gap-8 rounded-lg border-[1px] border-gray-200 bg-[#fff] p-4 shadow-select',
+        {
+          'h-[480px]': locale === 'sv-SE',
+        },
+      )}
+    >
       <ul className="flex flex-col gap-2">
         {column1.map((item, idx) => {
           return (

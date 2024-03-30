@@ -45,8 +45,14 @@ const config: Config = {
           '0%': {
             opacity: '0.1',
           },
+          '30%': {
+            opacity: '0.3',
+          },
           '50%': {
             opacity: '0.5',
+          },
+          '70%': {
+            opacity: '0.7',
           },
           '100%': {
             opacity: '1',

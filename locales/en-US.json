@@ -1,0 +1,27 @@
+{
+  "Header": {
+    "solutions": "Parkio solutions",
+    "business-parking": "Business parking",
+    "faq": "FAQ",
+    "about-us": "About us",
+    "contact-us": "Contact us",
+    "login": "Log in",
+    "For-those-who-park": "For those who park",
+    "How-PARKIO-app-works": "How PARKIO app works",
+    "Short-time-parking": "Short time parking",
+    "Digital-permit": "Digital permit",
+    "Business-parking": "Business parking",
+    "Family-account": "Family account",
+    "Guest-parking": "Guest parking",
+    "Resident's-parking": "Resident's parking",
+    "SMS-parking": "SMS parking",
+    "For-those-who-own-parking-spaces": "For those who own parking spaces",
+    "Parking-for-municipalities-and-property-owners": "Parking for municipalities and property owners"
+  },
+  "Home": {
+    "title": "Simplified Parking",
+    "s-1-ul-li-1": "Park quickly with a simple app",
+    "s-1-ul-li-2": "Organize your entire parking experience",
+    "s-1-ul-li-3": "Save money with bonus points"
+  }
+}

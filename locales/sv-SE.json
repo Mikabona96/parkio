@@ -1,0 +1,27 @@
+{
+  "Header": {
+    "solutions": "Parkio lösningar",
+    "business-parking": "Företagsparkering",
+    "faq": "FAQ",
+    "about-us": "Om oss",
+    "contact-us": "Kontakta oss",
+    "login": "Logga in",
+    "For-those-who-park": "För dig som parkerar",
+    "How-PARKIO-app-works": "Hur PARKIO appen fungerar",
+    "Short-time-parking": "Korttidsparkering",
+    "Digital-permit": "Digitalt tillstånd",
+    "Business-parking": "Företagsparkering",
+    "Family-account": "Familjekonto",
+    "Guest-parking": "Gästparkering",
+    "Resident's-parking": "Boendeparkering",
+    "SMS-parking": "SMS parkering",
+    "For-those-who-own-parking-spaces": "För dig som äger parkeringsplatser",
+    "Parking-for-municipalities-and-property-owners": "Parkering för kommuner och fastighetsägare"
+  },
+  "Home": {
+    "title": "Förenklad parkering",
+    "s-1-ul-li-1": "Parkera snabbt med en enkel app",
+    "s-1-ul-li-2": "Organisera hela din parkeringsupplevelse",
+    "s-1-ul-li-3": "Spara pengar med bonuspoäng"
+  }
+}
