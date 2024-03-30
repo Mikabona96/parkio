@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
+import { cn } from '@/tools/utils/cn';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -7,14 +7,16 @@ import React from 'react';
 export const FirstSection = () => {
   const t = useTranslations('Home');
   const locale = useLocale();
+
   return (
-    <div className="home-first-section-bg h-full max-h-[784px] max-w-full bg-[url('/home-first_section-background.png')] bg-no-repeat">
+    <div className="home-first-section-bg h-[784px] bg-[url('/home-first_section-background.png')] bg-no-repeat">
       <div
-        className={clsx(
+        className={cn(
           'ml-auto mr-[16.5rem] mt-[15.5rem] h-full max-h-[316px] w-full max-w-[497px]',
+          '',
           {
-            'max-w-[570px]': locale === 'sv-SE',
-            'mr-[11.5rem]': locale === 'sv-SE',
+            'max-w-[570px]': locale !== 'en-US',
+            'mr-[11.5rem]': locale !== 'en-US',
           },
         )}
       >

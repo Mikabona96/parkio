@@ -1,9 +1,10 @@
-import { FirstSection } from '@/components/home/first-section';
+import { FirstSection, ParkingSteps } from '@/components/home';
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col">
+    <main className="flex flex-col">
       <FirstSection />
+      <ParkingSteps />
     </main>
   );
 }

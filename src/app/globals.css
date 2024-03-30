@@ -16,6 +16,7 @@ body {
 
 @layer components {
   .home-first-section-bg {
-    background-position: -204px 22px;
+    background-position: -196px 40px;
+    background-size: 744px;
   }
 }
