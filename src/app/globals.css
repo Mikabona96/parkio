@@ -13,3 +13,9 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .home-first-section-bg {
+    background-position: -204px 22px;
+  }
+}

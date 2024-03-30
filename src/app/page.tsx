@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import { FirstSection } from '@/components/home/first-section';
 
 export default function Home() {
-  return <main className="">Hello World</main>;
+  return (
+    <main className="flex h-full flex-col">
+      <FirstSection />
+    </main>
+  );
 }
