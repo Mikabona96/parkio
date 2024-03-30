@@ -1,2 +1,2 @@
-export * from './first-section';
+export * from './section-1';
 export * from './parking-steps';

@@ -1,0 +1,13 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons features">
+<path id="Vector" d="M18.75 8.75H11.25M18.75 13.75H11.25M18.75 18.75H13.75M6.25 3.75H23.75V26.25L22.46 25.145C22.0069 24.7567 21.4299 24.5432 20.8331 24.5432C20.2364 24.5432 19.6593 24.7567 19.2062 25.145L17.9163 26.25L16.6275 25.145C16.1743 24.7563 15.597 24.5427 15 24.5427C14.403 24.5427 13.8257 24.7563 13.3725 25.145L12.0837 26.25L10.7938 25.145C10.3407 24.7567 9.76361 24.5432 9.16687 24.5432C8.57014 24.5432 7.99309 24.7567 7.54 25.145L6.25 26.25V3.75Z" stroke="url(#paint0_linear_6618_2121)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6618_2121" x1="20.539" y1="8.43749" x2="9.45445" y2="8.67794" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD177"/>
+<stop offset="0.307292" stop-color="#FFA2A3"/>
+<stop offset="0.979167" stop-color="#D18FE9"/>
+<stop offset="1" stop-color="#D18FE9"/>
+</linearGradient>
+</defs>
+</svg>

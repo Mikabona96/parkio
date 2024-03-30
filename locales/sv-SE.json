@@ -26,6 +26,25 @@
     "park-step-title": "Parkera i 3 enkla steg med PARKIO",
     "park-step-1": "Välj Parkeringsplats",
     "park-step-2": "Välj Varaktighet för parkeringssession",
-    "park-step-3": "Betala. Det är allt!"
+    "park-step-3": "Betala. Det är allt!",
+    "s-2-title": "Varför PARKIO?",
+    "s-2-subtitle": "Förbättra din parkeringsupplevelse med smarta funktioner",
+    "s-2-button": "Utforska funktioner",
+    "s-2-card-1-title": "Digitalt tillstånd",
+    "s-2-card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-2-title": "Påminnelsemeddelanden",
+    "s-2-card-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-3-title": "Parkering för flera bilar",
+    "s-2-card-3-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-4-title": "Månatlig fakturabetalning",
+    "s-2-card-4-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-5-title": "Privata och företagskonton",
+    "s-2-card-5-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-6-title": "Fjärrstyrning av sessioner",
+    "s-2-card-6-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-7-title": "Snabba och säkra betalningar",
+    "s-2-card-7-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-8-title": "Parkering Tillgänglighet",
+    "s-2-card-8-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
   }
 }
