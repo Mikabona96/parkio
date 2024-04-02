@@ -1,6 +1,7 @@
-import { Button } from '@/elements';
+import { Button, WhyParkioCard } from '@/elements';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export const SecondSection = () => {
@@ -57,24 +58,7 @@ export const SecondSection = () => {
       </div>
       <div className="grid grid-cols-2 gap-8">
         {cards.map((card, idx) => (
-          <div
-            key={idx}
-            className="flex max-w-[527px] flex-col rounded-lg bg-[#fff] px-8 py-6"
-          >
-            <Image
-              src={card.img}
-              width={0}
-              height={0}
-              className="h-[30px] w-[30px]"
-              alt={`s-2-icon-${idx + 1}.svg`}
-            />
-            <div className="mt-6 flex flex-col gap-4">
-              <h4 className="text-[32px] font-bold text-gray-900">
-                {card.title}
-              </h4>
-              <p className="text-base font-normal text-gray-700">{card.desc}</p>
-            </div>
-          </div>
+          <WhyParkioCard card={card} idx={idx} key={idx} />
         ))}
       </div>
       <Button>{t('s-2-button')}</Button>

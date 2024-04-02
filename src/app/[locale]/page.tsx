@@ -1,5 +1,9 @@
-import { FirstSection, ParkingSteps } from '@/components/home';
-import { SecondSection } from '@/components/home/section-2';
+import {
+  FirstSection,
+  ParkingSteps,
+  SecondSection,
+  ThirdSection,
+} from '@/components/home';
 
 export default function Home() {
   return (
@@ -7,6 +11,7 @@ export default function Home() {
       <FirstSection />
       <ParkingSteps />
       <SecondSection />
+      <ThirdSection />
     </main>
   );
 }

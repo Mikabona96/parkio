@@ -31,7 +31,7 @@
     "s-2-subtitle": "Enhancing Your Parking Experience with Smart Features",
     "s-2-button": "Explore Features",
     "s-2-card-1-title": "Digital Permit",
-    "s-2-card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-2-card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "s-2-card-2-title": "Reminder Notifications",
     "s-2-card-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     "s-2-card-3-title": "Multi-Car Parking",
@@ -45,6 +45,12 @@
     "s-2-card-7-title": "Fast and Secure Payments",
     "s-2-card-7-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     "s-2-card-8-title": "Parking Availability",
-    "s-2-card-8-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "s-2-card-8-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "s-3-title": "How it works",
+    "s-3-subtitle": "Park with ease - step-by-step guide",
+    "s-3-slide-1": "Step 1: Choose Your Parking Option",
+    "s-3-slide-2": "Step 2: Set Your Parking Duration",
+    "s-3-slide-3": "Step 3: Confirm and Pay",
+    "s-3-slide-4": "Step 4: Monitor Your Parking Session"
   }
 }
