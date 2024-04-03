@@ -30,7 +30,7 @@ export const ThirdSection = () => {
 			//+ scroll to top of the section
 			const section = document.querySelector('#section-3') as HTMLElement;
 			window.scrollTo({
-				top: section.offsetTop,
+				top: section.offsetTop - 60,
 				behavior: 'smooth',
 			});
 		},
@@ -63,11 +63,7 @@ export const ThirdSection = () => {
 	useTouchEvents([prevSlideHandler, nextSlideHandler]);
 
 	return (
-		<section
-			ref={ref}
-			id="section-3"
-			className="flex flex-col items-center py-[120px]"
-		>
+		<section ref={ref} id="section-3" className="flex flex-col items-center">
 			<h3 className="text-xl font-normal text-gray-700">{t('s-3-title')}</h3>
 			<h4 className="text-[32px] font-bold text-gray-900">
 				{t('s-3-subtitle')}
