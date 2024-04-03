@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 
 /**
  * Hook for Intersection Observer API.
+ * @param {T} intersectedCallback - Function invokes when element is intersected.
  * @param {IntersectionObserverInit} options - The options object passed into the IntersectionObserver() constructor let you control the circumstances under which the observer's callback is invoked. It has the following fields:
 
 		root:
@@ -13,16 +14,23 @@ import { useEffect, useRef, useState } from 'react';
 		threshold:
 		Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array [0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible..
  * @param {() => any} intersectedCallback - Function invokes when element is intersected.
- * @returns {{ref: MutableRefObject<HTMLElement | null>}} - ref for observing changes in the intersection of a target element .
+ * @param {number} isIntersectedDelay - value to delay isIntersected variable.
+ * 
+ * @returns {ReturnType<T>} -{ref, isIntersected} for observing changes in the intersection of a target element .
  */
 
-type UseRefType<T> = T extends HTMLElement ? HTMLDivElement : HTMLElement;
+interface ReturnType<T> {
+	ref: RefObject<T>;
+	isIntersected: boolean;
+}
 
-export const useIntersectionObserver = (
+export const useIntersectionObserver = <T extends HTMLElement>(
 	options: IntersectionObserverInit,
 	intersectedCallback: () => any,
-) => {
-	const ref = useRef<UseRefType<HTMLElement> | null>(null);
+	isIntersectedDelay: number = 200,
+): ReturnType<T> => {
+	const [isIntersected, setIsIntersected] = useState(false);
+	const ref = useRef<T>(null);
 
 	useEffect(() => {
 		const element = ref.current;
@@ -31,6 +39,11 @@ export const useIntersectionObserver = (
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					intersectedCallback();
+					setTimeout(() => {
+						setIsIntersected(true);
+					}, isIntersectedDelay);
+				} else {
+					setIsIntersected(false);
 				}
 			});
 		};
@@ -42,9 +55,10 @@ export const useIntersectionObserver = (
 		return () => {
 			observer.unobserve(element as HTMLElement);
 		};
-	}, [options, intersectedCallback]);
+	}, [options, intersectedCallback, isIntersected, isIntersectedDelay]);
 
 	return {
 		ref,
+		isIntersected,
 	};
 };

@@ -18,7 +18,7 @@ export const ThirdSection = () => {
 	const t = useTranslations('Home');
 
 	//* IntersectionObserver
-	const { ref } = useIntersectionObserver(
+	const { ref, isIntersected } = useIntersectionObserver<HTMLDivElement>(
 		{
 			rootMargin: '0px',
 			threshold: 0,
@@ -34,6 +34,7 @@ export const ThirdSection = () => {
 				behavior: 'smooth',
 			});
 		},
+		200,
 	);
 
 	const slidesDescription = [
@@ -44,18 +45,22 @@ export const ThirdSection = () => {
 	];
 
 	const nextSlideHandler = () => {
-		if (activeSlide === 3) {
-			setBodyOverflow('');
-			return;
+		if (isIntersected) {
+			if (activeSlide === 3) {
+				setBodyOverflow('');
+				return;
+			}
+			setActiveSlide((prev) => prev + 1);
 		}
-		setActiveSlide((prev) => prev + 1);
 	};
 	const prevSlideHandler = () => {
-		if (activeSlide === 0) {
-			setBodyOverflow('');
-			return;
+		if (isIntersected) {
+			if (activeSlide === 0) {
+				setBodyOverflow('');
+				return;
+			}
+			setActiveSlide((prev) => prev - 1);
 		}
-		setActiveSlide((prev) => prev - 1);
 	};
 
 	useWheelEvent([nextSlideHandler, prevSlideHandler]);
@@ -63,12 +68,15 @@ export const ThirdSection = () => {
 	useTouchEvents([prevSlideHandler, nextSlideHandler]);
 
 	return (
-		<section ref={ref} id="section-3" className="flex flex-col items-center">
+		<section id="section-3" className="flex flex-col items-center">
 			<h3 className="text-xl font-normal text-gray-700">{t('s-3-title')}</h3>
 			<h4 className="text-[32px] font-bold text-gray-900">
 				{t('s-3-subtitle')}
 			</h4>
-			<div className="mt-12 flex h-[560px] items-center gap-16 overflow-hidden">
+			<div
+				ref={ref}
+				className="mt-12 flex h-[560px] items-center gap-16 overflow-hidden"
+			>
 				<div className="relative flex h-[560px] w-[534px] justify-center bg-[url('/gradient_circle_background.png')]">
 					<Image
 						className={cn(
