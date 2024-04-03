@@ -1,5 +1,7 @@
 import {
 	FirstSection,
+	FourthSection,
+	GetParkio,
 	ParkingSteps,
 	SecondSection,
 	ThirdSection,
@@ -12,7 +14,8 @@ export default function Home() {
 			<ParkingSteps />
 			<SecondSection />
 			<ThirdSection />
-			<SecondSection />
+			<FourthSection />
+			<GetParkio />
 		</main>
 	);
 }

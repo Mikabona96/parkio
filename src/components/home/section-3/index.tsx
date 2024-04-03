@@ -21,7 +21,7 @@ export const ThirdSection = () => {
 	const { ref, isIntersected } = useIntersectionObserver<HTMLDivElement>(
 		{
 			rootMargin: '0px',
-			threshold: 0,
+			threshold: 0.3,
 		},
 		() => {
 			//$ prevent touch/wheel scrolling
@@ -34,7 +34,7 @@ export const ThirdSection = () => {
 				behavior: 'smooth',
 			});
 		},
-		200,
+		500,
 	);
 
 	const slidesDescription = [

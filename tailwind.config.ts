@@ -16,12 +16,14 @@ const config: Config = {
 		},
 		colors: {
 			gray: {
+				'100': '#F2F4F7',
 				'200': '#EAECF0',
 				'300': '#D0D5DD',
 				'500': '#667085',
 				'700': '#344054',
 				'900': '#101828',
 			},
+			background: '#FEF0E2',
 			gradient: {
 				'1': '#FFD177',
 				'2': '#FFA1A3',
