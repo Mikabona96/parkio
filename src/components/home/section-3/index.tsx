@@ -15,6 +15,9 @@ import { Button } from '@/elements';
 
 export const ThirdSection = () => {
 	const [activeSlide, setActiveSlide] = useState(0);
+	const [navSlideDirection, setNavSlideDirection] = useState<
+		undefined | 'down' | 'up'
+	>(undefined);
 	const t = useTranslations('Home');
 
 	//* IntersectionObserver
@@ -70,6 +73,7 @@ export const ThirdSection = () => {
 				return;
 			}
 			setActiveSlide((prev) => prev + 1);
+			setNavSlideDirection('down');
 		}
 	};
 	const prevSlideHandler = () => {
@@ -79,6 +83,7 @@ export const ThirdSection = () => {
 				return;
 			}
 			setActiveSlide((prev) => prev - 1);
+			setNavSlideDirection('up');
 		}
 	};
 
@@ -96,16 +101,15 @@ export const ThirdSection = () => {
 				ref={ref}
 				className="mt-12 flex h-[560px] items-center gap-16 overflow-hidden"
 			>
-				<div className="relative flex h-[560px] w-[534px] justify-center bg-[url('/gradient_circle_background.png')]">
+				<div className="relative -z-[2] flex h-[560px] w-[534px] justify-center bg-[url('/gradient_circle_background.png')]">
 					{slides.map(({ alt, src }, idx) => (
 						<Image
 							key={idx}
 							className={cn(
-								'absolute left-[50%] z-[11] h-[600px] w-[308px] -translate-x-[50%]',
-								`${activeSlide === idx && 'z-[22]'}`,
-								`${
-									activeSlide === idx ? 'animate-appearence' : 'animate-vanish'
-								}`,
+								'absolute left-[50%] -z-[1] hidden h-[600px] w-[308px] -translate-x-[50%]',
+								`${activeSlide === idx && 'z-[999] block animate-appearence'}`,
+								`${activeSlide - 1 === idx && navSlideDirection === 'down' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll down
+								`${activeSlide + 1 === idx && navSlideDirection === 'up' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll up
 							)}
 							width={534}
 							height={602}
@@ -116,7 +120,7 @@ export const ThirdSection = () => {
 				</div>
 				<div
 					className={clsx(
-						'relative flex h-[348px] w-[388px] flex-col justify-between border-l-2 border-l-gray-200 text-left duration-300 ease-in-out before:absolute before:-left-[12px] before:top-0 before:block before:h-[40px] before:w-[20px] before:transition before:duration-[.7s] before:ease-in-out before:content-[url("/slider.png")]',
+						'relative flex h-[348px] w-[388px] flex-col justify-between border-l-2 border-l-gray-200 text-left duration-500 ease-in-out before:absolute before:-left-[12px] before:top-0 before:block before:h-[40px] before:w-[20px] before:transition before:duration-[.7s] before:ease-in-out before:content-[url("/slider.png")]',
 						{
 							'before:translate-y-[87px]': activeSlide === 1,
 							'before:translate-y-[174px]': activeSlide === 2,
@@ -127,7 +131,14 @@ export const ThirdSection = () => {
 					{slidesDescription.map((slideDescr, idx) => {
 						return (
 							<div
-								onClick={() => setActiveSlide(idx)}
+								onClick={() => {
+									if (idx > activeSlide) {
+										setNavSlideDirection('down');
+									} else {
+										setNavSlideDirection('up');
+									}
+									setActiveSlide(idx);
+								}}
 								key={idx}
 								className={clsx(
 									'relative flex h-[87px] cursor-pointer items-center text-xl font-normal text-gray-700',

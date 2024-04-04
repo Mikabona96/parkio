@@ -49,7 +49,6 @@ const config: Config = {
 				appearence: {
 					'0%': {
 						opacity: '0.1',
-						display: 'block',
 					},
 					'20%': {
 						opacity: '0.2',
@@ -91,7 +90,6 @@ const config: Config = {
 					},
 					'100%': {
 						opacity: '0.1',
-						display: 'none',
 					},
 				},
 			},
