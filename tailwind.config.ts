@@ -42,13 +42,14 @@ const config: Config = {
 				select: '0px 8px 16px 0px rgba(27, 33, 44, 0.10)',
 			},
 			animation: {
-				appearence: 'appearence .3s ease-in-out',
-				vanish: 'vanish .4s ease-out',
+				appearence: 'appearence .5s ease-in-out',
+				vanish: 'vanish .5s ease-in-out',
 			},
 			keyframes: {
 				appearence: {
 					'0%': {
 						opacity: '0.1',
+						display: 'block',
 					},
 					'20%': {
 						opacity: '0.2',
@@ -89,7 +90,8 @@ const config: Config = {
 						opacity: '0.2',
 					},
 					'100%': {
-						opacity: '0',
+						opacity: '0.1',
+						display: 'none',
 					},
 				},
 			},

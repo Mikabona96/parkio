@@ -44,6 +44,25 @@ export const ThirdSection = () => {
 		t('s-3-slide-4'),
 	];
 
+	const slides = [
+		{
+			src: '/slide-1.png',
+			alt: 'slide-1.png',
+		},
+		{
+			src: '/slide-2.png',
+			alt: 'slide-2.png',
+		},
+		{
+			src: '/slide-3.png',
+			alt: 'slide-3.png',
+		},
+		{
+			src: '/slide-4.png',
+			alt: 'slide-4.png',
+		},
+	];
+
 	const nextSlideHandler = () => {
 		if (isIntersected) {
 			if (activeSlide === 3) {
@@ -78,66 +97,22 @@ export const ThirdSection = () => {
 				className="mt-12 flex h-[560px] items-center gap-16 overflow-hidden"
 			>
 				<div className="relative flex h-[560px] w-[534px] justify-center bg-[url('/gradient_circle_background.png')]">
-					<Image
-						className={cn(
-							'absolute left-[50%] h-[600px] w-[308px] -translate-x-[50%] animate-appearence',
-							{
-								'animate-appearence': activeSlide === 0,
-								'z-[22]': activeSlide === 0,
-								'z-[11]': activeSlide !== 0,
-								'animate-vanish': activeSlide === 1 || activeSlide === 3,
-							},
-						)}
-						width={534}
-						height={602}
-						src={`/slide-1.png`}
-						alt={`slide-1.png`}
-					/>
-					<Image
-						className={cn(
-							'absolute left-[50%] h-[600px] w-[308px] -translate-x-[50%] animate-appearence',
-							{
-								'animate-appearence': activeSlide === 1,
-								'z-[22]': activeSlide === 1,
-								'z-[11]': activeSlide !== 1,
-								'animate-vanish': activeSlide === 2 || activeSlide === 0,
-							},
-						)}
-						width={534}
-						height={602}
-						src={`/slide-2.png`}
-						alt={`slide-2.png`}
-					/>
-					<Image
-						className={cn(
-							'absolute left-[50%] h-[600px] w-[308px] -translate-x-[50%] animate-appearence',
-							{
-								'animate-appearence': activeSlide === 2,
-								'z-[22]': activeSlide === 2,
-								'z-[11]': activeSlide !== 2,
-								'animate-vanish': activeSlide === 3 || activeSlide === 1,
-							},
-						)}
-						width={534}
-						height={602}
-						src={`/slide-3.png`}
-						alt={`slide-3.png`}
-					/>
-					<Image
-						className={cn(
-							'absolute left-[50%] h-[600px] w-[308px] -translate-x-[50%] animate-appearence',
-							{
-								'animate-appearence': activeSlide === 3,
-								'z-[22]': activeSlide === 3,
-								'z-[11]': activeSlide !== 3,
-								'animate-vanish': activeSlide === 0 || activeSlide === 2,
-							},
-						)}
-						width={534}
-						height={602}
-						src={`/slide-4.png`}
-						alt={`slide-4.png`}
-					/>
+					{slides.map(({ alt, src }, idx) => (
+						<Image
+							key={idx}
+							className={cn(
+								'absolute left-[50%] z-[11] h-[600px] w-[308px] -translate-x-[50%]',
+								`${activeSlide === idx && 'z-[22]'}`,
+								`${
+									activeSlide === idx ? 'animate-appearence' : 'animate-vanish'
+								}`,
+							)}
+							width={534}
+							height={602}
+							src={src}
+							alt={alt}
+						/>
+					))}
 				</div>
 				<div
 					className={clsx(

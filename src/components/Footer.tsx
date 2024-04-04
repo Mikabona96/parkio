@@ -107,67 +107,73 @@ export const Footer = () => {
 		},
 	];
 	return (
-		<footer className="bg-footerBackground flex w-full justify-center px-[120px] pb-6 pt-16">
+		<footer className="flex w-full justify-center bg-footerBackground px-[120px] pb-6 pt-16">
 			<div className="w-full max-w-screen-xl">
-				<div className="flex justify-between">
+				<nav className="flex justify-between">
 					<Logo color="#fff" />
-					<div className="flex w-[190px] flex-col gap-2">
+					<ul className="flex w-[190px] flex-col gap-2">
 						{linksFirstColumn.map(({ href, title }, idx) =>
 							idx === 0 ? (
-								<p key={idx} className="p-2 text-[#fff]">
-									{title}
-								</p>
+								<li key={idx} className="p-2">
+									<p className="text-[#fff]">{title}</p>
+								</li>
 							) : (
-								<Link
-									className={
-										'p-2 text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
-									}
-									key={idx}
-									href={href}
-								>
-									{title}
-								</Link>
+								<li key={idx} className="p-2">
+									<Link
+										className={
+											' text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
+										}
+										href={href}
+									>
+										{title}
+									</Link>
+								</li>
 							),
 						)}
-					</div>
-					<div className="flex w-[288px] flex-col gap-2">
+					</ul>
+					<ul className="flex w-[288px] flex-col gap-2">
 						{linksSecondColumn.map(({ href, title }, idx) =>
 							idx === 0 ? (
-								<p key={idx} className="p-2 text-[#fff]">
-									{title}
-								</p>
+								<li key={idx} className="p-2">
+									<p className=" text-[#fff]">{title}</p>
+								</li>
 							) : (
-								<Link
-									className={
-										'p-2 text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
-									}
-									key={idx}
-									href={href}
-								>
-									{title}
-								</Link>
+								<li key={idx} className="p-2">
+									<Link
+										className={
+											'text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
+										}
+										href={href}
+									>
+										{title}
+									</Link>
+								</li>
 							),
 						)}
-					</div>
-					<div className="flex w-[112px] flex-col gap-2">
+					</ul>
+					<ul className="flex w-[112px] flex-col gap-2">
 						{linksThirdColumn.map(({ href, title }, idx) =>
 							idx === 0 ? (
-								<p key={idx} className="p-2 text-[#fff]">
-									{title}
-								</p>
+								<li key={idx} className="p-2">
+									<p key={idx} className=" text-[#fff]">
+										{title}
+									</p>
+								</li>
 							) : (
-								<Link
-									className={
-										'p-2 text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
-									}
-									key={idx}
-									href={href}
-								>
-									{title}
-								</Link>
+								<li key={idx} className="p-2">
+									<Link
+										className={
+											' text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3'
+										}
+										key={idx}
+										href={href}
+									>
+										{title}
+									</Link>
+								</li>
 							),
 						)}
-					</div>
+					</ul>
 					<div className="flex w-[337px] flex-col py-2">
 						<div className="flex flex-col gap-2">
 							<p className="px-2 pb-2 text-xl font-bold text-[#fff]">
@@ -188,20 +194,21 @@ export const Footer = () => {
 							<GooglePlayButton variant="white" />
 						</div>
 					</div>
-				</div>
+				</nav>
 				<div className="my-12 h-[0.5px] w-full bg-[#ffffff66]"></div>
 				<div className="flex justify-between">
-					<div className="flex justify-between">
+					<ul className="flex justify-between">
 						{bottomLinks.map(({ title, href }, idx) => (
-							<Link
-								className="p-2 text-xs text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3"
-								href={href}
-								key={idx}
-							>
-								{title}
-							</Link>
+							<li key={idx} className="p-2">
+								<Link
+									className="text-xs text-[#ffffff99] transition-all duration-300 ease-in-out hover:text-gradient-3"
+									href={href}
+								>
+									{title}
+								</Link>
+							</li>
 						))}
-					</div>
+					</ul>
 					<div className="flex gap-6">
 						<Link href="#">
 							<InstagramIcon />
