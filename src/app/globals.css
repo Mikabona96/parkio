@@ -62,6 +62,7 @@ body {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		transition: all 0.3s ease;
+		animation: textGradient2 0.3s ease forwards;
 		&:hover {
 			animation: textGradient 1.75s ease forwards;
 		}
@@ -106,6 +107,14 @@ body {
 		}
 		100% {
 			background-size: 250%;
+		}
+	}
+	@keyframes textGradient2 {
+		0% {
+			background-size: 180%;
+		}
+		100% {
+			background-size: 100%;
 		}
 	}
 	.form-input {

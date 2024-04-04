@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
 	return (
-		<main className="flex flex-col gap-[120px]">
+		<main className="mt-20 flex flex-col gap-[120px]">
 			<FirstSection />
 			<ParkingSteps />
 			<SecondSection />
