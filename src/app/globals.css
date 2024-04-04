@@ -120,4 +120,10 @@ body {
 	.form-input {
 		@apply w-full rounded-lg border border-gray-300 px-[14px] py-[10px] shadow-sm shadow-gray-300 outline-4 outline-offset-0 outline-[#f4ebff] transition-all duration-200 placeholder:text-gray-500 focus:border-[#d9bffb] focus:placeholder-gray-300 focus:outline focus:placeholder:text-gray-300 focus:placeholder:transition-all focus:placeholder:duration-300;
 	}
+	.form-input_black {
+		@apply max-w-[284px] border-[#2d2f32] bg-[#2d2f32] text-gray-300 shadow-none placeholder:text-[#ffffff99];
+	}
+	.gradient-chevron {
+		@apply relative h-[30px] w-4 before:absolute before:left-[5px] before:top-[2px] before:h-[16px] before:w-1 before:rotate-[135deg] before:rounded before:bg-gradient-to-t before:from-gradient-3 before:to-gradient-1 before:content-[''] after:absolute after:bottom-[2px] after:left-[5px] after:h-[16px] after:w-1 after:-rotate-[135deg] after:rounded after:bg-gradient-to-b after:from-gradient-3 after:to-gradient-1 after:content-[''];
+	}
 }

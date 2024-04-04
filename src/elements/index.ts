@@ -3,3 +3,8 @@ export * from './Button';
 export * from './DropdownSolutions';
 export * from './WhyParkioCard';
 export * from './Accordion';
+export * from './Logo';
+export * from './AppStoreButton';
+export * from './GooglePlayButton';
+export * from './InstagramIcon';
+export * from './FaceBookIcon';

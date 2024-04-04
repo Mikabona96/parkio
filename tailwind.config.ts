@@ -24,6 +24,8 @@ const config: Config = {
 				'900': '#101828',
 			},
 			background: '#FEF0E2',
+			headerBackground: '#fff',
+			footerBackground: '#232527',
 			gradient: {
 				'1': '#FFD177',
 				'2': '#FFA1A3',

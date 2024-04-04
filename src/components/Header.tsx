@@ -1,4 +1,4 @@
-import { Button, DropdownSolutions, Select } from '@/elements';
+import { Button, DropdownSolutions, Logo, Select } from '@/elements';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,17 +25,10 @@ export const Header = () => {
 		},
 	];
 	return (
-		<header className="fixed top-0 z-[9999] flex w-full justify-center border-b-[1px] border-gray-200 bg-[#fff] px-[120px] py-[16px]">
+		<header className="bg-headerBackground fixed top-0 z-[9999] flex w-full justify-center border-b-[1px] border-gray-200 px-[120px] py-[16px]">
 			<div className="flex w-full max-w-screen-xl justify-between">
 				<Link href={'/'}>
-					<Image
-						src="/Logo.svg"
-						width={0}
-						height={0}
-						alt="logo.svg"
-						priority
-						className="h-[35.5px] w-[92px]"
-					/>
+					<Logo />
 				</Link>
 				<nav>
 					<ul className="flex list-none gap-6">

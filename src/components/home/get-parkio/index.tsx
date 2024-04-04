@@ -1,3 +1,4 @@
+import { AppStoreButton, GooglePlayButton } from '@/elements';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,7 +7,7 @@ import React from 'react';
 export const GetParkio = () => {
 	const t = useTranslations('Home');
 	return (
-		<div className="bg-background relative h-[492px] w-full overflow-hidden">
+		<div className="relative h-[492px] w-full overflow-hidden bg-background">
 			<div className="ml-[264px] mt-[194px] flex flex-col gap-6">
 				<h3 className="text-[32px] font-bold text-gray-900">
 					{t('get-parkio-title-start')}
@@ -19,22 +20,10 @@ export const GetParkio = () => {
 				</h3>
 				<div className="flex gap-4">
 					<Link href={'#'}>
-						<Image
-							width={0}
-							height={0}
-							className="h-[44px] w-[133px]"
-							src={'/app-store.svg'}
-							alt="app-store.svg"
-						/>
+						<AppStoreButton variant={'black'} />
 					</Link>
 					<Link href={'#'}>
-						<Image
-							width={0}
-							height={0}
-							className="h-[44px] w-[133px]"
-							src={'/google-play.svg'}
-							alt="google-play.svg"
-						/>
+						<GooglePlayButton variant="black" />
 					</Link>
 				</div>
 			</div>

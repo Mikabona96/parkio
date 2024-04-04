@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '../globals.css';
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 import { NextIntlClientProvider } from '@/providers';
 
 const MabryPro = localFont({
@@ -49,9 +49,10 @@ export default function RootLayout({
 		<html lang={locale}>
 			<body className={`${MabryPro.className} text-gray-700`}>
 				<NextIntlClientProvider>
-					<div className="relative h-full w-full">
+					<div className="relative w-full">
 						<Header />
 						<div className="m-auto h-full max-w-screen-xl">{children}</div>
+						<Footer />
 					</div>
 				</NextIntlClientProvider>
 			</body>
