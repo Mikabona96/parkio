@@ -1,4 +1,5 @@
 import {
+	FifthSection,
 	FirstSection,
 	FourthSection,
 	GetParkio,
@@ -16,6 +17,7 @@ export default function Home() {
 			<ThirdSection />
 			<FourthSection />
 			<GetParkio />
+			<FifthSection />
 		</main>
 	);
 }

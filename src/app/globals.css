@@ -108,4 +108,7 @@ body {
 			background-size: 250%;
 		}
 	}
+	.form-input {
+		@apply w-full rounded-lg border border-gray-300 px-[14px] py-[10px] shadow-sm shadow-gray-300 outline-4 outline-offset-0 outline-[#f4ebff] transition-all duration-200 placeholder:text-gray-500 focus:border-[#d9bffb] focus:placeholder-gray-300 focus:outline focus:placeholder:text-gray-300 focus:placeholder:transition-all focus:placeholder:duration-300;
+	}
 }

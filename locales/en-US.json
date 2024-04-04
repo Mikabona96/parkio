@@ -60,6 +60,16 @@
 		"s-4-card-1-question": "How do I download and install the PARKIO app?",
 		"s-4-card-1-answer": "To download Parkio, visit the App Store (for iOS) or Google Play Store (for Android). Search for \"Parkio\" and follow the installation instructions.",
 		"get-parkio-title-start": "Get",
-		"get-parkio-title-end": "for iOS and Android"
+		"get-parkio-title-end": "for iOS and Android",
+		"s-5-title": "Get in touch",
+		"s-5-subtitle": "Contact Us",
+		"s-5-description": "Have a question or need assistance? We're'here to'help! Please fill out the contact form, and our dedicated support team will get back to you as soon as possible.",
+		"s-5-full-name": "Full Name",
+		"s-5-email": "Email",
+		"s-5-phone-number": "Phone number",
+		"s-5-subject": "Subject",
+		"s-5-message": "Message",
+		"s-5-button": "Send Message",
+		"s-5-urgent-matters": "For urgent matters, contact us directly at {tel}."
 	}
 }

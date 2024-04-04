@@ -60,6 +60,16 @@
 		"s-4-card-1-question": "Hur laddar jag ner och installerar PARKIO-appen?",
 		"s-4-card-1-answer": "För att ladda ner Parkio, besök App Store (för iOS) eller Google Play Store (för Android). Sök efter \"Parkio\" och följ installationsanvisningarna.",
 		"get-parkio-title-start": "Skaffa",
-		"get-parkio-title-end": "för iOS och Android"
+		"get-parkio-title-end": "för iOS och Android",
+		"s-5-title": "Komma i kontakt",
+		"s-5-subtitle": "Kontakta oss",
+		"s-5-description": "Har du en fråga eller behöver du hjälp? Vi är här för att hjälpa dig! Vänligen fyll i kontaktformuläret så återkommer vårt dedikerade supportteam till dig så snart som möjligt.",
+		"s-5-full-name": "Fullständiga namn",
+		"s-5-email": "Email",
+		"s-5-phone-number": "Telefonnummer",
+		"s-5-subject": "Ämne",
+		"s-5-message": "Meddelande",
+		"s-5-button": "Skicka meddelande",
+		"s-5-urgent-matters": "För brådskande ärenden, kontakta oss direkt på {tel}."
 	}
 }
