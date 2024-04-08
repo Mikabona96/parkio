@@ -6,11 +6,13 @@ import {
 } from '@/tools/hooks';
 import { cn } from '@/tools/utils/cn';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 export const FirstSection = () => {
-	const [circleExpand, setCircleExpand] = useState<null | boolean>(null);
-	const [circleCollapse, setCircleCollapse] = useState(false);
+	const [toggleCircleAnimation, setToggleCircleAnimation] = useState<
+		boolean | null
+	>(null);
+	const [isAnimating, setIsAnimating] = useState(false);
 
 	const { isIntersected, ref } = useIntersectionObserver<HTMLDivElement>({
 		options: {
@@ -22,16 +24,18 @@ export const FirstSection = () => {
 
 	const scrollHandlerDown = () => {
 		console.log('isIntersected: ', isIntersected, 'down');
-		if (isIntersected) {
-			setCircleCollapse(false);
-			setCircleExpand(true);
+		if (isAnimating || toggleCircleAnimation) return;
+		if (isIntersected && !toggleCircleAnimation) {
+			setIsAnimating(true);
+			setToggleCircleAnimation(true);
 		}
 	};
 	const scrollHandlerUp = () => {
 		console.log('isIntersected: ', isIntersected, 'up');
-		if (isIntersected) {
-			setCircleExpand(false);
-			setCircleCollapse(true);
+		if (isAnimating || !toggleCircleAnimation) return;
+		if (isIntersected && toggleCircleAnimation) {
+			setIsAnimating(true);
+			setToggleCircleAnimation(false);
 		}
 	};
 	useWheelEvent([scrollHandlerDown, scrollHandlerUp], 0);
@@ -49,6 +53,7 @@ export const FirstSection = () => {
 				<div
 					ref={ref}
 					onAnimationEnd={() => {
+						setIsAnimating(false);
 						console.log('animationEnd');
 					}}
 					className="sticky top-[77px] mb-12 flex h-[626px]  w-full flex-col items-center overflow-hidden bg-gradient-2"
@@ -57,8 +62,8 @@ export const FirstSection = () => {
 						<div
 							className={cn(
 								'absolute left-[29%] top-0 h-[588px] w-[588px] rounded-full bg-background transition-all duration-150',
-								{ 'animate-circleExpand': circleExpand },
-								{ 'animate-circleCollapse': circleCollapse },
+								{ 'animate-circleExpand': toggleCircleAnimation },
+								{ 'animate-circleCollapse': toggleCircleAnimation === false },
 							)}
 						></div>
 						{/* //$ ========== circle copy ========= */}
@@ -66,8 +71,7 @@ export const FirstSection = () => {
 							className={cn(
 								'absolute left-[29%] top-0 h-[588px] w-[588px] rounded-full',
 								{
-									'overflow-hidden':
-										(!circleCollapse && !circleExpand) || !circleExpand,
+									'overflow-hidden': !toggleCircleAnimation,
 								},
 							)}
 						>

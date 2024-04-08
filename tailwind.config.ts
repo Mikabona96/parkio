@@ -99,7 +99,7 @@ const config: Config = {
 						scale: '1',
 					},
 					'20%': {
-						scale: '0.7',
+						scale: '0.8',
 					},
 					'100%': {
 						scale: '4',
@@ -110,7 +110,7 @@ const config: Config = {
 						scale: '4',
 					},
 					'80%': {
-						scale: '0.7',
+						scale: '0.8',
 					},
 					'100%': {
 						scale: '1',
