@@ -24,11 +24,18 @@ interface ReturnType<T> {
 	isIntersected: boolean;
 }
 
-export const useIntersectionObserver = <T extends HTMLElement>(
-	options: IntersectionObserverInit,
-	intersectedCallback: () => any,
-	isIntersectedDelay: number = 200,
-): ReturnType<T> => {
+interface Options extends IntersectionObserverInit {
+	isIntersectedDelay?: number;
+}
+interface Params {
+	options: Options;
+	intersectedCallback?: () => any;
+}
+
+export const useIntersectionObserver = <T extends HTMLElement>({
+	intersectedCallback,
+	options: { isIntersectedDelay, ...observerOptions },
+}: Params): ReturnType<T> => {
 	const [isIntersected, setIsIntersected] = useState(false);
 	const ref = useRef<T>(null);
 
@@ -38,7 +45,9 @@ export const useIntersectionObserver = <T extends HTMLElement>(
 		let callback: IntersectionObserverCallback = function (entries, observer) {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					intersectedCallback();
+					if (intersectedCallback) {
+						intersectedCallback();
+					}
 					setTimeout(() => {
 						setIsIntersected(true);
 					}, isIntersectedDelay);
@@ -49,13 +58,13 @@ export const useIntersectionObserver = <T extends HTMLElement>(
 		};
 
 		// observer
-		let observer = new IntersectionObserver(callback, options);
+		let observer = new IntersectionObserver(callback, observerOptions);
 		observer.observe(element as HTMLElement);
 
 		return () => {
 			observer.unobserve(element as HTMLElement);
 		};
-	}, [options, intersectedCallback, isIntersected, isIntersectedDelay]);
+	}, [intersectedCallback, isIntersected, observerOptions, isIntersectedDelay]);
 
 	return {
 		ref,

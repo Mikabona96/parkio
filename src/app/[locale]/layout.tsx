@@ -50,7 +50,7 @@ export default function RootLayout({
 			<body className={`${MabryPro.className} text-gray-700`}>
 				<NextIntlClientProvider>
 					<div className="relative w-full">
-						<Header />
+						<Header locale={locale} />
 						<div className="m-auto h-full max-w-screen-xl">{children}</div>
 						<Footer />
 					</div>

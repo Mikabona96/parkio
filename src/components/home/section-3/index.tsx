@@ -21,12 +21,13 @@ export const ThirdSection = () => {
 	const t = useTranslations('Home');
 
 	//* IntersectionObserver
-	const { ref, isIntersected } = useIntersectionObserver<HTMLDivElement>(
-		{
+	const { ref, isIntersected } = useIntersectionObserver<HTMLDivElement>({
+		options: {
 			rootMargin: '0px',
 			threshold: 0.3,
+			isIntersectedDelay: 500,
 		},
-		() => {
+		intersectedCallback: () => {
 			//$ prevent touch/wheel scrolling
 			document.body.style.overflow = 'hidden';
 
@@ -37,8 +38,7 @@ export const ThirdSection = () => {
 				behavior: 'smooth',
 			});
 		},
-		500,
-	);
+	});
 
 	const slidesDescription = [
 		t('s-3-slide-1'),

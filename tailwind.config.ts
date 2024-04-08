@@ -44,6 +44,8 @@ const config: Config = {
 			animation: {
 				appearence: 'appearence .5s ease-in-out',
 				vanish: 'vanish .5s ease-in-out',
+				circleExpand: 'circleExpand 1s ease-in-out forwards',
+				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
 			},
 			keyframes: {
 				appearence: {
@@ -90,6 +92,28 @@ const config: Config = {
 					},
 					'100%': {
 						opacity: '0.1',
+					},
+				},
+				circleExpand: {
+					'0%': {
+						scale: '1',
+					},
+					'20%': {
+						scale: '0.7',
+					},
+					'100%': {
+						scale: '4',
+					},
+				},
+				circleCollapse: {
+					'0%': {
+						scale: '4',
+					},
+					'80%': {
+						scale: '0.7',
+					},
+					'100%': {
+						scale: '1',
 					},
 				},
 			},
