@@ -98,5 +98,23 @@
 		"s-5-message": "Meddelande",
 		"s-5-button": "Skicka meddelande",
 		"s-5-urgent-matters": "För brådskande ärenden, kontakta oss direkt på {tel}."
+	},
+	"Parkio-Solutions": {
+		"Parkio-Solutions": "Parkio lösning",
+		"Discover-the-power": "Upptäck kraften i PARKIO — din allt-i-ett-lösning för sömlösa och bekväma parkeringsupplevelser",
+		"Short-Term-Parking-Title": "Korttidsparkering",
+		"Short-Term-Parking-Description": "Parkio-appen framstår som den ultimata lösningen för snabba korttidsparkeringspass. Välj en rekommenderad parkeringszon från appens karta eller ange riktnumret som visas på skylten. Efteråt, snurra hjulet i appen för att ange parkeringslängden, bekräfta ditt val och påbörja din parkeringssession!",
+		"SMS-Parking-Title": "SMS Parkering",
+		"SMS-Parking-Description": "Parkios SMS-tjänst erbjuder ett bekvämt sätt att parkera med hjälp av textmeddelanden. Inget kontoskapande krävs, och du kan betala parkeringsavgiften senare genom din valda betalningsmetod. En avgift på upp till 5 kr (plus potentiella operatörskostnader) tas ut för varje parkeringstillfälle.",
+		"Digital-Permit-Title": "Digitalt tillstånd",
+		"Digital-Permit-Descsription": "Parkio-appen förenklar hanteringen av olika tillstånd, som bostadsparkering, års-, månads- och veckotillstånd. Att hantera dessa tillstånd kan vara utmanande på grund av olika behov från invånare, entreprenörer, företag och organisationer, vilket kräver skräddarsydda lösningar. Den goda nyheten är att det finns ett bekvämre och helt gratis sätt att hantera tillstånd med Parkio. Parkio tillhandahåller elektroniska tillstånd som...",
+		"Family-Account-Title": "Familjekonto",
+		"Family-Account-Description": "Upplev fördelarna med ett familjekonto på Parkio, där du effektivt kan centralisera och övervaka alla familjemedlemmars betalningar och kvitton. Den utsedda personen inom din familj initierar kontokonfigureringen och utökar inbjudningar till upp till 5 familjemedlemmar. Alla medlemmar på familjekontot har rätt till 5 % rabatt på sina parkeringskostnader. Omfamna bekvämligheten med kollektiv förvaltning och sparande. Är det inte härligt att vara tillsammans, speciellt när det är både kostnadsfritt och ekonomiskt fördelaktigt?",
+		"Business-Parking-Title": "Affärsparkering",
+		"Business-Parking-Description": "Parkios lösning för digital företagsparkering erbjuder ett sofistikerat och kostnadseffektivt sätt att hantera och beräkna parkeringsavgifter för anställda i tjänst. Förenkla betalningen och administrationen av parkeringsavgifter för flera parkeringsplatser med en samlad månadsräkning. Ju fler anställda du länkar till ditt företagskonto, desto smidigare blir processen att konsolidera parkeringskvitton till...",
+		"Guest-Parking-Title": "Gästparkering",
+		"Guest-Parking-Description": "Förenkla besöksparkering med gästparkering! Gör det möjligt för besökare att använda ditt företags tillstånd, och låt dem sköta parkeringen självständigt via en iPad eller dator i receptionen. Genom att lägga till gästparkering till din tillståndstjänst tillhandahåller du gratis parkering för gäster och effektiviserar processen. Besökare kan ange sitt registreringsnummer, ställa in parkeringslängden och välja SMS-påminnelser vid behov. Säg adjö till manuell tillståndsutdelning och förbättra parkeringsupplevelsen för både anställda och besökare.",
+		"Resident's-Parking-Title": "Boendeparkering",
+		"Resident's-Parking-Description": "De boende hanterar sina parkeringstillstånd sömlöst med Parkio boendeparkering. Systemet säkerställer att endast behöriga invånare självständigt kan köpa och administrera sina tillstånd."
 	}
 }

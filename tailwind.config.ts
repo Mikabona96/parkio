@@ -46,6 +46,23 @@ const config: Config = {
 				vanish: 'vanish .5s ease-in-out',
 				circleExpand: 'circleExpand 1s ease-in-out forwards',
 				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
+				textShown: 'textShown 1s ease-in-out forwards',
+				phoneImageXl: 'phoneImageXl 1s ease-in-out forwards',
+				phoneImageReverseXl: 'phoneImageReverseXl 1s ease-in-out forwards',
+				firstCardXl: 'firstCardXl 1s ease-in-out forwards',
+				firstCardReverseXl: 'firstCardReverseXl 1s ease-in-out forwards',
+				secondCardXl: 'secondCardXl 1s ease-in-out forwards',
+				secondCardReverseXl: 'secondCardReverseXl 1s ease-in-out forwards',
+				thirdCardXl: 'thirdCardXl 1s ease-in-out forwards',
+				thirdCardReverseXl: 'thirdCardReverseXl 1s ease-in-out forwards',
+				fourthCardXl: 'fourthCardXl 1s ease-in-out forwards',
+				fourthCardReverseXl: 'fourthCardReverseXl 1s ease-in-out forwards',
+				fifthCardXl: 'fifthCardXl 1s ease-in-out forwards',
+				fifthCardReverseXl: 'fifthCardReverseXl 1s ease-in-out forwards',
+				sixthCardXl: 'sixthCardXl 1s ease-in-out forwards',
+				sixthCardReverseXl: 'sixthCardReverseXl 1s ease-in-out forwards',
+				seventhCardXl: 'seventhCardXl 1s ease-in-out forwards',
+				seventhCardReverseXl: 'seventhCardReverseXl 1s ease-in-out forwards',
 			},
 			keyframes: {
 				appearence: {
@@ -114,6 +131,328 @@ const config: Config = {
 					},
 					'100%': {
 						scale: '1',
+					},
+				},
+				textShown: {
+					'0%': {
+						opacity: '0',
+					},
+					'100%': {
+						opacity: '1',
+					},
+				},
+				phoneImageXl: {
+					'0%': {
+						left: '50%',
+						top: '240px',
+					},
+					'100%': {
+						left: '0%',
+						top: '51px',
+					},
+				},
+				phoneImageReverseXl: {
+					'0%': {
+						left: '0%',
+						top: '51px',
+					},
+					'100%': {
+						left: '50%',
+						top: '240px',
+					},
+				},
+				firstCardXl: {
+					'0%': {
+						top: '6px',
+						left: '26%',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						top: '22px',
+						left: '30%',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						top: '-33%',
+						left: '1%',
+						opacity: '0',
+					},
+				},
+				firstCardReverseXl: {
+					'0%': {
+						scale: '1',
+						top: '-33%',
+						left: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						top: '22px',
+						left: '30%',
+					},
+					'100%': {
+						top: '6px',
+						left: '26%',
+						opacity: '1',
+					},
+				},
+				secondCardXl: {
+					'0%': {
+						top: '41px',
+						right: '503px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						top: '57px',
+						right: '543px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						top: '-33%',
+						right: '1%',
+						opacity: '0',
+					},
+				},
+				secondCardReverseXl: {
+					'0%': {
+						scale: '1',
+						top: '-33%',
+						right: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						top: '57px',
+						right: '543px',
+					},
+					'100%': {
+						top: '41px',
+						right: '503px',
+						opacity: '1',
+					},
+				},
+				thirdCardXl: {
+					'0%': {
+						top: '150px',
+						right: '307px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						top: '166px',
+						right: '347px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						top: '200px',
+						right: '1%',
+						opacity: '0',
+					},
+				},
+				thirdCardReverseXl: {
+					'0%': {
+						scale: '1',
+						top: '200px',
+						right: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						top: '166px',
+						right: '347px',
+					},
+					'100%': {
+						top: '150px',
+						right: '307px',
+						opacity: '1',
+					},
+				},
+				fourthCardXl: {
+					'0%': {
+						top: '354px',
+						right: '297px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						top: '370px',
+						right: '337px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						top: '475px',
+						right: '1%',
+						opacity: '0',
+					},
+				},
+				fourthCardReverseXl: {
+					'0%': {
+						scale: '1',
+						top: '475px',
+						right: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						top: '370px',
+						right: '337px',
+					},
+					'100%': {
+						top: '354px',
+						right: '297px',
+						opacity: '1',
+					},
+				},
+				fifthCardXl: {
+					'0%': {
+						bottom: '0px',
+						right: '547px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						bottom: '-16px',
+						right: '587px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						bottom: '-52px',
+						right: '500px',
+						opacity: '0',
+					},
+				},
+				fifthCardReverseXl: {
+					'0%': {
+						scale: '1',
+						bottom: '-52px',
+						right: '500px',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						bottom: '-16px',
+						right: '587px',
+					},
+					'100%': {
+						bottom: '0px',
+						right: '547px',
+						opacity: '1',
+					},
+				},
+				sixthCardXl: {
+					'0%': {
+						bottom: '57px',
+						left: '357px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						bottom: '73px',
+						right: '397px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						bottom: '-48px',
+						left: '1%',
+						opacity: '0',
+					},
+				},
+				sixthCardReverseXl: {
+					'0%': {
+						scale: '1',
+						bottom: '-48px',
+						left: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						bottom: '73px',
+						right: '397px',
+					},
+					'100%': {
+						bottom: '57px',
+						left: '357px',
+						opacity: '1',
+					},
+				},
+				seventhCardXl: {
+					'0%': {
+						top: '232px',
+						left: '297px',
+						opacity: '1',
+					},
+					'20%': {
+						scale: '0.8',
+						top: '248px',
+						left: '337px',
+					},
+					'75%': {
+						opacity: '1',
+					},
+					'100%': {
+						scale: '1',
+						top: '252px',
+						left: '1%',
+						opacity: '0',
+					},
+				},
+				seventhCardReverseXl: {
+					'0%': {
+						scale: '1',
+						top: '252px',
+						left: '1%',
+						opacity: '0',
+					},
+					'25%': {
+						opacity: '1',
+					},
+					'80%': {
+						scale: '0.8',
+						top: '248px',
+						left: '337px',
+					},
+					'100%': {
+						top: '232px',
+						left: '297px',
+						opacity: '1',
 					},
 				},
 			},

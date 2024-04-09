@@ -98,5 +98,23 @@
 		"s-5-message": "Message",
 		"s-5-button": "Send Message",
 		"s-5-urgent-matters": "For urgent matters, contact us directly at {tel}."
+	},
+	"Parkio-Solutions": {
+		"Parkio-Solutions": "Parkio Solutions",
+		"Discover-the-power": "Discover the power of PARKIO — your all-in-one solution for seamless and convenient parking experiences",
+		"Short-Term-Parking-Title": "Short Term Parking",
+		"Short-Term-Parking-Description": "The Parkio app stands out as the ultimate solution for quick short-term parking sessions. Choose a recommended parking zone from the app's map or input the area code displayed on the sign. Afterward, spin the wheel within the app to designate the parking duration, confirm your selection, and commence your parking session!",
+		"SMS-Parking-Title": "SMS Parking",
+		"SMS-Parking-Description": "Parkio's SMS service offers a convenient way to park using text messages. No account creation is required, and you can settle the parking fee later through your chosen payment method. A charge of up to SEK 5 (plus potential operator costs) is applied for each parking session.",
+		"Digital-Permit-Title": "Digital Permi",
+		"Digital-Permit-Descsription": "The Parkio app simplifies the management of different permits, such as residential parking, yearly, monthly, and weekly permits. Handling these permits can be challenging due to diverse needs from residents, entrepreneurs, companies, and organizations, requiring tailored solutions. The good news is, there’s a more convenient and absolutely free way to manage permits with Parkio. Parkio provides electronic permits that...",
+		"Family-Account-Title": "Family Account",
+		"Family-Account-Description": "Experience the benefits of a Family account on Parkio, where you can efficiently centralize and oversee all family members' payments and receipts. The designated individual within your family initiates the account setup and extends invitations to up to 5 family members. All members of the family account are entitled to a 5% discount on their parking expenses. Embrace the convenience of collective management and savings. Isn't it delightful to be together, especially when it's both cost-free and financially advantageous?",
+		"Business-Parking-Title": "Business Parking",
+		"Business-Parking-Description": "Parkio’s solution for digital company parking offers a sophisticated and cost-effective approach to managing and calculating parking fees for employees on duty. Simplify the payment and administration of parking fees for multiple parking lots with a consolidated monthly bill. The more employees you link to your company account, the smoother the process of consolidating parking receipts into...",
+		"Guest-Parking-Title": "Guest Parking",
+		"Guest-Parking-Description": "Simplify visitor parking with Guest Parking! Enable visitors to use your company's permit, and let them manage parking independently via an iPad or computer at the reception. By adding Guest Parking to your permit service, you provide free parking for guests and streamline the process. Visitors can enter their registration number, set the parking duration, and opt for SMS reminders when needed. Say goodbye to manual permit distribution and enhance the parking experience for both employees and visitors.",
+		"Resident's-Parking-Title": "Resident’s Parking",
+		"Resident's-Parking-Description": "Residents manage their parking permits seamlessly with Parkio resident parking. The system ensures that only authorized residents can independently purchase and administer their permits."
 	}
 }
