@@ -134,5 +134,19 @@
 		"step-3-description": "Fill in the necessary details, including company information, contact details, and any specific requirements. Ensure accuracy to expedite the application process.",
 		"step-4": "Step 4: Review and Submit ",
 		"step-4-description": "Carefully review the provided information to guarantee accuracy. Once satisfied, submit the application form. Our team will promptly review your request and contact you with further instructions."
+	},
+	"How-it-works": {
+		"Effortless-Parking": "Effortless Parking, Every Time",
+		"Discover-how-to-use": "Discover how to use the PARKIO app seamlessly for a convenient and stress-free parking experience",
+		"card-1-title": "Choose Your Parking Option",
+		"card-1-description": "Begin your parking journey by selecting from recommended zones on the app’s map or simply input the displayed area code from on-site signs. Parkio ensures a seamless start to your parking experience!",
+		"card-2-title": "Set Your Parking Duration",
+		"card-2-description": "Customize your parking experience by selecting the duration that suits you best. Use the intuitive wheel feature within the app to effortlessly spin and set your desired parking time. Whether it’s a short visit or a long stay, Parkio adapts to your schedule",
+		"card-3-title": "Confirm and Pay",
+		"card-3-description": "Effortlessly confirm your parking selection and proceed to a seamless payment process. With secure transactions, Parkio ensures a convenient and safe experience",
+		"card-4-title": "Monitor Your Parking Session",
+		"card-4-description": "Stay in control by monitoring your active parking session. Receive notifications, extend your stay if needed, and enjoy peace of mind throughout your parking experience",
+		"get-parkio-title-start": "Get",
+		"get-parkio-title-end": "for iOS and Android"
 	}
 }

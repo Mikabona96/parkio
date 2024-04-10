@@ -134,5 +134,19 @@
 		"step-3-description": "Fyll i nödvändig information, inklusive företagsinformation, kontaktuppgifter och eventuella specifika krav. Säkerställ noggrannhet för att påskynda ansökningsprocessen.",
 		"step-4": "Steg 4: Granska och skicka",
 		"step-4-description": "Granska noggrant den tillhandahållna informationen för att garantera noggrannhet. När du är nöjd, skicka in ansökningsformuläret. Vårt team kommer omedelbart att granska din begäran och kontakta dig med ytterligare instruktioner."
+	},
+	"How-it-works": {
+		"Effortless-Parking": "Enkel parkering, varje gång",
+		"Discover-how-to-use": "Upptäck hur du använder PARKIO-appen sömlöst för en bekväm och stressfri parkeringsupplevelse",
+		"card-1-title": "Välj ditt parkeringsalternativ",
+		"card-1-description": "Börja din parkeringsresa genom att välja från rekommenderade zoner på appens karta eller helt enkelt mata in det visade riktnumret från skyltar på plats. Parkio säkerställer en sömlös start på din parkeringsupplevelse!",
+		"card-2-title": "Ställ in din parkeringstid",
+		"card-2-description": "Anpassa din parkeringsupplevelse genom att välja den varaktighet som passar dig bäst. Använd den intuitiva hjulfunktionen i appen för att enkelt snurra och ställa in önskad parkeringstid. Oavsett om det är ett kort besök eller en lång vistelse, anpassar Parkio sig till ditt schema",
+		"card-3-title": "Bekräfta och betala",
+		"card-3-description": "Bekräfta ditt val av parkering utan problem och fortsätt till en sömlös betalningsprocess. Med säkra transaktioner garanterar Parkio en bekväm och säker upplevelse",
+		"card-4-title": "Övervaka din parkeringssession",
+		"card-4-description": "Behåll kontrollen genom att övervaka din aktiva parkeringssession. Ta emot aviseringar, förläng din vistelse om det behövs och njut av sinnesfrid under hela din parkeringsupplevelse",
+		"get-parkio-title-start": "Skaffa",
+		"get-parkio-title-end": "för iOS och Android"
 	}
 }
