@@ -16,7 +16,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 		},
 		{
 			name: t('business-parking'),
-			href: '#',
+			href: `/${locale}/business-parking`,
 		},
 		{
 			name: t('faq'),

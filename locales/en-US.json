@@ -116,5 +116,23 @@
 		"Guest-Parking-Description": "Simplify visitor parking with Guest Parking! Enable visitors to use your company's permit, and let them manage parking independently via an iPad or computer at the reception. By adding Guest Parking to your permit service, you provide free parking for guests and streamline the process. Visitors can enter their registration number, set the parking duration, and opt for SMS reminders when needed. Say goodbye to manual permit distribution and enhance the parking experience for both employees and visitors.",
 		"Resident's-Parking-Title": "Resident’s Parking",
 		"Resident's-Parking-Description": "Residents manage their parking permits seamlessly with Parkio resident parking. The system ensures that only authorized residents can independently purchase and administer their permits."
+	},
+	"Business-Parking": {
+		"Business-Parking": "Business Parking",
+		"Digital-company-parking-title": "Digital company parking",
+		"Digital-company-parking-description": "With the Parkio Business Account, you save time and energy managing the company’s parking. Take total control as an administrator, with the ability to determine who has access to parking privileges on the company’s account. Ensure that each receipt never gets lost or delayed. Additionally, our solution manages and calculates parking fees for your staff who drive on duty.",
+		"Business-license-title": "Business license",
+		"Business-license-description": "With the Parkio Business Account, you save time and energy managing the company’s parking. Take total control as an administrator, with the ability to determine who has access to parking privileges on the company’s account. Ensure that each receipt never gets lost or delayed. Additionally, our solution manages and calculates parking fees for your staff who drive on duty.",
+		"Effortless-Parking-Management-title": "Effortless Parking Management",
+		"Effortless-Parking-Management-description": "Empower your business with the Parkio Business Account dashboard. As a business owner, take charge effortlessly: manage parking access, control privileges, and ensure seamless administration. On the dashboard, easily add, edit, or delete employee license plates, ensuring efficient control and oversight of your company’s parking operations. Experience a streamlined solution where you can handle everything from one central hub.",
+		"Apply for the company account": "Apply for the company account",
+		"step-1": "Step 1: Download the Parkio App",
+		"step-1-description": "If you haven’t already, download the Parkio app from your preferred app store. Available for iOS and Android.",
+		"step-2": "Step 2: Access the Application Form ",
+		"step-2-description": "Navigate to the 'Business Account' section within the Parkio app. Locate the 'Apply Now' button to access the dedicated application form.",
+		"step-3": "Step 3: Complete the Application Form",
+		"step-3-description": "Fill in the necessary details, including company information, contact details, and any specific requirements. Ensure accuracy to expedite the application process.",
+		"step-4": "Step 4: Review and Submit ",
+		"step-4-description": "Carefully review the provided information to guarantee accuracy. Once satisfied, submit the application form. Our team will promptly review your request and contact you with further instructions."
 	}
 }

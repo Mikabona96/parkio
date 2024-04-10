@@ -116,5 +116,23 @@
 		"Guest-Parking-Description": "Förenkla besöksparkering med gästparkering! Gör det möjligt för besökare att använda ditt företags tillstånd, och låt dem sköta parkeringen självständigt via en iPad eller dator i receptionen. Genom att lägga till gästparkering till din tillståndstjänst tillhandahåller du gratis parkering för gäster och effektiviserar processen. Besökare kan ange sitt registreringsnummer, ställa in parkeringslängden och välja SMS-påminnelser vid behov. Säg adjö till manuell tillståndsutdelning och förbättra parkeringsupplevelsen för både anställda och besökare.",
 		"Resident's-Parking-Title": "Boendeparkering",
 		"Resident's-Parking-Description": "De boende hanterar sina parkeringstillstånd sömlöst med Parkio boendeparkering. Systemet säkerställer att endast behöriga invånare självständigt kan köpa och administrera sina tillstånd."
+	},
+	"Business-Parking": {
+		"Business-Parking": "Affärsparkering",
+		"Digital-company-parking-title": "Digital företagsparkering",
+		"Digital-company-parking-description": "Med Parkio Business Account sparar du tid och energi på att hantera företagets parkering. Ta total kontroll som administratör, med möjligheten att avgöra vem som har tillgång till parkeringsrättigheter på företagets konto. Se till att varje kvitto aldrig försvinner eller försenas. Dessutom hanterar och beräknar vår lösning parkeringsavgifter för din personal som kör i tjänst.",
+		"Business-license-title": "Företagslicens",
+		"Business-license-description": "Med Parkio Business Account sparar du tid och energi på att hantera företagets parkering. Ta total kontroll som administratör, med möjligheten att avgöra vem som har tillgång till parkeringsrättigheter på företagets konto. Se till att varje kvitto aldrig försvinner eller försenas. Dessutom hanterar och beräknar vår lösning parkeringsavgifter för din personal som kör i tjänst.",
+		"Effortless-Parking-Management-title": "Enkel parkeringshantering",
+		"Effortless-Parking-Management-description": "Styr ditt företag med instrumentpanelen för Parkio Business Account. Som företagsägare, ta ansvar utan ansträngning: hantera parkeringsåtkomst, kontrollera privilegier och säkerställ sömlös administration. På instrumentpanelen kan du enkelt lägga till, redigera eller ta bort anställdas registreringsskyltar, vilket säkerställer effektiv kontroll och överblick över ditt företags parkeringsverksamhet. Upplev en strömlinjeformad lösning där du kan hantera allt från ett centralt nav.",
+		"Apply for the company account": "Ansök om företagskontot",
+		"step-1": "Steg 1: Ladda ner Parkio-appen",
+		"step-1-description": "Om du inte redan har gjort det, ladda ner Parkio-appen från din favoritappbutik. Tillgänglig för iOS och Android.",
+		"step-2": "Steg 2: Öppna ansökningsformuläret",
+		"step-2-description": "Navigera till avsnittet \"Företagskonto\" i Parkio-appen. Leta upp knappen \"Ansök nu\" för att få åtkomst till det dedikerade ansökningsformuläret.",
+		"step-3": "Steg 3: Fyll i ansökningsformuläret",
+		"step-3-description": "Fyll i nödvändig information, inklusive företagsinformation, kontaktuppgifter och eventuella specifika krav. Säkerställ noggrannhet för att påskynda ansökningsprocessen.",
+		"step-4": "Steg 4: Granska och skicka",
+		"step-4-description": "Granska noggrant den tillhandahållna informationen för att garantera noggrannhet. När du är nöjd, skicka in ansökningsformuläret. Vårt team kommer omedelbart att granska din begäran och kontakta dig med ytterligare instruktioner."
 	}
 }
