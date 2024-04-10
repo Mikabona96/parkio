@@ -1,6 +1,9 @@
+'use client';
 import { Button, DropdownSolutions, Logo, Select } from '@/elements';
+import { cn } from '@/tools/utils/cn';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 interface IRootLayoutProps {
@@ -9,6 +12,7 @@ interface IRootLayoutProps {
 
 export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const t = useTranslations('Header');
+	const pathname = usePathname();
 	const links = [
 		{
 			name: t('solutions'),
@@ -24,7 +28,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 		},
 		{
 			name: t('about-us'),
-			href: '#',
+			href: `/${locale}/about-us`,
 		},
 		{
 			name: t('contact-us'),
@@ -47,7 +51,9 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 								>
 									<Link
 										href={link.href}
-										className="peer transition-all hover:text-gradient-3"
+										className={cn('peer transition-all hover:text-gradient-3', {
+											'text-gradient-3': pathname === link.href,
+										})}
 									>
 										Parkio solutions
 									</Link>
@@ -58,7 +64,9 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 							) : (
 								<li className="p-2" key={link.name}>
 									<Link
-										className="transition-all hover:text-gradient-3"
+										className={cn('transition-all hover:text-gradient-3', {
+											'text-gradient-3': pathname === link.href,
+										})}
 										href={link.href}
 									>
 										{link.name}

@@ -164,5 +164,22 @@
 		"s-1-card-1-question": "Hur laddar jag ner och installerar PARKIO-appen?",
 		"s-1-card-1-answer": "För att ladda ner Parkio, besök App Store (för iOS) eller Google Play Store (för Android). Sök efter \"Parkio\" och följ installationsanvisningarna.",
 		"form-title": "Har du inte hittat ditt svar?"
+	},
+	"About-us": {
+		"title": "Om",
+		"description": "Välkommen till Parkio, din pålitliga partner inom smarta parkeringslösningar. På PARKIO brinner vi för att förändra parkeringsupplevelsen för både företag och privatpersoner.",
+		"s-2-title": "Vår mission och vision",
+		"s-2-description": "Bemyndiga företag och privatpersoner med innovativa parkeringslösningar som gör parkeringshanteringen enkel, effektiv och stressfri.",
+		"s-2-title-2": "Vad skiljer oss åt",
+		"card-1-title": "Sömlös parkeringshantering",
+		"card-1-description": "PARKIO tillhandahåller en användarvänlig plattform för företag och privatpersoner att utan ansträngning hantera parkeringsprivilegier, vilket sparar tid och energi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-2-title": "Effektiviserad administration",
+		"card-2-description": "Vår instrumentpanel för företagskonton ger dig kontrollen, så att du kan hantera parkeringsåtkomst, kontrollera privilegier och hantera allt från ett centralt nav. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-3-title": "Nyskapande teknologi",
+		"card-3-description": "Vi använder den senaste tekniken för att skapa intelligenta parkeringslösningar som anpassar sig efter dina behov. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-4-title": "Transparent prissättning",
+		"card-4-description": "Vårt engagemang för transparens säkerställer rättvisa och förutsägbara priser för alla användare. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"s-3-title": "Kom igång idag",
+		"s-3-description": "Gå med i PARKIO-communityt och upplev en ny era inom parkeringsbekvämlighet. Oavsett om du är en företagare som söker strömlinjeformad parkeringshantering eller en individ som letar efter en effektiv parkeringslösning, är PARKIO här för dig."
 	}
 }

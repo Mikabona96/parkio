@@ -164,5 +164,22 @@
 		"s-1-card-1-question": "How do I download and install the PARKIO app?",
 		"s-1-card-1-answer": "To download Parkio, visit the App Store (for iOS) or Google Play Store (for Android). Search for \"Parkio\" and follow the installation instructions.",
 		"form-title": "Haven’t found your answer?"
+	},
+	"About-us": {
+		"title": "About",
+		"description": "Welcome to Parkio, your trusted partner in smart parking solutions. At PARKIO, we're passionate about transforming the parking experience for businesses and individuals alike.",
+		"s-2-title": "Our Mission and Vision",
+		"s-2-description": "Empowering businesses and individuals with innovative parking solutions, making parking management simple, efficient, and stress-free.",
+		"s-2-title-2": "What Sets Us Apart",
+		"card-1-title": "Seamless Parking Management",
+		"card-1-description": "PARKIO provides a user-friendly platform for businesses and individuals to effortlessly manage parking privileges, saving time and energy. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-2-title": "Streamlined Administration",
+		"card-2-description": "Our business account dashboard puts you in control, allowing you to manage parking access, control privileges, and handle everything from one central hub. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-3-title": "Cutting-Edge Technology",
+		"card-3-description": "We leverage the latest technology to create intelligent parking solutions that adapt to your needs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"card-4-title": "Transparent Pricing",
+		"card-4-description": "Our commitment to transparency ensures fair and predictable pricing for all users. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"s-3-title": "Get Started Today",
+		"s-3-description": "Join the PARKIO community and experience a new era in parking convenience. Whether you’re a business owner seeking streamlined parking management or an individual looking for an efficient parking solution, PARKIO is here for you."
 	}
 }
