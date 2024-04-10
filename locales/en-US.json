@@ -45,6 +45,16 @@
 		"GRPD": "GRPD",
 		"all-rights-reserverd": "© {year} Parkio. All rights reserved"
 	},
+	"Form": {
+		"form-subtitle": "Contact Us",
+		"form-full-name": "Full Name",
+		"form-email": "Email",
+		"form-phone-number": "Phone number",
+		"form-subject": "Subject",
+		"form-message": "Message",
+		"form-button": "Send Message",
+		"form-urgent-matters": "For urgent matters, contact us directly at {tel}."
+	},
 	"Home": {
 		"title": "Simplified Parking",
 		"s-1-ul-li-1": "Park quickly with a simple app",
@@ -88,16 +98,8 @@
 		"s-4-card-1-answer": "To download Parkio, visit the App Store (for iOS) or Google Play Store (for Android). Search for \"Parkio\" and follow the installation instructions.",
 		"get-parkio-title-start": "Get",
 		"get-parkio-title-end": "for iOS and Android",
-		"s-5-title": "Get in touch",
-		"s-5-subtitle": "Contact Us",
-		"s-5-description": "Have a question or need assistance? We're'here to'help! Please fill out the contact form, and our dedicated support team will get back to you as soon as possible.",
-		"s-5-full-name": "Full Name",
-		"s-5-email": "Email",
-		"s-5-phone-number": "Phone number",
-		"s-5-subject": "Subject",
-		"s-5-message": "Message",
-		"s-5-button": "Send Message",
-		"s-5-urgent-matters": "For urgent matters, contact us directly at {tel}."
+		"form-title": "Get in touch",
+		"form-description": "Have a question or need assistance? We're'here to'help! Please fill out the contact form, and our dedicated support team will get back to you as soon as possible."
 	},
 	"Parkio-Solutions": {
 		"Parkio-Solutions": "Parkio Solutions",
@@ -148,5 +150,19 @@
 		"card-4-description": "Stay in control by monitoring your active parking session. Receive notifications, extend your stay if needed, and enjoy peace of mind throughout your parking experience",
 		"get-parkio-title-start": "Get",
 		"get-parkio-title-end": "for iOS and Android"
+	},
+	"FAQ": {
+		"Getting-started": "Getting started",
+		"Account-management": "Account management",
+		"Parking-options": "Parking options",
+		"Technical-issues": "Technical issues",
+		"Security-and-privacy": "Security and privacy",
+		"Business-accounts": "Business accounts",
+		"Reminders-and-notifications": "Reminders and notifications",
+		"Parking-session-management": "Parking session management",
+		"Contact-and-support": "Contact and support",
+		"s-1-card-1-question": "How do I download and install the PARKIO app?",
+		"s-1-card-1-answer": "To download Parkio, visit the App Store (for iOS) or Google Play Store (for Android). Search for \"Parkio\" and follow the installation instructions.",
+		"form-title": "Haven’t found your answer?"
 	}
 }

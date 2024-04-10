@@ -20,7 +20,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 		},
 		{
 			name: t('faq'),
-			href: '#',
+			href: `/${locale}/faq`,
 		},
 		{
 			name: t('about-us'),

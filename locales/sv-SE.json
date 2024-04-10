@@ -45,6 +45,16 @@
 		"GRPD": "GRPD",
 		"all-rights-reserverd": "© {year} Parkio. Alla rättigheter förbehållna"
 	},
+	"Form": {
+		"form-subtitle": "Kontakta oss",
+		"form-full-name": "Fullständiga namn",
+		"form-email": "Email",
+		"form-phone-number": "Telefonnummer",
+		"form-subject": "Ämne",
+		"form-message": "Meddelande",
+		"form-button": "Skicka meddelande",
+		"form-urgent-matters": "För brådskande ärenden, kontakta oss direkt på {tel}."
+	},
 	"Home": {
 		"title": "Förenklad parkering",
 		"s-1-ul-li-1": "Parkera snabbt med en enkel app",
@@ -88,16 +98,8 @@
 		"s-4-card-1-answer": "För att ladda ner Parkio, besök App Store (för iOS) eller Google Play Store (för Android). Sök efter \"Parkio\" och följ installationsanvisningarna.",
 		"get-parkio-title-start": "Skaffa",
 		"get-parkio-title-end": "för iOS och Android",
-		"s-5-title": "Komma i kontakt",
-		"s-5-subtitle": "Kontakta oss",
-		"s-5-description": "Har du en fråga eller behöver du hjälp? Vi är här för att hjälpa dig! Vänligen fyll i kontaktformuläret så återkommer vårt dedikerade supportteam till dig så snart som möjligt.",
-		"s-5-full-name": "Fullständiga namn",
-		"s-5-email": "Email",
-		"s-5-phone-number": "Telefonnummer",
-		"s-5-subject": "Ämne",
-		"s-5-message": "Meddelande",
-		"s-5-button": "Skicka meddelande",
-		"s-5-urgent-matters": "För brådskande ärenden, kontakta oss direkt på {tel}."
+		"form-title": "Komma i kontakt",
+		"form-description": "Har du en fråga eller behöver du hjälp? Vi är här för att hjälpa dig! Vänligen fyll i kontaktformuläret så återkommer vårt dedikerade supportteam till dig så snart som möjligt."
 	},
 	"Parkio-Solutions": {
 		"Parkio-Solutions": "Parkio lösning",
@@ -148,5 +150,19 @@
 		"card-4-description": "Behåll kontrollen genom att övervaka din aktiva parkeringssession. Ta emot aviseringar, förläng din vistelse om det behövs och njut av sinnesfrid under hela din parkeringsupplevelse",
 		"get-parkio-title-start": "Skaffa",
 		"get-parkio-title-end": "för iOS och Android"
+	},
+	"FAQ": {
+		"Getting-started": "Komma igång",
+		"Account-management": "Kontohantering",
+		"Parking-options": "Parkeringsmöjligheter",
+		"Technical-issues": "Tekniska problem",
+		"Security-and-privacy": "Säkerhet och integritet",
+		"Business-accounts": "Företagskonton",
+		"Reminders-and-notifications": "Påminnelser och aviseringar",
+		"Parking-session-management": "Hantering av parkeringssession",
+		"Contact-and-support": "Kontakt och support",
+		"s-1-card-1-question": "Hur laddar jag ner och installerar PARKIO-appen?",
+		"s-1-card-1-answer": "För att ladda ner Parkio, besök App Store (för iOS) eller Google Play Store (för Android). Sök efter \"Parkio\" och följ installationsanvisningarna.",
+		"form-title": "Har du inte hittat ditt svar?"
 	}
 }
