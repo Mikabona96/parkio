@@ -32,7 +32,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 		},
 		{
 			name: t('contact-us'),
-			href: '#',
+			href: `/${locale}/contact-us`,
 		},
 	];
 	return (

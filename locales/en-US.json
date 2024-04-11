@@ -181,5 +181,14 @@
 		"card-4-description": "Our commitment to transparency ensures fair and predictable pricing for all users. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"s-3-title": "Get Started Today",
 		"s-3-description": "Join the PARKIO community and experience a new era in parking convenience. Whether you’re a business owner seeking streamlined parking management or an individual looking for an efficient parking solution, PARKIO is here for you."
+	},
+	"Contact-us": {
+		"title": "Contact us",
+		"description": "Email, call, or complete the form to learn how PARKIO can solve your problem.",
+		"customer-support": "Customer Support:",
+		"email": "Email: {email}",
+		"phone": "Phone: {tel}",
+		"form-title": "Get in Touch",
+		"form-description": "Please fill out the contact form, and our dedicated support team will get back to you as soon as possible."
 	}
 }

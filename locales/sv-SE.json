@@ -181,5 +181,14 @@
 		"card-4-description": "Vårt engagemang för transparens säkerställer rättvisa och förutsägbara priser för alla användare. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"s-3-title": "Kom igång idag",
 		"s-3-description": "Gå med i PARKIO-communityt och upplev en ny era inom parkeringsbekvämlighet. Oavsett om du är en företagare som söker strömlinjeformad parkeringshantering eller en individ som letar efter en effektiv parkeringslösning, är PARKIO här för dig."
+	},
+	"Contact-us": {
+		"title": "Kontakta oss",
+		"description": "Maila, ring eller fyll i formuläret för att lära dig hur PARKIO kan lösa ditt problem.",
+		"customer-support": "Kundsupport:",
+		"email": "Email: {email}",
+		"phone": "Telefon: {tel}",
+		"form-title": "Komma i kontakt",
+		"form-description": "Fyll i kontaktformuläret så återkommer vårt dedikerade supportteam till dig så snart som möjligt."
 	}
 }

@@ -1,0 +1,11 @@
+<svg id="mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Bounding_box" data-name="Bounding box" width="24" height="24" fill="#d9d9d9"/>
+    </clipPath>
+  </defs>
+  <g id="Bounding_box-2" data-name="Bounding box" clip-path="url(#clip-path)">
+    <path id="mail-2" data-name="mail" d="M1.808,15a1.745,1.745,0,0,1-1.283-.525A1.745,1.745,0,0,1,0,13.192V1.808A1.745,1.745,0,0,1,.525.525,1.745,1.745,0,0,1,1.808,0H17.192a1.745,1.745,0,0,1,1.283.525A1.745,1.745,0,0,1,19,1.808V13.192A1.793,1.793,0,0,1,17.192,15ZM17.5,2.942,9.987,7.752a1.181,1.181,0,0,1-.238.1.839.839,0,0,1-.5,0,1.18,1.18,0,0,1-.238-.1L1.5,2.942v10.25a.3.3,0,0,0,.308.308H17.192a.3.3,0,0,0,.308-.308ZM9.5,6.5l7.846-5H1.654Zm-8-3.327v0Z" transform="translate(2.5 4.5)" fill="#d0d5dd"/>
+    <path id="mail-3" data-name="mail" d="M1.5,13.5V3.173M1.5,1.5v.56" transform="translate(2.5 4.5)" fill="#d0d5dd"/>
+  </g>
+</svg>
