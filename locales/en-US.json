@@ -212,5 +212,10 @@
 		"checkbox": "I agree to the Terms & Conditions and Privacy Policy",
 		"register": "Register",
 		"question": "Already have an account?"
+	},
+	"Forgot-password": {
+		"title": "Forgot Password?",
+		"subtitle": "No worries, we’ll send you reset instructions.",
+		"button": "Send Instructions"
 	}
 }

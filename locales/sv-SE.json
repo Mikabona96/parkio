@@ -212,5 +212,10 @@
 		"checkbox": "Jag godkänner villkoren och sekretesspolicyn",
 		"register": "Registrera",
 		"question": "Har du redan ett konto?"
+	},
+	"Forgot-password": {
+		"title": "Glömt ditt lösenord?",
+		"subtitle": "Inga bekymmer, vi skickar återställningsinstruktioner till dig.",
+		"button": "Skicka instruktioner"
 	}
 }
