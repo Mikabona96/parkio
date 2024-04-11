@@ -54,7 +54,7 @@ export const Select = () => {
 						onClick={() => {
 							changeLocale('en-US');
 						}}
-						className="flex items-center gap-3"
+						className="flex cursor-pointer items-center gap-3"
 					>
 						<p
 							onKeyDown={(event) => {
@@ -66,7 +66,7 @@ export const Select = () => {
 							className="checkbox"
 						>
 							<input
-								className="h-full w-full opacity-0"
+								className="h-full w-full cursor-pointer opacity-0"
 								type="checkbox"
 								checked={localeActive === 'en-US'}
 								onChange={() => changeLocale('en-US')}
@@ -80,7 +80,7 @@ export const Select = () => {
 						onClick={() => {
 							changeLocale('sv-SE');
 						}}
-						className="flex items-center gap-3"
+						className="flex cursor-pointer items-center gap-3"
 					>
 						<p
 							onKeyDown={(event) => {
@@ -92,7 +92,7 @@ export const Select = () => {
 							className="checkbox"
 						>
 							<input
-								className="h-full w-full opacity-0"
+								className="h-full w-full cursor-pointer opacity-0"
 								checked={localeActive === 'sv-SE'}
 								type="checkbox"
 								name="agree"

@@ -190,5 +190,27 @@
 		"phone": "Phone: {tel}",
 		"form-title": "Get in Touch",
 		"form-description": "Please fill out the contact form, and our dedicated support team will get back to you as soon as possible."
+	},
+	"Sign-in": {
+		"title": "Welcome to PARKIO!",
+		"subtitle": "Log In To Your Account",
+		"password": "Password",
+		"log-in": "Log in",
+		"question": "Don’t have an account?"
+	},
+	"Sign-up": {
+		"title": "Welcome to PARKIO!",
+		"subtitle": "Create Your Account",
+		"first-name": "First name",
+		"last-name": "Last name",
+		"phone": "Phone number",
+		"street-address": "Street Address",
+		"post-code": "Post code",
+		"city": "City",
+		"password": "Password",
+		"confirm-password": "Confirm password",
+		"checkbox": "I agree to the Terms & Conditions and Privacy Policy",
+		"register": "Register",
+		"question": "Already have an account?"
 	}
 }

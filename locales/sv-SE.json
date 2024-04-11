@@ -190,5 +190,27 @@
 		"phone": "Telefon: {tel}",
 		"form-title": "Komma i kontakt",
 		"form-description": "Fyll i kontaktformuläret så återkommer vårt dedikerade supportteam till dig så snart som möjligt."
+	},
+	"Sign-in": {
+		"title": "Välkommen till PARKIO!",
+		"subtitle": "Logga in på ditt konto",
+		"password": "Lösenord",
+		"log-in": "Logga in",
+		"question": "Har du inget konto?"
+	},
+	"Sign-up": {
+		"title": "Välkommen till PARKIO!",
+		"subtitle": "Skapa ditt konto",
+		"first-name": "Förnamn",
+		"last-name": "Efternamn",
+		"phone": "Telefonnummer",
+		"street-address": "Gatuadress",
+		"post-code": "Postnummer",
+		"city": "Stad",
+		"password": "Lösenord",
+		"confirm-password": "Bekräfta lösenord",
+		"checkbox": "Jag godkänner villkoren och sekretesspolicyn",
+		"register": "Registrera",
+		"question": "Har du redan ett konto?"
 	}
 }
