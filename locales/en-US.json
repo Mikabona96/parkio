@@ -224,5 +224,21 @@
 		"password": "Password",
 		"confirm-password": "Confirm password",
 		"button": "Reset Password"
+	},
+	"PFMAPO": {
+		"title": "Efficient Parking Solutions for Municipalities and Property Owners",
+		"subtitle": "Welcome to PARKIO's specialized parking solutions designed to cater to the unique needs of municipalities and property owners. Explore our comprehensive suite of features that streamline parking management, enhance community satisfaction, and optimize space utilization",
+		"s-2-title": "Unlock Key Benefits",
+		"s-2-card-1-title": "Ongoing Parkings",
+		"s-2-card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-2-title": "Manage Parking Areas",
+		"s-2-card-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-3-title": "User Management",
+		"s-2-card-3-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-4-title": "Analytics and Insights",
+		"s-2-card-4-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-3-title": "Get Started with Parkio: Streamline Your Parking Management",
+		"s-3-description": "Ready to explore Parkio’s smart parking solutions for municipalities and property owners? If you’re interested or have specific questions, our dedicated team is here to assist you. Click the «Contact Us» button below, and we’ll get back to you promptly. Empower your community with seamless, efficient, and stress-free parking management. Choose Parkio for a smarter parking experience.",
+		"button": "Contact Us"
 	}
 }

@@ -224,5 +224,21 @@
 		"password": "Lösenord",
 		"confirm-password": "Bekräfta lösenord",
 		"button": "Återställ lösenord"
+	},
+	"PFMAPO": {
+		"title": "Effektiva parkeringslösningar för kommuner och fastighetsägare",
+		"subtitle": "Välkommen till PARKIOs specialiserade parkeringslösningar utformade för att tillgodose kommuners och fastighetsägares unika behov. Utforska vår omfattande svit med funktioner som effektiviserar parkeringshanteringen, ökar gemenskapsnöjdheten och optimerar utrymmesutnyttjandet",
+		"s-2-title": "Lås upp nyckelfördelar",
+		"s-2-card-1-title": "Pågående parkeringar",
+		"s-2-card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-2-title": "Hantera parkeringsplatser",
+		"s-2-card-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-3-title": "Användarhantering",
+		"s-2-card-3-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-2-card-4-title": "Analytics och insikter",
+		"s-2-card-4-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+		"s-3-title": "Kom igång med Parkio: Effektivisera din parkeringshantering",
+		"s-3-description": "Redo att utforska Parkios smarta parkeringslösningar för kommuner och fastighetsägare? Om du är intresserad eller har specifika frågor finns vårt engagerade team här för att hjälpa dig. Klicka på knappen \"Kontakta oss\" nedan så återkommer vi till dig omgående. Styr ditt samhälle med sömlös, effektiv och stressfri parkeringshantering. Välj Parkio för en smartare parkeringsupplevelse.",
+		"button": "Kontakta oss"
 	}
 }

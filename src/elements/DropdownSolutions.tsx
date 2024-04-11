@@ -51,7 +51,7 @@ export const DropdownSolutions = () => {
 		},
 		{
 			title: t('Parking-for-municipalities-and-property-owners'),
-			href: '#',
+			href: `/${locale}/parking-for-municipalities-and-property-owners`,
 		},
 	];
 	return (
@@ -86,7 +86,7 @@ export const DropdownSolutions = () => {
 							})}
 							key={item.title}
 						>
-							{item.title}
+							<Link href={item.href}>{item.title}</Link>
 						</li>
 					);
 				})}

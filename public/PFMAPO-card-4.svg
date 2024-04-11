@@ -1,0 +1,5 @@
+<svg id="icons_features" data-name="icons features" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <rect id="icons_features_Frame_Background_" data-name="icons features [Frame Background]" width="30" height="30" fill="none"/>
+  <path id="Icon" d="M5,15,9.9,9.772a1.447,1.447,0,0,1,.39-.348.625.625,0,0,1,.316-.054,1.447,1.447,0,0,1,.484.2l4.072,2.114a1.447,1.447,0,0,0,.484.2.625.625,0,0,0,.316-.054,1.447,1.447,0,0,0,.39-.348l4.9-5.228" transform="translate(3.75 3.75)" fill="none" stroke="#ffd177" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path id="Icon-2" data-name="Icon" d="M22.5,22.5H2a3.105,3.105,0,0,1-1.317-.136,1.25,1.25,0,0,1-.546-.546A3.105,3.105,0,0,1,0,20.5V0" transform="translate(3.75 3.75)" fill="none" stroke="#ffd177" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</svg>
