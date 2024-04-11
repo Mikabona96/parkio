@@ -217,5 +217,12 @@
 		"title": "Glömt ditt lösenord?",
 		"subtitle": "Inga bekymmer, vi skickar återställningsinstruktioner till dig.",
 		"button": "Skicka instruktioner"
+	},
+	"Reset-password": {
+		"title": "Skapa nytt lösenord",
+		"subtitle": "Ange ett nytt lösenord för ditt konto",
+		"password": "Lösenord",
+		"confirm-password": "Bekräfta lösenord",
+		"button": "Återställ lösenord"
 	}
 }

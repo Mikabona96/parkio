@@ -217,5 +217,12 @@
 		"title": "Forgot Password?",
 		"subtitle": "No worries, we’ll send you reset instructions.",
 		"button": "Send Instructions"
+	},
+	"Reset-password": {
+		"title": "Create New Password",
+		"subtitle": "Enter a new password for your account",
+		"password": "Password",
+		"confirm-password": "Confirm password",
+		"button": "Reset Password"
 	}
 }
