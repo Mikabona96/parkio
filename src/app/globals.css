@@ -126,4 +126,7 @@ body {
 	.gradient-chevron {
 		@apply relative h-[30px] w-4 before:absolute before:left-[5px] before:top-[2px] before:h-[16px] before:w-1 before:rotate-[135deg] before:rounded before:bg-gradient-to-t before:from-gradient-3 before:to-gradient-1 before:content-[''] after:absolute after:bottom-[2px] after:left-[5px] after:h-[16px] after:w-1 after:-rotate-[135deg] after:rounded after:bg-gradient-to-b after:from-gradient-3 after:to-gradient-1 after:content-[''];
 	}
+	.checkbox {
+		@apply relative flex h-[18px] w-[18px] items-center justify-center rounded-sm border border-gray-300 has-[:checked]:border-0 has-[:checked]:bg-gradient-to-r has-[:checked]:from-gradient-1 has-[:checked]:from-10% has-[:checked]:via-gradient-2 has-[:checked]:via-[37.36%] has-[:checked]:to-gradient-3 has-[:checked]:to-[80%] has-[:checked]:before:absolute has-[:checked]:before:left-[0.25rem] has-[:checked]:before:top-1/2 has-[:checked]:before:block has-[:checked]:before:h-[6px] has-[:checked]:before:w-[2px] has-[:checked]:before:-translate-y-[1px] has-[:checked]:before:translate-x-[1px] has-[:checked]:before:rotate-[-45deg] has-[:checked]:before:rounded-md has-[:checked]:before:bg-[#fff] has-[:checked]:before:content-[''] has-[:checked]:after:absolute has-[:checked]:after:right-[5px] has-[:checked]:after:top-[3px] has-[:checked]:after:block has-[:checked]:after:h-[0.75rem] has-[:checked]:after:w-[2px]  has-[:checked]:after:rotate-[40deg] has-[:checked]:after:rounded-md has-[:checked]:after:bg-[#fff] has-[:checked]:after:content-[''];
+	}
 }
