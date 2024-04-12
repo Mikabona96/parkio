@@ -242,6 +242,7 @@
 		"button": "Kontakta oss"
 	},
 	"Account": {
+		"title": "inställningar",
 		"menu-items-1": "Profilinställningar",
 		"menu-items-2": "Parkeringar/Kvitton",
 		"menu-items-3": "Prenumerationer",

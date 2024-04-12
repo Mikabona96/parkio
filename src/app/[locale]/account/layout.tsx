@@ -35,7 +35,7 @@ function AccountLayout({ children }: Readonly<IRootLayoutProps>) {
 	];
 	return (
 		<main className="mt-[4.8rem] flex flex-col px-[120px] pt-20">
-			<h1 className="text-[32px] font-bold text-gray-900">Settings</h1>
+			<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
 			<div className="mt-6 flex gap-[108px]">
 				<div className="flex w-[290px] flex-col gap-2">
 					<ul className="w-full max-w-[282px] list-none">

@@ -242,6 +242,7 @@
 		"button": "Contact Us"
 	},
 	"Account": {
+		"title": "Settings",
 		"menu-items-1": "Profile settings",
 		"menu-items-2": "Parkings/ Receipts",
 		"menu-items-3": "Subscriptions",
