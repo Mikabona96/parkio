@@ -240,5 +240,41 @@
 		"s-3-title": "Kom igång med Parkio: Effektivisera din parkeringshantering",
 		"s-3-description": "Redo att utforska Parkios smarta parkeringslösningar för kommuner och fastighetsägare? Om du är intresserad eller har specifika frågor finns vårt engagerade team här för att hjälpa dig. Klicka på knappen \"Kontakta oss\" nedan så återkommer vi till dig omgående. Styr ditt samhälle med sömlös, effektiv och stressfri parkeringshantering. Välj Parkio för en smartare parkeringsupplevelse.",
 		"button": "Kontakta oss"
+	},
+	"Account": {
+		"menu-items-1": "Profilinställningar",
+		"menu-items-2": "Parkeringar/Kvitton",
+		"menu-items-3": "Prenumerationer",
+		"menu-items-4": "Fakturor",
+		"My-vehicles": "Mina fordon",
+		"input": "Nytt registreringsnummer",
+		"button": "Lägg till fordon"
+	},
+	"Account-profile": {
+		"form-1-title": "Profil",
+		"first-name": "Förnamn",
+		"last-name": "Efternamn",
+		"phone": "Telefonnummer",
+		"street-address": "Gatuadress",
+		"post-code": "Postnummer",
+		"city": "Stad",
+		"password": "Lösenord",
+		"confirm-password": "Bekräfta lösenord",
+		"form-1-button": "Spara ändringar",
+		"form-2-button": "Spara lösenord",
+		"s-2-title": "Betalningsmetod",
+		"s-2-subtitle": "Nuvarande betalningsmetod: Kreditkort",
+		"card-1-title": "Kreditkort",
+		"card-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+		"card-2-title": "Pappersfaktura",
+		"card-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+		"card-3-title": "E-posta faktura",
+		"card-3-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+		"card-4-title": "CSMS-faktura",
+		"card-4-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+		"s-2-button": "Spara ändringar",
+		"s-3-title": "Radera konto",
+		"s-3-description": "Om du vill ta bort ditt Parkio-konto, var medveten om följande: \nAtt ta bort ditt konto kommer att resultera i permanent borttagning av all associerad data, inklusive parkeringshistorik och inställningar. Denna åtgärd kan inte ångras. Innan du fortsätter, se till att alla aktiva parkeringssessioner är avslutade och att ditt kontosaldo är löst.",
+		"s-3-button": "Radera konto"
 	}
 }

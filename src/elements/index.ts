@@ -8,3 +8,4 @@ export * from './AppStoreButton';
 export * from './GooglePlayButton';
 export * from './InstagramIcon';
 export * from './FaceBookIcon';
+export * from './TrashIcon';
