@@ -12,4 +12,5 @@ export * from './TrashIcon';
 export * from './CaseIcon';
 export * from './ProfileIcon';
 export * from './ChevronIcon';
+export * from './ExitIcon';
 export * from './ParkingStatus';

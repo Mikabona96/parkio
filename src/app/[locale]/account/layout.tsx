@@ -27,7 +27,7 @@ function AccountLayout({
 		},
 		{
 			title: t('menu-items-2'),
-			href: `/${locale}/account/parkings-reciepts`,
+			href: `/${locale}/account/parkings-receipts`,
 		},
 		{
 			title: t('menu-items-3'),

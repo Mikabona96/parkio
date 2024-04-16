@@ -1,10 +1,18 @@
 'use client';
-import { Button, DropdownSolutions, Logo, Select } from '@/elements';
+import {
+	Button,
+	ChevronIcon,
+	DropdownSolutions,
+	ExitIcon,
+	Logo,
+	ProfileIcon,
+	Select,
+} from '@/elements';
 import { cn } from '@/tools/utils/cn';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface IRootLayoutProps {
 	locale: string;
@@ -12,7 +20,9 @@ interface IRootLayoutProps {
 
 export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const t = useTranslations('Header');
+	const [profileMenu, setProfileMenu] = useState(false);
 	const pathname = usePathname();
+	const isLoggedIn = true;
 	const links = [
 		{
 			name: t('solutions'),
@@ -35,6 +45,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 			href: `/${locale}/contact-us`,
 		},
 	];
+
 	return (
 		<header className="fixed top-0 z-[9999] flex w-full justify-center border-b-[1px] border-gray-200 bg-headerBackground px-[120px] py-[16px]">
 			<div className="flex w-full max-w-screen-xl justify-between">
@@ -77,7 +88,51 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 						<li className="w-[108px] cursor-pointer p-2">
 							<Select />
 						</li>
-						<Button>{t('login')}</Button>
+						{!isLoggedIn ? (
+							<Button>{t('login')}</Button>
+						) : (
+							<button
+								onClick={() => setProfileMenu(!profileMenu)}
+								className="relative flex cursor-pointer items-center gap-2"
+							>
+								<ProfileIcon active={false} />
+								<span>john_brown1@gmail.com</span>
+								<ChevronIcon />
+								{profileMenu && (
+									<ul className="absolute right-0 top-12 flex flex-col gap-2 rounded-lg border border-gray-500 bg-[#ffffff] p-4">
+										<Link
+											href={`/${locale}/account/profile`}
+											className="text-left transition-all hover:text-gradient-3"
+										>
+											<li className="p-[4px]">Profile settings</li>
+										</Link>
+										<Link
+											href={`/${locale}/account/parkings-receipts`}
+											className="text-left transition-all hover:text-gradient-3"
+										>
+											<li className="p-[4px]">Parkings/ Receipts</li>
+										</Link>
+										<Link
+											href={`/${locale}/account/parkings-subscriptions`}
+											className="text-left transition-all hover:text-gradient-3"
+										>
+											<li className="p-[4px]">Subscriptions</li>
+										</Link>
+										<Link
+											href={`/${locale}/account/invoices`}
+											className="text-left transition-all hover:text-gradient-3"
+										>
+											<li className="p-[4px]">Invoices</li>
+										</Link>
+										<li className="h-[1px] w-full bg-gray-300"></li>
+										<li className="flex items-center justify-center gap-2 p-[4px] transition-all hover:text-[#ff5558]">
+											<span>Logout</span>
+											<ExitIcon />
+										</li>
+									</ul>
+								)}
+							</button>
+						)}
 					</ul>
 				</nav>
 			</div>
