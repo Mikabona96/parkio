@@ -48,6 +48,7 @@ export default function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className={`${MabryPro.className} text-gray-700`}>
+				{/* //+ NextIntlClientProvider for use in client components */}
 				<NextIntlClientProvider>
 					<div className="relative w-full">
 						<Header locale={locale} />

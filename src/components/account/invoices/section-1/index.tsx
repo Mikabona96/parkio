@@ -1,6 +1,7 @@
 'use client';
 import { Button, ChevronIcon, ParkingStatus } from '@/elements';
 import { cn } from '@/tools/utils/cn';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import React, { useState } from 'react';
@@ -70,9 +71,10 @@ export const FirstSection = () => {
 	const searchParams = useSearchParams();
 	const rowsPerPage = searchParams.get('rows') || '8';
 	const currentPage = searchParams.get('page') || '1';
+	const t = useTranslations('Account-invoices');
 	return (
-		<section className="mb-[120px] flex flex-col gap-6">
-			<Button className="ml-auto">Generate Invoices </Button>
+		<section className="flex flex-col gap-6">
+			<Button className="ml-auto">{t('button')}</Button>
 			<div className="overflow-hidden rounded-lg border border-[#F5F5F5]">
 				{/* //+ =========== Table =========== */}
 				<table className="w-full">
@@ -80,19 +82,19 @@ export const FirstSection = () => {
 						<tr>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] py-[14px]"></th>
 							<th className="border border-t-0 border-[#F5F5F5] px-3 py-[14px] text-start text-[12px] font-normal text-gray-900">
-								Date
+								{t('table-header-1')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Amount
+								{t('table-header-2')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Payment method
+								{t('table-header-3')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Status
+								{t('table-header-4')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Refers to
+								{t('table-header-5')}
 							</th>
 						</tr>
 					</thead>
@@ -141,7 +143,7 @@ export const FirstSection = () => {
 			</div>
 			<div className="ml-auto mt-7 flex">
 				<div className="flex items-center gap-2">
-					<span>Rows per page:</span>
+					<span>{t('bottom-navigation')}</span>
 					{/* //+ ===========DROPDOWN=========== */}
 					<button
 						onClick={() => stIsDropDownOpen(!isDropdownOpen)}

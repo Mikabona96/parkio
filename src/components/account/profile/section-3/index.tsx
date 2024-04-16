@@ -5,7 +5,7 @@ export const ThirdSection = () => {
 	const t = useTranslations('Account-profile');
 
 	return (
-		<section className="mb-[120px] flex flex-col">
+		<section className="flex flex-col">
 			<div className="flex flex-col">
 				<h3 className="text-[20px] text-gray-900">{t('s-3-title')}</h3>
 				<p className="mt-4 whitespace-pre-line">{t('s-3-description')}</p>

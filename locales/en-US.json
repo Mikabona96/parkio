@@ -277,5 +277,39 @@
 		"s-3-title": "Delete account",
 		"s-3-description": "If you wish to delete your Parkio account, please be aware of the following: \nDeleting your account will result in the permanent removal of all associated data, including parking history and preferences. This action cannot be undone. Before proceeding, ensure that any active parking sessions are concluded, and your account balance is settled.",
 		"s-3-button": "Delete Account"
+	},
+	"Account-parkings-receipts": {
+		"tab-1": "Private",
+		"tab-2": "Business",
+		"button": "Generate Receipts",
+		"table-header-1": "Car",
+		"table-header-2": "Valid from",
+		"table-header-3": "Valid to",
+		"table-header-4": "Length",
+		"table-header-5": "Parking",
+		"table-header-6": "Quantity kWh",
+		"table-header-7": "Amount",
+		"table-header-8": "Status",
+		"table-header-9": "Refers to",
+		"bottom-navigation": "Rows per page:"
+	},
+	"Account-subscriptions": {
+		"table-header-1": "From",
+		"table-header-2": "End date",
+		"table-header-3": "Company name / Org number",
+		"table-header-4": "Type",
+		"table-header-5": "Area code",
+		"table-header-6": "Time limits",
+		"table-header-7": "Monthly rate",
+		"botom-text": "Note: Your subscription details are available for viewing in this section. For any modifications, including upgrades or cancellations, please access the 'Subscriptions' tab within the Parkio app."
+	},
+	"Account-invoices": {
+		"button": "Generate Invoices",
+		"table-header-1": "Date",
+		"table-header-2": "Amount",
+		"table-header-3": "Payment method",
+		"table-header-4": "Status",
+		"table-header-5": "Refers to",
+		"bottom-navigation": "Rows per page:"
 	}
 }

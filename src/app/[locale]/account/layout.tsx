@@ -39,7 +39,7 @@ function AccountLayout({
 		},
 	];
 	return (
-		<main className="mt-[4.8rem] flex flex-col px-[120px] pt-20">
+		<main className="mb-[120px] mt-[4.8rem] flex flex-col px-[120px] pt-20">
 			<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
 			<div className="mt-6 flex gap-[108px]">
 				<div className="flex w-[290px] flex-col gap-2">

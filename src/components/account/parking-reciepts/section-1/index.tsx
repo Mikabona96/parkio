@@ -7,6 +7,7 @@ import {
 	ChevronIcon,
 } from '@/elements';
 import { cn } from '@/tools/utils/cn';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import React, { useState } from 'react';
@@ -108,9 +109,10 @@ export const FirstSection = () => {
 	const show = searchParams.get('show') || 'private';
 	const rowsPerPage = searchParams.get('rows') || '8';
 	const currentPage = searchParams.get('page') || '1';
+	const t = useTranslations('Account-parkings-receipts');
 
 	return (
-		<section className="mb-[120px] flex flex-col gap-6">
+		<section className="flex flex-col gap-6">
 			<div className="flex items-center justify-between">
 				{/* //+ ======= Tabs ======= */}
 				<div className="flex h-9 rounded-[4px] bg-[#EAECF0] p-[1px]">
@@ -124,7 +126,7 @@ export const FirstSection = () => {
 						)}
 					>
 						<ProfileIcon active={show === 'private'} />
-						<span>Private</span>
+						<span>{t('tab-1')}</span>
 					</Link>
 					<Link
 						href={`?show=business&page=${currentPage}&rows=${rowsPerPage}`}
@@ -136,11 +138,11 @@ export const FirstSection = () => {
 						)}
 					>
 						<CaseIcon active={show === 'business'} />
-						<span>Business</span>
+						<span>{t('tab-2')}</span>
 					</Link>
 				</div>
 				{/* //$ ======= Tabs ======= */}
-				<Button>Generate Receipts</Button>
+				<Button>{t('button')}</Button>
 			</div>
 			<div className="overflow-hidden rounded-lg border border-[#F5F5F5]">
 				{/* //+ =========== Table =========== */}
@@ -149,31 +151,31 @@ export const FirstSection = () => {
 						<tr>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] py-[14px]"></th>
 							<th className="border border-t-0 border-[#F5F5F5] px-3 py-[14px] text-start text-[12px] font-normal text-gray-900">
-								Car
+								{t('table-header-1')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Valid from
+								{t('table-header-2')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Valid to
+								{t('table-header-3')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Length
+								{t('table-header-4')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Parking
+								{t('table-header-5')}
 							</th>
 							<th className="text-nowrap border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Quantity kWh
+								{t('table-header-6')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Amount
+								{t('table-header-7')}
 							</th>
 							<th className="border border-l-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Status
+								{t('table-header-8')}
 							</th>
 							<th className="border border-l-0 border-r-0 border-t-0 border-[#F5F5F5] px-3 py-[14px] text-left text-[12px] font-normal text-gray-900">
-								Refers to
+								{t('table-header-9')}
 							</th>
 						</tr>
 					</thead>
@@ -234,7 +236,7 @@ export const FirstSection = () => {
 			</div>
 			<div className="ml-auto mt-7 flex">
 				<div className="flex items-center gap-2">
-					<span>Rows per page:</span>
+					<span>{t('bottom-navigation')}</span>
 					{/* //+ ===========DROPDOWN=========== */}
 					<button
 						onClick={() => stIsDropDownOpen(!isDropdownOpen)}

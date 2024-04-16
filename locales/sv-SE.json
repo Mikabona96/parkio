@@ -277,5 +277,39 @@
 		"s-3-title": "Radera konto",
 		"s-3-description": "Om du vill ta bort ditt Parkio-konto, var medveten om följande: \nAtt ta bort ditt konto kommer att resultera i permanent borttagning av all associerad data, inklusive parkeringshistorik och inställningar. Denna åtgärd kan inte ångras. Innan du fortsätter, se till att alla aktiva parkeringssessioner är avslutade och att ditt kontosaldo är löst.",
 		"s-3-button": "Radera konto"
+	},
+	"Account-parkings-receipts": {
+		"tab-1": "Privat",
+		"tab-2": "Företag",
+		"button": "Skapa kvitton",
+		"table-header-1": "Bil",
+		"table-header-2": "Giltig från",
+		"table-header-3": "Giltig till",
+		"table-header-4": "Längd",
+		"table-header-5": "Parkering",
+		"table-header-6": "Kvantitet kWh",
+		"table-header-7": "Belopp",
+		"table-header-8": "Status",
+		"table-header-9": "Refererar till",
+		"bottom-navigation": "Rader per sida:"
+	},
+	"Account-subscriptions": {
+		"table-header-1": "Från",
+		"table-header-2": "Slutdatum",
+		"table-header-3": "Företagsnamn / Organisationsnummer",
+		"table-header-4": "Typ",
+		"table-header-5": "Riktnummer",
+		"table-header-6": "Tidsbegränsningar",
+		"table-header-7": "Månadspris",
+		"botom-text": "Obs! Din prenumerationsinformation är tillgänglig för visning i det här avsnittet. För eventuella ändringar, inklusive uppgraderingar eller avbokningar, gå till fliken 'Prenumerationer' i Parkio-appen."
+	},
+	"Account-invoices": {
+		"button": "Skapa fakturor",
+		"table-header-1": "Datum",
+		"table-header-2": "Belopp",
+		"table-header-3": "Betalningsmetod",
+		"table-header-4": "Status",
+		"table-header-5": "Refererar till",
+		"bottom-navigation": "Rader per sida:"
 	}
 }
