@@ -9,7 +9,7 @@ export const ParkingStatus = ({
 	return (
 		<span
 			className={cn(
-				'relative flex w-full max-w-[102px] rounded-2xl border py-[3px] pl-[22px] pr-2 text-xs before:absolute before:left-[9px] before:top-[50%] before:h-[6px] before:w-[6px] before:translate-y-[-50%] before:rounded-[50%] before:content-[""]',
+				'relative flex w-fit max-w-[102px] rounded-2xl border py-[3px] pl-[22px] pr-2 text-xs before:absolute before:left-[9px] before:top-[50%] before:h-[6px] before:w-[6px] before:translate-y-[-50%] before:rounded-[50%] before:content-[""]',
 				{
 					'border-[#ABEFC6] bg-[#ECFDF3] text-[#067647] before:bg-[#17B26A]':
 						status === 'active',

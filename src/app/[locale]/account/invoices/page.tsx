@@ -1,7 +1,12 @@
+import { FirstSection } from '@/components/account/invoices';
 import React from 'react';
 
 const Invoices = () => {
-	return <div>Invoices</div>;
+	return (
+		<>
+			<FirstSection />
+		</>
+	);
 };
 
 export default Invoices;
