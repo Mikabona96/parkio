@@ -3,17 +3,22 @@ import { TrashIcon } from '@/elements';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 
 interface IRootLayoutProps {
 	children: React.ReactNode;
+	params: {
+		locale: string;
+	};
 }
 
-function AccountLayout({ children }: Readonly<IRootLayoutProps>) {
+function AccountLayout({
+	children,
+	params: { locale },
+}: Readonly<IRootLayoutProps>) {
 	const t = useTranslations('Account');
 	const path = usePathname();
-	const { locale } = useParams();
 
 	const menuItems = [
 		{

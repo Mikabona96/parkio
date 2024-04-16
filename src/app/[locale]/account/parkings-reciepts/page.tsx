@@ -1,7 +1,12 @@
+import { FirstSection } from '@/components/account/parking-reciepts';
 import React from 'react';
 
 const ParkingsReciepts = () => {
-	return <div>ParkingReciepts</div>;
+	return (
+		<>
+			<FirstSection />
+		</>
+	);
 };
 
 export default ParkingsReciepts;
