@@ -19,7 +19,7 @@ export const Select = () => {
 	};
 
 	return (
-		<div className="relative select-none">
+		<div className="relative z-[999999] select-none">
 			<div
 				tabIndex={0}
 				onKeyDown={(event) => {

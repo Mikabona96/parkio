@@ -22,7 +22,7 @@ export const WhyParkioCard: FC<ICardProps> = ({ card, idx }) => {
 	return (
 		<div
 			className={clsx(
-				'hover:bg-background flex h-[274px] max-w-[527px] flex-col rounded-lg bg-[#fff] px-8 py-6 transition-all duration-500',
+				'flex h-[274px] max-w-[527px] flex-col rounded-lg bg-[#fff] px-8 py-6 transition-all duration-500 hover:bg-background',
 				{
 					'h-[384px]': isOpen,
 				},
@@ -36,7 +36,9 @@ export const WhyParkioCard: FC<ICardProps> = ({ card, idx }) => {
 				alt={`s-2-icon-${idx + 1}.svg`}
 			/>
 			<div className="mt-6 flex flex-col gap-4">
-				<h4 className="text-[32px] font-bold text-gray-900">{card.title}</h4>
+				<h4 className="font-bold text-gray-900 sm:text-2xl xl:text-[32px]">
+					{card.title}
+				</h4>
 				<p
 					className={clsx(
 						'scroll text-base font-normal text-gray-700 transition-all duration-500',

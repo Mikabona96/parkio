@@ -47,19 +47,19 @@ export const SecondSection = () => {
 		},
 	];
 	return (
-		<div className="flex flex-col items-center gap-12 rounded-2xl bg-[#F2F4F7] px-[120px] py-12">
+		<section className="flex flex-col items-center gap-12 rounded-2xl bg-[#F2F4F7] py-12 sm:px-6 lg:px-[120px]">
 			<div className="flex flex-col gap-2 text-center">
 				<h3 className="text-xl font-normal text-gray-700">{t('s-2-title')}</h3>
 				<h4 className="text-[32px] font-bold text-gray-900">
 					{t('s-2-subtitle')}
 				</h4>
 			</div>
-			<div className="grid grid-cols-2 gap-8">
+			<div className="gap-8 sm:flex sm:flex-col lg:grid lg:grid-cols-2">
 				{cards.map((card, idx) => (
 					<WhyParkioCard card={card} idx={idx} key={idx} />
 				))}
 			</div>
 			<Button>{t('s-2-button')}</Button>
-		</div>
+		</section>
 	);
 };

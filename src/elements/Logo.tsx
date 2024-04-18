@@ -4,18 +4,21 @@ interface IProps {
 	color?: string;
 	width?: number;
 	height?: number;
+	className?: string;
 }
 
 export const Logo: FC<IProps> = ({
 	color = '#344054',
 	height = 36,
 	width = 92,
+	className = '',
 }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width={width}
 			height={height}
+			className={className}
 			fill="none"
 		>
 			<path

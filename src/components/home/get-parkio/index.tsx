@@ -7,8 +7,8 @@ import React from 'react';
 export const GetParkio = () => {
 	const t = useTranslations('Home');
 	return (
-		<div className="relative h-[492px] w-full overflow-hidden bg-background">
-			<div className="ml-[264px] mt-[194px] flex flex-col gap-6">
+		<div className="relative w-full overflow-hidden bg-background sm:h-[642px] sm:px-6 lg:h-[492px] lg:px-0">
+			<div className="z-20 flex flex-col gap-6 sm:mt-6 sm:items-center sm:text-center lg:ml-[90px] lg:mt-[194px] lg:items-start lg:text-start xl:ml-[264px]">
 				<h3 className="text-[32px] font-bold text-gray-900">
 					{t('get-parkio-title-start')}
 					{' PARK'}
@@ -28,7 +28,9 @@ export const GetParkio = () => {
 				</div>
 			</div>
 			<Image
-				className={'absolute right-[269px] top-20 z-[2] h-[600px] w-[308px]'}
+				className={
+					'absolute z-[2] h-[600px] w-[308px] sm:left-[50%] sm:top-[16rem] sm:translate-x-[-50%] lg:left-[unset] lg:right-[9px] lg:top-20 lg:translate-x-0 xl:right-[269px]'
+				}
 				width={534}
 				height={602}
 				src={`/slide-1.png`}
@@ -36,7 +38,7 @@ export const GetParkio = () => {
 			/>
 			<Image
 				className={
-					'absolute -right-[152px] top-[-288px] z-[1] h-[564px] w-[612px]'
+					'absolute -right-[152px] top-[-288px] z-[1] h-[564px] w-[612px] sm:hidden lg:block'
 				}
 				width={612}
 				height={564}

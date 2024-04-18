@@ -42,9 +42,9 @@ export const FourthSection = () => {
 	};
 
 	return (
-		<section className="flex select-none flex-col items-center">
+		<section className="flex select-none flex-col items-center sm:px-6 lg:px-0">
 			<h3 className="text-xl font-normal text-gray-700">{t('s-4-title')}</h3>
-			<h4 className="text-[32px] font-bold text-gray-900">
+			<h4 className="text-[32px] font-bold text-gray-900 sm:text-center lg:text-start">
 				{t('s-4-subtitle')}
 			</h4>
 			<div className="my-12 flex w-full max-w-[790px] flex-col items-center gap-6">

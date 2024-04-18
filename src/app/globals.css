@@ -15,10 +15,6 @@ body {
 @tailwind utilities;
 
 @layer components {
-	.home-first-section-bg {
-		background-position: -196px 40px;
-		background-size: 744px;
-	}
 	.gradient {
 		background: linear-gradient(
 			268deg,

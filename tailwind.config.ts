@@ -1,6 +1,9 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,8 +11,30 @@ const config: Config = {
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		backgroundPosition: {
+			'xl-position': '-196px 40px',
+			'sm-position': '50% 40px',
+			bottom: 'bottom',
+			center: 'center',
+			left: 'left',
+			'left-bottom': 'left bottom',
+			'left-top': 'left top',
+			right: 'right',
+			'right-bottom': 'right bottom',
+			'right-top': 'right top',
+			top: 'top',
+		},
+		backgroundSize: {
+			'xl-size': '744px',
+			'lg-size': '644px',
+			'md-size': '530px',
+			'sm-size': '330px',
+			auto: 'auto',
+			cover: 'cover',
+			contain: 'contain',
+		},
 		screens: {
-			sm: '480px',
+			sm: '375px',
 			md: '768px',
 			lg: '976px',
 			xl: '1440px',

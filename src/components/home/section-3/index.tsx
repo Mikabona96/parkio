@@ -29,14 +29,28 @@ export const ThirdSection = () => {
 		},
 		intersectedCallback: () => {
 			//$ prevent touch/wheel scrolling
-			document.body.style.overflow = 'hidden';
+			if (isIntersected) {
+				document.body.style.overflow = 'hidden';
+			}
 
 			//+ scroll to top of the section
 			const section = document.querySelector('#section-3') as HTMLElement;
-			window.scrollTo({
-				top: section.offsetTop - 60,
-				behavior: 'smooth',
-			});
+			const windowWidth = window.innerWidth;
+
+			//$ scrolling to top of the section for different resolutions
+			if (windowWidth < 1440) {
+				window.scrollTo({
+					top: section.offsetTop,
+					behavior: 'smooth',
+				});
+			}
+
+			if (windowWidth >= 1440) {
+				window.scrollTo({
+					top: section.offsetTop - 60,
+					behavior: 'smooth',
+				});
+			}
 		},
 	});
 
@@ -92,21 +106,34 @@ export const ThirdSection = () => {
 	useTouchEvents([prevSlideHandler, nextSlideHandler]);
 
 	return (
-		<section id="section-3" className="flex flex-col items-center">
+		<section
+			id="section-3"
+			className="flex flex-col items-center sm:px-0 md:px-0"
+		>
 			<h3 className="text-xl font-normal text-gray-700">{t('s-3-title')}</h3>
-			<h4 className="text-[32px] font-bold text-gray-900">
+			<h4 className="font-bold text-gray-900 lg:text-[32px]">
 				{t('s-3-subtitle')}
 			</h4>
+			{slidesDescription.map((descr, idx) => (
+				<p
+					key={idx}
+					className={cn('mt-1 font-bold text-gray-500 sm:hidden lg:hidden', {
+						'sm:block': activeSlide === idx,
+					})}
+				>
+					{descr}
+				</p>
+			))}
 			<div
 				ref={ref}
-				className="mt-12 flex h-[560px] items-center gap-16 overflow-hidden"
+				className="flex w-full items-center overflow-hidden sm:mt-4 sm:h-fit sm:flex-col lg:mt-12 lg:h-[560px] lg:flex-row lg:justify-center lg:gap-8 xl:gap-16"
 			>
-				<div className="relative -z-[2] flex h-[560px] w-[534px] justify-center bg-[url('/gradient_circle_background.png')]">
+				<div className="sm:bg-sm-size relative -z-[2] flex justify-center bg-[url('/gradient_circle_background.png')] bg-center bg-no-repeat sm:h-[480px] sm:w-full lg:h-[560px] lg:w-[534px] lg:bg-auto">
 					{slides.map(({ alt, src }, idx) => (
 						<Image
 							key={idx}
 							className={cn(
-								'absolute left-[50%] -z-[1] hidden h-[600px] w-[308px] -translate-x-[50%]',
+								'absolute left-[50%] -z-[1] -translate-x-[50%] sm:h-[480px] sm:w-[250px] lg:h-[600px] lg:w-[308px]',
 								`${activeSlide === idx && 'z-[999] block animate-appearence'}`,
 								`${activeSlide - 1 === idx && navSlideDirection === 'down' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll down
 								`${activeSlide + 1 === idx && navSlideDirection === 'up' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll up
@@ -120,7 +147,7 @@ export const ThirdSection = () => {
 				</div>
 				<div
 					className={clsx(
-						'relative flex h-[348px] w-[388px] flex-col justify-between border-l-2 border-l-gray-200 text-left duration-500 ease-in-out before:absolute before:-left-[12px] before:top-0 before:block before:h-[40px] before:w-[20px] before:transition before:duration-[.7s] before:ease-in-out before:content-[url("/slider.png")]',
+						'relative flex h-[348px] w-[388px] flex-col justify-between border-l-2 border-l-gray-200 text-left duration-500 ease-in-out before:absolute before:-left-[12px] before:top-0 before:block before:h-[40px] before:w-[20px] before:transition before:duration-[.7s] before:ease-in-out before:content-[url("/slider.png")] sm:hidden lg:flex',
 						{
 							'before:translate-y-[87px]': activeSlide === 1,
 							'before:translate-y-[174px]': activeSlide === 2,

@@ -1,27 +1,22 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { cn } from '@/tools/utils/cn';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { AppStoreButton, GooglePlayButton } from '@/elements';
 
 export const FirstSection = () => {
 	const t = useTranslations('Home');
-	const locale = useLocale();
 
 	return (
-		<div className="home-first-section-bg h-[784px] bg-[url('/home-first_section-background.png')] bg-no-repeat">
+		<section className="md:bg-md-size sm:bg-sm-size sm:bg-sm-position h-[784px] bg-[url('/home-first_section-background.png')] bg-xl-size bg-xl-position bg-no-repeat md:bg-xl-position lg:bg-lg-size xl:bg-xl-size">
 			<div
-				className={cn(
-					'ml-auto mr-[16.5rem] mt-[15.5rem] h-full max-h-[316px] w-full max-w-[497px]',
-					'',
-					{
-						'max-w-[570px]': locale !== 'en-US',
-						'mr-[11.5rem]': locale !== 'en-US',
-					},
-				)}
+				className={
+					'h-full max-h-[316px] w-full max-w-fit sm:mx-auto sm:mt-[406px] sm:pl-6 sm:pr-6 md:ml-[390px] md:mt-[126px] md:pl-0 md:pr-6 lg:ml-[576px] lg:mt-[10.5rem] lg:pr-16 xl:ml-[690px] xl:mt-[15.5rem] xl:pr-0'
+				}
 			>
-				<div className="flex flex-col gap-8">
-					<h1 className="text-6xl font-bold text-gray-900">{t('title')}</h1>
+				<div className="flex flex-col gap-8 sm:items-center md:items-start">
+					<h1 className="font-bold text-gray-900 sm:text-[32px] lg:text-5xl xl:text-6xl">
+						{t('title')}
+					</h1>
 					<ul className="flex flex-col gap-4 text-[20px]">
 						<li className="bg-[url('/circle.svg')] bg-left bg-no-repeat pl-6">
 							{t('s-1-ul-li-1')}
@@ -44,6 +39,6 @@ export const FirstSection = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

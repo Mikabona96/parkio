@@ -19,9 +19,9 @@ export const Accordion: FC<IProps> = ({
 		<div
 			onClick={onClick}
 			className={cn(
-				'bg-gray-100 flex h-[72px] w-full cursor-pointer flex-col gap-6 overflow-hidden rounded-md px-4 py-6 transition-all duration-300',
+				'flex w-full cursor-pointer flex-col gap-6 overflow-hidden rounded-md bg-gray-100 px-4 py-6 transition-all duration-300 sm:h-[96px] md:h-[72px]',
 				{
-					'h-[140px]': isOpen,
+					'sm:h-fit md:h-fit': isOpen,
 				},
 			)}
 		>
