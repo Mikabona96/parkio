@@ -22,6 +22,7 @@ interface IRootLayoutProps {
 export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const t = useTranslations('Header');
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMobileSubMenuOpen, setIsMobileSubMenuOpen] = useState(false);
 	const [headerLoaded, setHeaderLoaded] = useState(false);
 	const pathname = usePathname();
 	const isLoggedIn = true;
@@ -115,22 +116,36 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 										onMouseEnter={() => setHeaderLoaded(true)}
 										className="group relative cursor-pointer p-2"
 									>
-										<Link
-											href={link.href}
-											className={cn(
-												'peer transition-all hover:text-gradient-3',
-												{
-													'text-gradient-3': pathname === link.href,
-												},
-											)}
-										>
-											Parkio solutions
-										</Link>
+										<div className="flex sm:gap-8 lg:gap-0">
+											<Link
+												href={link.href}
+												className={cn(
+													'peer transition-all hover:text-gradient-3',
+													{
+														'text-gradient-3': pathname === link.href,
+													},
+												)}
+											>
+												Parkio solutions
+											</Link>
+											<span
+												onClick={() =>
+													setIsMobileSubMenuOpen(!isMobileSubMenuOpen)
+												}
+											>
+												<ChevronIcon
+													className={cn('rotate-0 transition-all lg:hidden', {
+														'-rotate-180': isMobileSubMenuOpen,
+													})}
+												/>
+											</span>
+										</div>
 										<div
 											className={cn(
-												'absolute left-0 top-8 animate-vanish cursor-default hover:block group-hover:block group-hover:animate-appearence',
+												'left-0 top-8 cursor-default sm:block lg:absolute lg:animate-vanish lg:hover:block lg:group-hover:block lg:group-hover:animate-appearence',
 												{
-													hidden: !headerLoaded,
+													'lg:hidden': !headerLoaded,
+													'sm:hidden': !isMobileSubMenuOpen,
 												},
 											)}
 										>

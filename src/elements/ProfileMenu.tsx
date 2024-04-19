@@ -73,7 +73,7 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 						<li className="p-[4px]">Invoices</li>
 					</Link>
 					<li className="h-[1px] w-full bg-gray-300"></li>
-					<li className="group flex items-center justify-center gap-2 p-[4px] transition-all hover:text-[#ff5558]">
+					<li className="group flex items-center gap-2 p-[4px] transition-all hover:text-[#ff5558]">
 						<span>Logout</span>
 						<ExitIcon />
 					</li>

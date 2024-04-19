@@ -57,7 +57,7 @@ export const DropdownSolutions = () => {
 	return (
 		<div
 			className={clsx(
-				'mt-9 flex h-[458px] w-[608px] gap-8 rounded-lg border-[1px] border-gray-200 bg-[#fff] p-4 shadow-select',
+				'mt-9 flex gap-8 rounded-lg border-[1px] border-gray-200 bg-[#fff] p-4 shadow-select sm:flex-col lg:h-[458px] lg:w-[608px] lg:flex-row',
 				{
 					'h-[480px]': locale === 'sv-SE',
 				},

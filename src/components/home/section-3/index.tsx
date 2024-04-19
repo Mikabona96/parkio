@@ -29,9 +29,7 @@ export const ThirdSection = () => {
 		},
 		intersectedCallback: () => {
 			//$ prevent touch/wheel scrolling
-			if (isIntersected) {
-				document.body.style.overflow = 'hidden';
-			}
+			document.body.style.overflow = 'hidden';
 
 			//+ scroll to top of the section
 			const section = document.querySelector('#section-3') as HTMLElement;
