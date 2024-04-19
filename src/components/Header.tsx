@@ -6,6 +6,7 @@ import {
 	ExitIcon,
 	Logo,
 	ProfileIcon,
+	ProfileMenu,
 	Select,
 } from '@/elements';
 import { cn } from '@/tools/utils/cn';
@@ -20,7 +21,6 @@ interface IRootLayoutProps {
 
 export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const t = useTranslations('Header');
-	const [profileMenu, setProfileMenu] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [headerLoaded, setHeaderLoaded] = useState(false);
 	const pathname = usePathname();
@@ -160,53 +160,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 					{!isLoggedIn ? (
 						<Button>{t('login')}</Button>
 					) : (
-						<button
-							onClick={() => setProfileMenu(!profileMenu)}
-							className="relative flex cursor-pointer items-center gap-2"
-						>
-							<ProfileIcon active={false} />
-							<span className="sm:hidden md:inline lg:hidden min-[1130px]:inline">
-								john_brown1@gmail.com
-							</span>
-							<ChevronIcon
-								className={cn('rotate-0 transition-all', {
-									'-rotate-180': profileMenu,
-								})}
-							/>
-							{profileMenu && (
-								<ul className="absolute right-0 top-12 z-[999999] flex flex-col gap-2 rounded-lg border border-gray-500 bg-[#ffffff] p-4">
-									<Link
-										href={`/${locale}/account/profile`}
-										className="text-left transition-all hover:text-gradient-3"
-									>
-										<li className="p-[4px]">Profile settings</li>
-									</Link>
-									<Link
-										href={`/${locale}/account/parkings-receipts`}
-										className="text-left transition-all hover:text-gradient-3"
-									>
-										<li className="p-[4px]">Parkings/ Receipts</li>
-									</Link>
-									<Link
-										href={`/${locale}/account/parkings-subscriptions`}
-										className="text-left transition-all hover:text-gradient-3"
-									>
-										<li className="p-[4px]">Subscriptions</li>
-									</Link>
-									<Link
-										href={`/${locale}/account/invoices`}
-										className="text-left transition-all hover:text-gradient-3"
-									>
-										<li className="p-[4px]">Invoices</li>
-									</Link>
-									<li className="h-[1px] w-full bg-gray-300"></li>
-									<li className="flex items-center justify-center gap-2 p-[4px] transition-all hover:text-[#ff5558]">
-										<span>Logout</span>
-										<ExitIcon />
-									</li>
-								</ul>
-							)}
-						</button>
+						<ProfileMenu locale={locale} />
 					)}
 				</div>
 			</div>

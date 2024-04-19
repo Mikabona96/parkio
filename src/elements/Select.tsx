@@ -3,23 +3,42 @@
 import clsx from 'clsx';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import React, { useState, useTransition } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import React, { useEffect, useRef, useState, useTransition } from 'react';
 
 export const Select = () => {
 	const [open, setOpen] = useState(false);
 	const [isPending, startTransition] = useTransition();
 	const localeActive = useLocale();
+	const ref = useRef<HTMLDivElement>(null);
+	const pathname = usePathname();
 	const router = useRouter();
 
 	const changeLocale = (locale: string) => {
+		const result = pathname.replace(/^\/(en-US|sv-SE)/, `${locale}`);
 		startTransition(() => {
-			router.replace(`/${locale}`);
+			router.replace(`/${result}`);
 		});
 	};
 
+	const onClickOutsideHandler = (event: MouseEvent) => {
+		if (ref.current && !ref.current.contains(event.target as Node)) {
+			setOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		if (open) {
+			document.addEventListener('click', onClickOutsideHandler);
+		} else {
+			document.removeEventListener('click', onClickOutsideHandler);
+		}
+
+		return () => document.removeEventListener('click', onClickOutsideHandler);
+	}, [open]);
+
 	return (
-		<div className="relative z-[999999] select-none">
+		<div ref={ref} className="relative z-[999999] select-none">
 			<div
 				tabIndex={0}
 				onKeyDown={(event) => {
@@ -95,6 +114,7 @@ export const Select = () => {
 								className="h-full w-full cursor-pointer opacity-0"
 								checked={localeActive === 'sv-SE'}
 								type="checkbox"
+								onChange={() => changeLocale('sv-SE')}
 								name="agree"
 								id="form-agree-checkbox"
 							/>

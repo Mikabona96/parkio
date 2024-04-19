@@ -7,6 +7,7 @@ export const ExitIcon = () => {
 			<path
 				fill="none"
 				stroke="#667085"
+				className="transition-all group-hover:stroke-[#ff5558]"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 				strokeWidth={2}
