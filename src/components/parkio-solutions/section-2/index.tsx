@@ -38,11 +38,11 @@ export const SecondSection = () => {
 		},
 	];
 	return (
-		<section className="mb-[120px] flex h-[2300px] w-full flex-col gap-[120px] px-[270px]">
+		<section className="mb-[120px] flex w-full flex-col sm:gap-12 sm:px-12 lg:gap-[120px] xl:px-[270px]">
 			{cards.map((card, idx) => {
 				return (
 					<div
-						className={`flex gap-[120px] ${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} w-[900px]`}
+						className={`flex sm:flex-col sm:items-center sm:gap-12 lg:items-start xl:gap-[120px] ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} xl:w-[900px]`}
 						key={idx}
 					>
 						<div

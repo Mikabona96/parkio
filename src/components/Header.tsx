@@ -146,6 +146,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 												{
 													'lg:hidden': !headerLoaded,
 													'sm:hidden': !isMobileSubMenuOpen,
+													'lg:block': headerLoaded,
 												},
 											)}
 										>
