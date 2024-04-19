@@ -22,6 +22,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const t = useTranslations('Header');
 	const [profileMenu, setProfileMenu] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [headerLoaded, setHeaderLoaded] = useState(false);
 	const pathname = usePathname();
 	const isLoggedIn = true;
 	const links = [
@@ -99,7 +100,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 				</div>
 				<div
 					className={cn(
-						'z-[99999] flex max-w-screen-xl bg-[#ffffff] sm:absolute sm:left-[-500px] sm:top-14 sm:h-[100vh] sm:w-[300px] sm:flex-col sm:items-start sm:overflow-y-scroll sm:border-r-[1px] sm:border-gray-300 sm:px-6 sm:py-4 sm:transition-all sm:duration-500 lg:static lg:ml-auto lg:h-auto lg:w-fit lg:flex-row lg:items-center lg:justify-between lg:overflow-y-auto lg:border-none lg:px-0 lg:py-0 lg:transition-none xl:w-fit',
+						'z-[99999] flex max-w-screen-xl bg-[#ffffff] sm:absolute sm:left-[-500px] sm:top-14 sm:h-[100vh] sm:w-[300px] sm:flex-col sm:items-start sm:overflow-y-scroll sm:border-r-[1px] sm:border-gray-300 sm:px-6 sm:py-4 sm:transition-all sm:duration-500 lg:static lg:ml-auto lg:h-auto lg:w-fit lg:flex-row lg:items-center lg:justify-between lg:overflow-y-visible lg:border-none lg:px-0 lg:py-0 lg:transition-none xl:w-fit',
 						{
 							'sm:left-0': isMenuOpen,
 						},
@@ -111,6 +112,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 								idx === 0 ? (
 									<li
 										key={link.name}
+										onMouseEnter={() => setHeaderLoaded(true)}
 										className="group relative cursor-pointer p-2"
 									>
 										<Link
@@ -124,7 +126,14 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 										>
 											Parkio solutions
 										</Link>
-										<div className="absolute left-0 top-8 hidden cursor-default hover:block group-hover:block group-hover:animate-appearence peer-focus:block">
+										<div
+											className={cn(
+												'absolute left-0 top-8 animate-vanish cursor-default hover:block group-hover:block group-hover:animate-appearence',
+												{
+													hidden: !headerLoaded,
+												},
+											)}
+										>
 											<DropdownSolutions />
 										</div>
 									</li>

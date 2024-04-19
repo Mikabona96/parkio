@@ -67,8 +67,8 @@ const config: Config = {
 				select: '0px 8px 16px 0px rgba(27, 33, 44, 0.10)',
 			},
 			animation: {
-				appearence: 'appearence .5s ease-in-out',
-				vanish: 'vanish .5s ease-in-out',
+				appearence: 'appearence .5s ease-in-out forwards',
+				vanish: 'vanish .5s ease-in-out forwards',
 				circleExpand: 'circleExpand 1s ease-in-out forwards',
 				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
 				textShown: 'textShown 1s ease-in-out forwards',
@@ -92,6 +92,7 @@ const config: Config = {
 			keyframes: {
 				appearence: {
 					'0%': {
+						display: 'flex',
 						opacity: '0.1',
 					},
 					'20%': {
@@ -134,6 +135,7 @@ const config: Config = {
 					},
 					'100%': {
 						opacity: '0.1',
+						display: 'none',
 					},
 				},
 				circleExpand: {

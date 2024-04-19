@@ -128,12 +128,12 @@ export const ThirdSection = () => {
 				ref={ref}
 				className="flex w-full items-center overflow-hidden sm:mt-4 sm:h-fit sm:flex-col lg:mt-12 lg:h-[560px] lg:flex-row lg:justify-center lg:gap-8 xl:gap-16"
 			>
-				<div className="sm:bg-sm-size relative -z-[2] flex justify-center bg-[url('/gradient_circle_background.png')] bg-center bg-no-repeat sm:h-[480px] sm:w-full lg:h-[560px] lg:w-[534px] lg:bg-auto">
+				<div className="relative -z-[2] flex justify-center bg-[url('/gradient_circle_background.png')] bg-center bg-no-repeat sm:h-[480px] sm:w-full sm:bg-sm-size lg:h-[560px] lg:w-[534px] lg:bg-auto">
 					{slides.map(({ alt, src }, idx) => (
 						<Image
 							key={idx}
 							className={cn(
-								'absolute left-[50%] -z-[1] -translate-x-[50%] sm:h-[480px] sm:w-[250px] lg:h-[600px] lg:w-[308px]',
+								'absolute left-[50%] -z-[1] hidden -translate-x-[50%] sm:h-[480px] sm:w-[250px] lg:h-[600px] lg:w-[308px]',
 								`${activeSlide === idx && 'z-[999] block animate-appearence'}`,
 								`${activeSlide - 1 === idx && navSlideDirection === 'down' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll down
 								`${activeSlide + 1 === idx && navSlideDirection === 'up' && 'z-[33] block animate-vanish'}`, //+ prevSlide scroll up
