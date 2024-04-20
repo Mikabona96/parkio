@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function FAQ() {
 	return (
-		<main className="mt-[10rem] flex flex-col">
+		<main className=" flex flex-col sm:mt-[5rem] md:mt-[7rem] lg:mt-[10rem]">
 			<FirstSection />
 			<SecondSection />
 		</main>

@@ -5,7 +5,7 @@ import React from 'react';
 export const SecondSection = () => {
 	const t = useTranslations('FAQ');
 	return (
-		<section className="py-[120px]">
+		<section className="sm:px-6 sm:py-[60px] xl:py-[120px]">
 			<Form title={t('form-title')} showUrgentMatters />
 		</section>
 	);
