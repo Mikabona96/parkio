@@ -6,7 +6,7 @@ import React from 'react';
 export const ThirdSection = () => {
 	const t = useTranslations('About-us');
 	return (
-		<section className="relative bg-background px-[288px] py-[120px]">
+		<section className="relative bg-background sm:px-6 sm:py-[60px] lg:py-[120px] xl:px-[288px]">
 			<div className="flex flex-col items-center justify-center gap-12">
 				<div className="flex w-full max-w-[860px] flex-col items-center text-center">
 					<h3 className="text-[32px] font-bold text-gray-900">

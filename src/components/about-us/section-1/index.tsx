@@ -5,7 +5,7 @@ import React from 'react';
 export const FirstSection = () => {
 	const t = useTranslations('About-us');
 	return (
-		<section className="mt-20 flex w-full items-center justify-center">
+		<section className="flex w-full items-center justify-center sm:mt-0 sm:px-6 md:mt-10 lg:mt-20 lg:px-12 xl:px-0">
 			<div className="flex flex-col items-center gap-12">
 				<div className="flex w-full max-w-[740px] flex-col gap-4 text-center">
 					<h1 className="text-[32px] font-bold text-gray-900">
@@ -18,9 +18,8 @@ export const FirstSection = () => {
 					<p>{t('description')}</p>
 				</div>
 				<Image
-					className="!h-[510px] !w-[545px]"
+					className="sm:h-[270px] sm:w-[300px] md:h-[510px] md:w-[545px]"
 					width={545}
-					style={{ width: 'auto', height: 'auto' }}
 					height={510}
 					src={'/about-parkio.png'}
 					alt="about-parkio.png"
