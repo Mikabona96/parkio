@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactUs = () => {
 	return (
-		<main className="p-[120px]">
+		<main className="sm:px-6 sm:py-[120px] lg:px-12 xl:p-[120px]">
 			<FirstSection />
 		</main>
 	);

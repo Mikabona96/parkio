@@ -6,7 +6,7 @@ import { Form } from '../Form';
 export const FirstSection = () => {
 	const t = useTranslations('Contact-us');
 	return (
-		<section className="flex gap-12">
+		<section className="flex gap-12 sm:flex-col lg:flex-row">
 			<div className="flex flex-col">
 				<div className="flex flex-col gap-4">
 					<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
@@ -25,7 +25,7 @@ export const FirstSection = () => {
 					</p>
 				</div>
 			</div>
-			<div className="justidy-center flex w-[605px] items-center rounded-lg bg-gray-100 py-12">
+			<div className="justidy-center flex items-center rounded-lg bg-gray-100 py-12 sm:px-6 lg:w-[605px]">
 				<Form subtitle={t('form-title')} />
 			</div>
 		</section>
