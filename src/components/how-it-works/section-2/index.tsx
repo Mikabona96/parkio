@@ -27,14 +27,14 @@ export const SecondSection = () => {
 		},
 	];
 	return (
-		<section className="flex flex-col gap-[120px]">
+		<section className="flex flex-col sm:gap-[60px] sm:px-6 lg:gap-[120px] lg:px-12">
 			{cards.map((card, idx) => (
 				<div
 					key={idx}
-					className={`flex ${idx % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'} items-center gap-[120px]`}
+					className={`flex ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center sm:flex-col sm:gap-[60px] lg:gap-[120px]`}
 				>
 					<Image
-						className="h-[460px] w-[486px]"
+						className="sm:h-[340px] sm:w-[327px] lg:h-[460px] lg:w-[486px]"
 						width={486}
 						height={460}
 						alt={card.img}

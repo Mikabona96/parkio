@@ -5,8 +5,8 @@ import React from 'react';
 export const FirstSection = () => {
 	const t = useTranslations('How-it-works');
 	return (
-		<section className="mt-[6.8rem] px-[120px]">
-			<div className="relative flex h-[243px] flex-col items-center justify-center rounded-2xl bg-[#FEF0E2]">
+		<section className="mt-[6.8rem] sm:px-6 lg:px-[120px]">
+			<div className="relative flex h-[243px] flex-col items-center justify-center rounded-2xl bg-[#FEF0E2] sm:px-6">
 				<div className="text-center">
 					<h1 className="text-[32px] font-bold text-gray-900">
 						{t('Effortless-Parking')}
