@@ -27,9 +27,9 @@ export const SecondSection = () => {
 		},
 	];
 	return (
-		<section className="flex flex-col items-center justify-center gap-12 rounded-lg bg-gray-100 px-12 py-12">
+		<section className="flex flex-col items-center justify-center gap-12 rounded-lg bg-gray-100 py-12 sm:px-6 lg:px-12">
 			<h3 className="text-[32px] font-bold text-gray-900">{t('s-2-title')}</h3>
-			<div className="grid grid-cols-2 gap-8">
+			<div className="grid-cols-2 gap-8 sm:flex sm:flex-col lg:grid">
 				{cards.map((card, idx) => (
 					<WhyParkioCard card={card} idx={idx} key={idx} />
 				))}
