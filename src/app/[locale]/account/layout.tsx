@@ -41,8 +41,8 @@ function AccountLayout({
 	return (
 		<main className="mb-[120px] flex pt-20 sm:flex-col sm:px-6 lg:mt-[4.8rem] lg:px-[60px] xl:px-[120px]">
 			<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
-			<div className="mt-6 flex sm:flex-col md:flex-row md:gap-[88px] lg:gap-[108px]">
-				<div className="flex w-[290px] flex-col gap-2">
+			<div className="mt-6 flex sm:flex-col md:gap-[88px] lg:flex-row xl:gap-[108px]">
+				<div className="flex w-full min-w-[290px] max-w-[290px] flex-col gap-2">
 					<ul className="w-full max-w-[282px] list-none">
 						{menuItems.map((item, idx) => (
 							<Link key={idx} href={item.href}>
@@ -82,7 +82,9 @@ function AccountLayout({
 						</form>
 					</div>
 				</div>
-				<main className="w-full sm:mt-12 md:mt-4">{children}</main>
+				<main className="w-full sm:mt-12 md:mt-4 lg:min-w-[422px]">
+					{children}
+				</main>
 			</div>
 		</main>
 	);

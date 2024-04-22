@@ -113,7 +113,7 @@ export const FirstSection = () => {
 
 	return (
 		<section className="flex flex-col gap-6">
-			<div className="flex items-center justify-between sm:flex-col sm:gap-6 md:flex-row md:gap-0">
+			<div className="flex flex-wrap items-center justify-between sm:flex-col sm:gap-6 md:flex-row md:gap-0">
 				{/* //+ ======= Tabs ======= */}
 				<div className="flex h-9 rounded-[4px] bg-[#EAECF0] p-[1px]">
 					<Link
@@ -145,7 +145,7 @@ export const FirstSection = () => {
 				<Button>{t('button')}</Button>
 			</div>
 			{/* //+ =========== Table =========== */}
-			<div className="overflow-hidden rounded-lg border border-[#F5F5F5] sm:overflow-x-scroll md:w-[500px]">
+			<div className="w-full overflow-hidden rounded-lg border border-[#F5F5F5] sm:overflow-x-auto md:min-w-[342px]">
 				<table className="w-full">
 					<thead className="bg-[#F9FAFB]">
 						<tr>

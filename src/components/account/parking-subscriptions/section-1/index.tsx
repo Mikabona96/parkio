@@ -16,8 +16,8 @@ export const FirstSection = () => {
 	const t = useTranslations('Account-subscriptions');
 	return (
 		<section>
-			<div className="overflow-hidden rounded-lg border border-[#F5F5F5]">
-				{/* //+ =========== Table =========== */}
+			{/* //+ =========== Table =========== */}
+			<div className="overflow-hidden rounded-lg border border-[#F5F5F5] sm:overflow-x-auto md:overflow-x-auto">
 				<table className="w-full">
 					<thead className="bg-[#F9FAFB]">
 						<tr>
@@ -77,8 +77,8 @@ export const FirstSection = () => {
 						})}
 					</tbody>
 				</table>
-				{/* //$ =========== Table =========== */}
 			</div>
+			{/* //$ =========== Table =========== */}
 			<p className="mt-6 text-sm">{t('botom-text')}</p>
 		</section>
 	);
