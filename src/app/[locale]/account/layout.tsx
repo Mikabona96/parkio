@@ -39,9 +39,9 @@ function AccountLayout({
 		},
 	];
 	return (
-		<main className="mb-[120px] mt-[4.8rem] flex flex-col px-[120px] pt-20">
+		<main className="mb-[120px] flex pt-20 sm:flex-col sm:px-6 lg:mt-[4.8rem] lg:px-[60px] xl:px-[120px]">
 			<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
-			<div className="mt-6 flex gap-[108px]">
+			<div className="mt-6 flex gap-[108px] sm:flex-col md:flex-row">
 				<div className="flex w-[290px] flex-col gap-2">
 					<ul className="w-full max-w-[282px] list-none">
 						{menuItems.map((item, idx) => (

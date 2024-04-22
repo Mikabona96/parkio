@@ -5,7 +5,7 @@ import React from 'react';
 export const FirstSection = () => {
 	const t = useTranslations('Account-profile');
 	return (
-		<section className="flex w-full justify-between">
+		<section className="flex w-full justify-between sm:flex-col lg:flex-row lg:gap-12 xl:gap-0">
 			<div className="form-1 w-full max-w-[384px]">
 				<h3 className="text-[20px] text-gray-700">{t('form-1-title')}</h3>
 				<form action="" className="mt-5 flex flex-col gap-4">

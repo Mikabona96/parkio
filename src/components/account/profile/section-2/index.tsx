@@ -28,7 +28,7 @@ export const SecondSection = () => {
 		<section className="flex w-full flex-col">
 			<h3 className="text-[20px] text-gray-700">{t('s-2-title')}</h3>
 			<p className="mt-4">{t('s-2-subtitle')}</p>
-			<div className="mt-6 grid grid-cols-2 gap-6">
+			<div className="mt-6 grid-cols-2 gap-6 sm:flex sm:flex-col lg:grid">
 				{cards.map((card, idx) => (
 					<div
 						key={idx}
