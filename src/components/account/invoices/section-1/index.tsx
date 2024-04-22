@@ -75,8 +75,8 @@ export const FirstSection = () => {
 	return (
 		<section className="flex flex-col gap-6">
 			<Button className="ml-auto">{t('button')}</Button>
-			<div className="overflow-hidden rounded-lg border border-[#F5F5F5]">
-				{/* //+ =========== Table =========== */}
+			{/* //+ =========== Table =========== */}
+			<div className="overflow-hidden overflow-x-auto rounded-lg border border-[#F5F5F5]">
 				<table className="w-full">
 					<thead className="bg-[#F9FAFB]">
 						<tr>
@@ -139,8 +139,8 @@ export const FirstSection = () => {
 						})}
 					</tbody>
 				</table>
-				{/* //$ =========== Table =========== */}
 			</div>
+			{/* //$ =========== Table =========== */}
 			<div className="ml-auto mt-7 flex">
 				<div className="flex items-center gap-2">
 					<span>{t('bottom-navigation')}</span>
