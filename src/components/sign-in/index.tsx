@@ -6,7 +6,7 @@ import React from 'react';
 export const FirstSection = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Sign-in');
 	return (
-		<section className="flex items-center justify-center py-[120px]">
+		<section className="flex items-center justify-center py-[120px] sm:px-6">
 			<div className="flex flex-col text-center">
 				<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
 				<h3 className="mt-4">{t('subtitle')}</h3>
