@@ -1,10 +1,11 @@
 'use client';
 import Link from 'next/link';
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useContext, useEffect, useRef, useState } from 'react';
 import { ExitIcon } from './ExitIcon';
 import { ProfileIcon } from './ProfileIcon';
 import { ChevronIcon } from './ChevronIcon';
 import { cn } from '@/tools/utils/cn';
+import { AuthContext } from '@/providers/AuthProvider';
 
 interface IProps {
 	locale: string;
@@ -13,6 +14,7 @@ interface IProps {
 export const ProfileMenu: FC<IProps> = ({ locale }) => {
 	const ref = useRef<HTMLUListElement>(null);
 	const [profileMenu, setProfileMenu] = useState(false);
+	const auth = useContext(AuthContext);
 
 	useEffect(() => {
 		const onClickOutsideHandler = (event: MouseEvent) => {
@@ -36,7 +38,7 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 		>
 			<ProfileIcon active={false} />
 			<span className="sm:hidden md:inline lg:hidden min-[1130px]:inline">
-				john_brown1@gmail.com
+				{auth?.user?.email}
 			</span>
 			<ChevronIcon
 				className={cn('rotate-0 transition-all', {

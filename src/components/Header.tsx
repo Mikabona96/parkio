@@ -3,17 +3,16 @@ import {
 	Button,
 	ChevronIcon,
 	DropdownSolutions,
-	ExitIcon,
 	Logo,
-	ProfileIcon,
 	ProfileMenu,
 	Select,
 } from '@/elements';
+import { AuthContext } from '@/providers/AuthProvider';
 import { cn } from '@/tools/utils/cn';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 interface IRootLayoutProps {
 	locale: string;
@@ -25,7 +24,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const [isMobileSubMenuOpen, setIsMobileSubMenuOpen] = useState(false);
 	const [headerLoaded, setHeaderLoaded] = useState(false);
 	const pathname = usePathname();
-	const isLoggedIn = true;
+	const auth = useContext(AuthContext);
 	const links = [
 		{
 			name: t('solutions'),
@@ -173,8 +172,10 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 					<div className="w-[108px] cursor-pointer p-2">
 						<Select />
 					</div>
-					{!isLoggedIn ? (
-						<Button>{t('login')}</Button>
+					{!auth?.user ? (
+						<Link href={`/${locale}/sign-in`}>
+							<Button>{t('login')}</Button>
+						</Link>
 					) : (
 						<ProfileMenu locale={locale} />
 					)}

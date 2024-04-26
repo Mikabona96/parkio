@@ -15,38 +15,6 @@ body {
 @tailwind utilities;
 
 @layer components {
-	.gradient {
-		background: linear-gradient(
-			268deg,
-			#ffd177 18.42%,
-			#ffa1a3 37.36%,
-			#d18fe9 78.78%,
-			#d18fe9 80.07%
-		);
-		position: relative;
-		z-index: 1;
-		&:before {
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: linear-gradient(
-				268deg,
-				#d18fe9 18.42%,
-				#d18fe9 37.36%,
-				#d18fe9 78.78%,
-				#d18fe9 80.07%
-			);
-			transition: opacity 0.5s ease-out;
-			z-index: 2;
-			opacity: 0;
-		}
-		&:hover::before {
-			opacity: 1;
-		}
-	}
 	.text-gradient {
 		background: linear-gradient(
 			268deg,
