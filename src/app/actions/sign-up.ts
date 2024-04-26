@@ -3,6 +3,7 @@ import { z } from 'zod';
 import jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcrypt';
 import prisma from '../../../db.config';
+import { cookies } from 'next/headers';
 
 export type State = {
 	errors?: {
@@ -105,6 +106,14 @@ export async function signup(
 				password_hash: hash,
 				refresh_token: tokens.refresh_token,
 			},
+		});
+		cookies().set('refresh_token', `${tokens.refresh_token}`, {
+			expires: new Date(Date.now() + 604800000),
+			httpOnly: true,
+		});
+		cookies().set('access_token', `${tokens.access_token}`, {
+			expires: new Date(Date.now() + 900000),
+			httpOnly: true,
 		});
 		return {
 			access_token: tokens.access_token,
