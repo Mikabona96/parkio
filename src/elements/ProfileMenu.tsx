@@ -1,11 +1,13 @@
 'use client';
 import Link from 'next/link';
-import React, { FC, useContext, useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { ExitIcon } from './ExitIcon';
 import { ProfileIcon } from './ProfileIcon';
 import { ChevronIcon } from './ChevronIcon';
 import { cn } from '@/tools/utils/cn';
-import { AuthContext } from '@/providers/AuthProvider';
+import { useAuthContext } from '@/tools/hooks';
+import { logout } from '@/app/actions';
+import { useRouter } from 'next/navigation';
 
 interface IProps {
 	locale: string;
@@ -14,8 +16,8 @@ interface IProps {
 export const ProfileMenu: FC<IProps> = ({ locale }) => {
 	const ref = useRef<HTMLUListElement>(null);
 	const [profileMenu, setProfileMenu] = useState(false);
-	const auth = useContext(AuthContext);
-
+	const auth = useAuthContext();
+	const router = useRouter();
 	useEffect(() => {
 		const onClickOutsideHandler = (event: MouseEvent) => {
 			if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -75,7 +77,14 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 						<li className="p-[4px]">Invoices</li>
 					</Link>
 					<li className="h-[1px] w-full bg-gray-300"></li>
-					<li className="group flex items-center gap-2 p-[4px] transition-all hover:text-[#ff5558]">
+					<li
+						onClick={() => {
+							logout(`${auth?.user?.email}`);
+							router.push(`/${locale}/sign-in`);
+							auth?.setUser(null);
+						}}
+						className="group flex items-center gap-2 p-[4px] transition-all hover:text-[#ff5558]"
+					>
 						<span>Logout</span>
 						<ExitIcon />
 					</li>

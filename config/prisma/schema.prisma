@@ -20,5 +20,5 @@ model User {
   streetAddress String
   postalCode Int
   city String
-  refresh_token String
+  refresh_token String?
 }

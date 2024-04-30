@@ -1,28 +1,21 @@
 'use client';
 import { signin } from '@/app/actions';
 import { Button } from '@/elements';
-import { AuthContext } from '@/providers/AuthProvider';
+import { useAuth } from '@/tools/hooks';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { useFormState } from 'react-dom';
 
 export const FirstSection = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Sign-in');
 	const [state, dispatch] = useFormState(signin, undefined);
-	const auth = useContext(AuthContext);
-	const router = useRouter();
-	useEffect(() => {
-		if (state?.access_token && state?.refresh_token) {
-			window.localStorage.setItem('access_token', state?.access_token);
-			window.localStorage.setItem('refresh_token', state?.refresh_token);
-			if (state?.user) {
-				auth?.setUser(state?.user);
-				router.push('/');
-			}
-		}
-	}, [state?.user, state?.refresh_token, state?.access_token, auth, router]);
+	useAuth({
+		validatedData: state?.validatedData,
+		errorMessage: 'Email or password is not correct ...',
+		route: '/api/sign-in',
+		redirectTo: `/${locale}/account/profile`,
+	});
 	return (
 		<section className="flex items-center justify-center py-[120px] sm:px-6">
 			<div className="flex flex-col text-center">

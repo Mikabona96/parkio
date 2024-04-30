@@ -1,36 +1,35 @@
 'use client';
-import { signup } from '@/app/actions';
+import { validateSignupFields } from '@/app/actions';
 import { Button } from '@/elements';
-import { AuthContext } from '@/providers/AuthProvider';
+import { useAuth } from '@/tools/hooks';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useFormState } from 'react-dom';
 
-export const FirstSection = () => {
+export const FirstSection = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Sign-up');
 	const [checked, setChecked] = useState(false);
-	const { locale } = useParams();
-	const [state, dispatch] = useFormState(signup, undefined);
-	const auth = useContext(AuthContext);
-	const router = useRouter();
-	useEffect(() => {
-		if (state?.access_token && state?.refresh_token) {
-			window.localStorage.setItem('access_token', state?.access_token);
-			window.localStorage.setItem('refresh_token', state?.refresh_token);
-			if (state?.user) {
-				auth?.setUser(state?.user);
-				router.push('/');
-			}
-		}
-	}, [state?.user, state?.refresh_token, state?.access_token, auth, router]);
+	const [state, dispatch] = useFormState(validateSignupFields, undefined);
+	const formRef = useRef<HTMLFormElement>(null);
+
+	useAuth({
+		validatedData: state?.validatedData,
+		errorMessage: 'User is already exist ...',
+		route: '/api/sign-up',
+		redirectTo: `/${locale}/account/profile`,
+	});
+
 	return (
 		<section className="flex items-center justify-center py-[120px] sm:px-6">
 			<div className="flex flex-col text-center">
 				<h1 className="text-[32px] font-bold text-gray-900">{t('title')}</h1>
 				<h3 className="mt-4">{t('subtitle')}</h3>
-				<form action={dispatch} className="mt-8 flex flex-col gap-4">
+				<form
+					ref={formRef}
+					action={dispatch}
+					className="mt-8 flex flex-col gap-4"
+				>
 					<div className="flex gap-4">
 						<input
 							id="name"

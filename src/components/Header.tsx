@@ -7,12 +7,12 @@ import {
 	ProfileMenu,
 	Select,
 } from '@/elements';
-import { AuthContext } from '@/providers/AuthProvider';
+import { useAuthContext } from '@/tools/hooks';
 import { cn } from '@/tools/utils/cn';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface IRootLayoutProps {
 	locale: string;
@@ -24,7 +24,7 @@ export const Header = ({ locale }: Readonly<IRootLayoutProps>) => {
 	const [isMobileSubMenuOpen, setIsMobileSubMenuOpen] = useState(false);
 	const [headerLoaded, setHeaderLoaded] = useState(false);
 	const pathname = usePathname();
-	const auth = useContext(AuthContext);
+	const auth = useAuthContext();
 	const links = [
 		{
 			name: t('solutions'),

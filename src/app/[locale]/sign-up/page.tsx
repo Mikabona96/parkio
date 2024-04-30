@@ -1,10 +1,16 @@
 import { FirstSection } from '@/components/sign-up';
 import React from 'react';
 
-const SignUp = () => {
+interface IParams {
+	params: {
+		locale: string;
+	};
+}
+
+const SignUp = ({ params: { locale } }: IParams) => {
 	return (
 		<main>
-			<FirstSection />
+			<FirstSection locale={locale} />
 		</main>
 	);
 };
