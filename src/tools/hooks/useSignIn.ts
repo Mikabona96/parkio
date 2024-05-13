@@ -1,12 +1,12 @@
-import { SignupFields } from '@/app/definitions';
+import { SigninFields } from '@/app/definitions';
 import { useAuthContext } from './useAuthContext';
 import { useRouter } from 'next/navigation';
-import { SIGN_UP } from '@/app/graphql/mutations/sign-up';
 import { useMutation } from '@apollo/client';
 import { useEffect } from 'react';
+import { SIGN_IN } from '@/app/graphql/mutations/sign-in';
 
 type MutationResponseType = {
-	signup: {
+	signin: {
 		access_token: string;
 		refresh_token: string;
 		user: {
@@ -22,12 +22,12 @@ type MutationResponseType = {
 	};
 };
 
-export const useSignUp = (
-	validatedData: SignupFields | undefined,
+export const useSignIn = (
+	validatedData: SigninFields | undefined,
 	redirectTo: string,
 ) => {
-	const [signup, { data, loading, error }] = useMutation<MutationResponseType>(
-		SIGN_UP,
+	const [signin, { data, loading, error }] = useMutation<MutationResponseType>(
+		SIGN_IN,
 		{
 			errorPolicy: 'all',
 		},
@@ -37,7 +37,7 @@ export const useSignUp = (
 
 	useEffect(() => {
 		if (validatedData) {
-			signup({
+			signin({
 				variables: {
 					fieldsValue: validatedData,
 				},
@@ -46,7 +46,7 @@ export const useSignUp = (
 	}, [validatedData]);
 
 	if (data) {
-		const user = (data as MutationResponseType)?.signup?.user;
+		const user = (data as MutationResponseType)?.signin?.user;
 		auth?.setUser(user);
 	}
 

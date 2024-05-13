@@ -1,14 +1,14 @@
 import { SigninFields } from '@/app/definitions';
-import * as bcrypt from 'bcrypt';
-import prisma from '../../../../db.config';
-import { NextResponse } from 'next/server';
+import prisma from '../../../../../db.config';
+import { GraphQLError } from 'graphql';
 import { comparePasswords, getTokens } from '@/app/lib';
 import { cookies } from 'next/headers';
-import { ApiError } from 'next/dist/server/api-utils';
 
-export async function GET() {}
-export async function POST(request: Request) {
-	const data: SigninFields = await request.json();
+export const signin = async (
+	_: unknown,
+	args: { fieldsValue: SigninFields },
+) => {
+	const data = args.fieldsValue;
 	//+ find user email in db
 	const existingUser = await prisma.user.findUnique({
 		where: {
@@ -16,8 +16,12 @@ export async function POST(request: Request) {
 		},
 	});
 	if (!existingUser) {
-		return NextResponse.json(`Email or password is not correct...`, {
-			status: 403,
+		throw new GraphQLError(`Email or password is not correct...`, {
+			extensions: {
+				statusCode: 401,
+				message: 'Unauthorized',
+				code: "USER'S_EMAIL_OR_PASSWORD_IS_INCORRECT",
+			},
 		});
 	}
 	//+ Compare passwords
@@ -25,9 +29,14 @@ export async function POST(request: Request) {
 		`${data.password}`,
 		`${existingUser.password_hash}`,
 	);
+
 	if (!passwordsMatch) {
-		return NextResponse.json(`Email or password is not correct...`, {
-			status: 403,
+		throw new GraphQLError(`Email or password is not correct...`, {
+			extensions: {
+				statusCode: 401,
+				message: 'Unauthorized',
+				code: "USER'S_EMAIL_OR_PASSWORD_IS_INCORRECT",
+			},
 		});
 	}
 
@@ -51,15 +60,19 @@ export async function POST(request: Request) {
 			expires: new Date(Date.now() + 60 * 60 * 10000 * 0.25), // 15 minutes
 			httpOnly: true,
 		});
-		return NextResponse.json(
-			{
-				access_token: tokens.access_token,
-				refresh_token: tokens.refresh_token,
-				user: { ...rest },
-			},
-			{ status: 201 },
-		);
+
+		return {
+			access_token: tokens.access_token,
+			refresh_token: tokens.refresh_token,
+			user: { ...rest },
+		};
 	} catch (error) {
-		throw new ApiError(400, 'Error registration user...');
+		throw new GraphQLError(`Error registration user...`, {
+			extensions: {
+				statusCode: 401,
+				message: 'Unauthorized',
+				code: 'ERROR_REGISTRATION_USER',
+			},
+		});
 	}
-}
+};

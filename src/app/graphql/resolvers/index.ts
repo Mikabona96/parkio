@@ -1,4 +1,5 @@
 import { signup } from './sign-up';
+import { signin } from './sign-in';
 
 export const resolvers = {
 	Query: {
@@ -6,5 +7,6 @@ export const resolvers = {
 	},
 	Mutation: {
 		signup,
+		signin,
 	},
 };

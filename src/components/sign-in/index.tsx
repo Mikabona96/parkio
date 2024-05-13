@@ -1,7 +1,7 @@
 'use client';
 import { signin } from '@/app/actions';
 import { Button } from '@/elements';
-import { useAuth } from '@/tools/hooks';
+import { useSignIn } from '@/tools/hooks';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
@@ -10,12 +10,10 @@ import { useFormState } from 'react-dom';
 export const FirstSection = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Sign-in');
 	const [state, dispatch] = useFormState(signin, undefined);
-	useAuth({
-		validatedData: state?.validatedData,
-		errorMessage: 'Email or password is not correct ...',
-		route: '/api/sign-in',
-		redirectTo: `/${locale}/account/profile`,
-	});
+	const { error, loading } = useSignIn(
+		state?.validatedData,
+		`/${locale}/account/profile`,
+	);
 	return (
 		<section className="flex items-center justify-center py-[120px] sm:px-6">
 			<div className="flex flex-col text-center">
@@ -38,6 +36,9 @@ export const FirstSection = ({ locale }: { locale: string }) => {
 					/>
 					<Button className="mt-12">{t('log-in')}</Button>
 					<p className="mt-1 px-4 text-xs text-[#ff898b]">{state?.message}</p>
+					{error?.message && (
+						<p className="mt-1 px-4 text-xs text-[#ff898b]">{error?.message}</p>
+					)}
 				</form>
 				<div className="mt-4 h-[1px] w-full bg-gray-300"></div>
 				<Link
