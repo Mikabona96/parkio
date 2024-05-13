@@ -1,26 +1,34 @@
-import { NextResponse } from 'next/server';
-import { ApiError } from 'next/dist/server/api-utils';
-
-import { SignupFields } from '@/app/definitions';
-import prisma from '../../../../db.config';
 import { cookies } from 'next/headers';
+import { GraphQLError } from 'graphql';
+
+import prisma from '../../../../../db.config';
 import { getTokens, hashPassword } from '@/app/lib';
 
-export async function GET() {}
+import { SignupFields } from '@/app/definitions';
 
-export async function POST(request: Request) {
-	const data: SignupFields = await request.json();
+export const signup = async (
+	_: unknown,
+	args: { fieldsValue: SignupFields },
+) => {
+	const data = args.fieldsValue;
 	const hash = await hashPassword(data.password);
 	const tokens = await getTokens(data.name, data.email);
+
 	const existedUser = await prisma.user.findUnique({
 		where: {
 			email: data.email,
 		},
 	});
 	if (existedUser) {
-		return NextResponse.json(
+		throw new GraphQLError(
 			`User with email:${data.email} is already exist...`,
-			{ status: 403 },
+			{
+				extensions: {
+					statusCode: 401,
+					message: 'Unauthorized',
+					code: "USER'S_EMAIL_ALREADY_EXISTS",
+				},
+			},
 		);
 	}
 	try {
@@ -45,15 +53,19 @@ export async function POST(request: Request) {
 			expires: new Date(Date.now() + 60 * 60 * 10000 * 0.25), // 15 minutes
 			httpOnly: true,
 		});
-		return NextResponse.json(
-			{
-				access_token: tokens.access_token,
-				refresh_token: tokens.refresh_token,
-				user: { ...rest },
-			},
-			{ status: 201 },
-		);
+
+		return {
+			access_token: tokens.access_token,
+			refresh_token: tokens.refresh_token,
+			user: { ...rest },
+		};
 	} catch (error) {
-		throw new ApiError(400, 'Error registration user...');
+		throw new GraphQLError(`Error registration user...`, {
+			extensions: {
+				statusCode: 401,
+				message: 'Unauthorized',
+				code: 'ERROR_REGISTRATION_USER',
+			},
+		});
 	}
-}
+};

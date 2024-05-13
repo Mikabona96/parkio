@@ -1,7 +1,7 @@
 'use client';
 import { validateSignupFields } from '@/app/actions';
 import { Button } from '@/elements';
-import { useAuth } from '@/tools/hooks';
+import { useSignUp } from '@/tools/hooks';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react';
@@ -13,12 +13,10 @@ export const FirstSection = ({ locale }: { locale: string }) => {
 	const [state, dispatch] = useFormState(validateSignupFields, undefined);
 	const formRef = useRef<HTMLFormElement>(null);
 
-	useAuth({
-		validatedData: state?.validatedData,
-		errorMessage: 'User is already exist ...',
-		route: '/api/sign-up',
-		redirectTo: `/${locale}/account/profile`,
-	});
+	const { error, loading } = useSignUp(
+		state?.validatedData,
+		`/${locale}/account/profile`,
+	);
 
 	return (
 		<section className="flex items-center justify-center py-[120px] sm:px-6">
@@ -158,6 +156,9 @@ export const FirstSection = ({ locale }: { locale: string }) => {
 				>
 					{state?.message && (
 						<p className="mt-1 px-4 text-xs text-[#ff898b]">{state?.message}</p>
+					)}
+					{error?.message && (
+						<p className="mt-1 px-4 text-xs text-[#ff898b]">{error?.message}</p>
 					)}
 				</div>
 				<div className="mt-4 h-[1px] w-full bg-gray-300"></div>
