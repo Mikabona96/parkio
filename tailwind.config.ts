@@ -72,8 +72,9 @@ const config: Config = {
 				circleExpand: 'circleExpand 1s ease-in-out forwards',
 				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
 				textShown: 'textShown 1s ease-in-out forwards',
-				phoneImageXl: 'phoneImageXl 1s ease-in-out forwards',
-				phoneImageReverseXl: 'phoneImageReverseXl 1s ease-in-out forwards',
+				textHidden: 'textHidden .5s ease-in-out forwards',
+				phoneImageXl: 'phoneImageXl .8s ease-in-out forwards',
+				phoneImageReverseXl: 'phoneImageReverseXl .8s ease-in-out forwards',
 				firstCardXl: 'firstCardXl 1s ease-in-out forwards',
 				firstCardReverseXl: 'firstCardReverseXl 1s ease-in-out forwards',
 				secondCardXl: 'secondCardXl 1s ease-in-out forwards',
@@ -166,6 +167,14 @@ const config: Config = {
 					},
 					'100%': {
 						opacity: '1',
+					},
+				},
+				textHidden: {
+					'0%': {
+						opacity: '1',
+					},
+					'100%': {
+						opacity: '0',
 					},
 				},
 				phoneImageXl: {
