@@ -2,6 +2,7 @@ import { signup } from './sign-up';
 import { signin } from './sign-in';
 import { logout } from './logout';
 import { checkUserSessionStatus } from './checkUserSessionStatus';
+import { addVehicle } from './addVehicle';
 
 export const resolvers = {
 	Query: {
@@ -12,5 +13,6 @@ export const resolvers = {
 	Mutation: {
 		signup,
 		signin,
+		addVehicle,
 	},
 };

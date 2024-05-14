@@ -1,10 +1,16 @@
 'use client';
+import { ADD_VEHICLE } from '@/app/graphql/mutations/addVehicle';
 import { TrashIcon } from '@/elements';
+import { addVehicle as addVehicleValidator } from '@/tools/helpers/validation';
+import { useAuthContext } from '@/tools/hooks';
+import { useMutation } from '@apollo/client';
+import { VehicleType } from '@prisma/client';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 
 interface IRootLayoutProps {
 	children: React.ReactNode;
@@ -13,12 +19,43 @@ interface IRootLayoutProps {
 	};
 }
 
+type AddVehicleVariablesType = {
+	data: {
+		userId: number;
+		vehicleNumber: string;
+		vehicleType: VehicleType;
+	};
+};
+
 function AccountLayout({
 	children,
 	params: { locale },
 }: Readonly<IRootLayoutProps>) {
 	const t = useTranslations('Account');
 	const path = usePathname();
+	const [state, dispatch] = useFormState(addVehicleValidator, undefined);
+	const auth = useAuthContext();
+	const [addVehicle, { data, loading, error }] = useMutation<
+		boolean,
+		AddVehicleVariablesType
+	>(ADD_VEHICLE, {
+		errorPolicy: 'all',
+	});
+
+	useEffect(() => {
+		console.log(auth?.user);
+		if (state?.validatedData && auth?.user) {
+			addVehicle({
+				variables: {
+					data: {
+						userId: auth?.user?.id as number,
+						vehicleNumber: state.validatedData.vehicle,
+						vehicleType: 'CAR',
+					},
+				},
+			});
+		}
+	}, [state?.validatedData]);
 
 	const menuItems = [
 		{
@@ -70,8 +107,9 @@ function AccountLayout({
 								<TrashIcon color="#FFA1A3" />
 							</span>
 						</div>
-						<form className="mt-3 flex flex-col gap-2">
+						<form action={dispatch} className="mt-3 flex flex-col gap-2">
 							<input
+								name="vehicle"
 								placeholder={t('input')}
 								type="text"
 								className="form-input"
@@ -79,6 +117,12 @@ function AccountLayout({
 							<button className="rounded-lg border-[1px] border-gray-300 py-[10px] shadow-sm shadow-gray-300 transition-all duration-300 hover:border-gradient-3 hover:bg-gradient-3 hover:text-[#fff]">
 								{t('button')}
 							</button>
+							<p className="mt-1 px-4 text-xs text-[#ff898b]">
+								{state?.errors?.vehicle}
+							</p>
+							<p className="mt-1 px-4 text-xs text-[#ff898b]">
+								{state?.message}
+							</p>
 						</form>
 					</div>
 				</div>

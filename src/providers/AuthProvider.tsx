@@ -22,17 +22,15 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
 	const [user, setUser] = useState<null | ReturnedUser>(null);
-	const { loading, error, data } = useQuery(CHECK_USER_SESSION_STATUS);
+	const { loading, error, data } = useQuery<{
+		checkUserSessionStatus: ReturnedUser;
+	}>(CHECK_USER_SESSION_STATUS);
 
 	useEffect(() => {
-		const loadUser = async () => {
-			if (data && !error) {
-				// const email = data.checkUserSessionStatus;
-				// setUser({ email: `${email}` });
-			}
-		};
-		loadUser();
-	}, []);
+		if (data && !error) {
+			setUser(data?.checkUserSessionStatus);
+		}
+	}, [data, error]);
 
 	return (
 		<AuthContext.Provider value={{ user, setUser }}>

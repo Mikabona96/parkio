@@ -3,6 +3,7 @@ import { signupTypeDef } from './sign-up';
 import { signinTypeDef } from './sign-in';
 import { logoutTypeDef } from './logout';
 import { checkUserSessionStatusTypeDef } from './checkUserSessionStatus';
+import { addVehicleTypeDef } from './addVehicle';
 
 export const typeDefs = gql`
 	type Query {
@@ -12,4 +13,5 @@ export const typeDefs = gql`
 	${signinTypeDef}
 	${logoutTypeDef}
 	${checkUserSessionStatusTypeDef}
+	${addVehicleTypeDef}
 `;

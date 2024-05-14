@@ -40,7 +40,9 @@ export const signin = async (
 		});
 	}
 
-	const tokens = await getTokens(existingUser.firstName, existingUser.email);
+	const { password_hash, refresh_token, ...rest } = existingUser;
+
+	const tokens = await getTokens(rest);
 
 	try {
 		//+ Update refresh_token in db

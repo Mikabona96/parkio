@@ -1,15 +1,26 @@
 import { AT_SECRET, RT_SECRET } from '@/constants';
 import { KeyLike, SignJWT } from 'jose';
 
-export const getTokens = async (name: string, email: string) => {
+type Payload = {
+	id: number;
+	email: string;
+	firstName: string;
+	lastName: string;
+	phoneNumber: string;
+	streetAddress: string;
+	postalCode: number;
+	city: string;
+};
+
+export const getTokens = async (payload: Payload) => {
 	const [access_token, refresh_token] = await Promise.all([
-		new SignJWT({ name, email })
+		new SignJWT(payload)
 			.setProtectedHeader({
 				alg: 'HS256',
 			})
 			.setExpirationTime('15 minutes')
 			.sign(AT_SECRET),
-		new SignJWT({ email })
+		new SignJWT({ email: payload.email, id: payload.id })
 			.setProtectedHeader({
 				alg: 'HS256',
 			})
@@ -43,7 +54,7 @@ export const getTokens = async (name: string, email: string) => {
  * @param input "exp" (Expiration Time) Claim value to set on the JWT Claims Set.
  */
 export const getToken = async (
-	args: { name?: string; email?: string },
+	args: Payload,
 	exp: string | number | Date,
 	secret: KeyLike | Uint8Array,
 ) =>

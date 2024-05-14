@@ -21,4 +21,31 @@ model User {
   postalCode Int
   city String
   refresh_token String?
+  receipt Receipt[]
+  vehicle Vehicle[]
+}
+
+model Receipt {
+  id             String       @id @default(uuid())
+  user   User @relation(fields: [userId], references: [id])
+  userId Int
+  validFrom String?
+  validTo String?
+  length String?
+  parking_descr String?
+  quantityKWh String?
+  amount String?
+  status String?
+}
+
+enum VehicleType {
+  CAR
+  MOTORCYCLE
+}
+model Vehicle {
+  id             String       @id @default(uuid())
+  user   User @relation(fields: [userId], references: [id])
+  userId Int
+  vehicleNumber String
+  vehicleType VehicleType
 }

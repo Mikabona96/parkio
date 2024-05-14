@@ -12,13 +12,13 @@ export const signup = async (
 ) => {
 	const data = args.fieldsValue;
 	const hash = await hashPassword(data.password);
-	const tokens = await getTokens(data.name, data.email);
 
 	const existedUser = await prisma.user.findUnique({
 		where: {
 			email: data.email,
 		},
 	});
+
 	if (existedUser) {
 		throw new GraphQLError(
 			`User with email:${data.email} is already exist...`,
@@ -42,9 +42,19 @@ export const signup = async (
 				postalCode: data.code,
 				streetAddress: data.street,
 				password_hash: hash,
+				refresh_token: null,
+			},
+		});
+		const tokens = await getTokens(rest);
+		await prisma.user.update({
+			where: {
+				id: rest.id,
+			},
+			data: {
 				refresh_token: tokens.refresh_token,
 			},
 		});
+
 		cookies().set('refresh_token', `${tokens.refresh_token}`, {
 			expires: new Date(Date.now() + 60 * 60 * 24 * 7 * 1000), // 7 days
 			httpOnly: true,
