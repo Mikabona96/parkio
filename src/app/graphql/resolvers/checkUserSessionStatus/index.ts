@@ -1,10 +1,10 @@
-'use server';
 import { cookies } from 'next/headers';
+import prisma from '../../../../../db.config';
+import { GraphQLError } from 'graphql';
+import { getToken, verifyToken } from '@/app/lib';
 import { AT_SECRET, RT_SECRET } from '@/constants';
-import { getToken, verifyToken } from '../lib';
-import prisma from '../../../db.config';
 
-export const checkUserSessionStatus = async () => {
+export const checkUserSessionStatus = async (_: unknown, __: unknown) => {
 	const access_token = cookies().get('access_token');
 	const refresh_token = cookies().get('refresh_token');
 	const at_verified = await verifyToken(`${access_token?.value}`, AT_SECRET);
@@ -32,8 +32,13 @@ export const checkUserSessionStatus = async () => {
 			});
 			return user?.email;
 		} catch (error) {
-			console.log('Something went wrong in checkUserSessionStatus action');
-			return null;
+			throw new GraphQLError(`Something went wromng...`, {
+				extensions: {
+					statusCode: 500,
+					message: 'Something went wrong',
+					code: 'SERVER_ERROR',
+				},
+			});
 		}
 	}
 };

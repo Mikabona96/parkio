@@ -48,13 +48,8 @@ export const useSignUp = (
 	if (data) {
 		const user = (data as MutationResponseType)?.signup?.user;
 		auth?.setUser(user);
+		router.push(redirectTo);
 	}
-
-	useEffect(() => {
-		if (auth?.user) {
-			router.push(redirectTo);
-		}
-	}, [auth?.user]);
 
 	if (error && error.graphQLErrors[0]) {
 		return {

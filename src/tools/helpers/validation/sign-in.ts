@@ -1,6 +1,5 @@
-'use server';
+import { SigninFields } from '@/app/definitions';
 import { z } from 'zod';
-import { SigninFields } from '../definitions';
 
 export type SignInState = {
 	errors?: {

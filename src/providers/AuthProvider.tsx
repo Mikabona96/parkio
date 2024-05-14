@@ -1,6 +1,7 @@
 'use client';
-import { checkUserSessionStatus } from '@/app/actions';
 import { ReturnedUser } from '@/app/definitions';
+import { CHECK_USER_SESSION_STATUS } from '@/app/graphql/queries/checkUserSessionStatus';
+import { useLazyQuery, useQuery } from '@apollo/client';
 import {
 	Dispatch,
 	FC,
@@ -21,11 +22,14 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
 	const [user, setUser] = useState<null | ReturnedUser>(null);
+	const { loading, error, data } = useQuery(CHECK_USER_SESSION_STATUS);
 
 	useEffect(() => {
 		const loadUser = async () => {
-			const email = await checkUserSessionStatus();
-			email && setUser({ email: `${email}` });
+			if (data && !error) {
+				// const email = data.checkUserSessionStatus;
+				// setUser({ email: `${email}` });
+			}
 		};
 		loadUser();
 	}, []);

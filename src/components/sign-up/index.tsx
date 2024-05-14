@@ -1,6 +1,6 @@
 'use client';
-import { validateSignupFields } from '@/app/actions';
 import { Button } from '@/elements';
+import { validateSignupFields } from '@/tools/helpers/validation';
 import { useSignUp } from '@/tools/hooks';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

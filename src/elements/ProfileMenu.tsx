@@ -6,8 +6,10 @@ import { ProfileIcon } from './ProfileIcon';
 import { ChevronIcon } from './ChevronIcon';
 import { cn } from '@/tools/utils/cn';
 import { useAuthContext } from '@/tools/hooks';
-import { logout } from '@/app/actions';
 import { useRouter } from 'next/navigation';
+import { useLazyQuery } from '@apollo/client';
+import { LOG_OUT } from '@/app/graphql/queries/logout';
+import { deleteCookies } from '@/app/actions';
 
 interface IProps {
 	locale: string;
@@ -18,6 +20,8 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 	const [profileMenu, setProfileMenu] = useState(false);
 	const auth = useAuthContext();
 	const router = useRouter();
+	const [logout, { loading, error, data }] = useLazyQuery(LOG_OUT);
+
 	useEffect(() => {
 		const onClickOutsideHandler = (event: MouseEvent) => {
 			if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -78,10 +82,13 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 					</Link>
 					<li className="h-[1px] w-full bg-gray-300"></li>
 					<li
-						onClick={() => {
-							logout(`${auth?.user?.email}`);
-							router.push(`/${locale}/sign-in`);
+						onClick={async () => {
+							await logout({
+								variables: { email: `${auth?.user?.email}` },
+							});
+							await deleteCookies();
 							auth?.setUser(null);
+							router.push(`/${locale}/sign-in`);
 						}}
 						className="group flex items-center gap-2 p-[4px] transition-all hover:text-[#ff5558]"
 					>
