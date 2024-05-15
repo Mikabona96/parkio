@@ -69,6 +69,7 @@ const config: Config = {
 			animation: {
 				appearence: 'appearence .5s ease-in-out forwards',
 				vanish: 'vanish .5s ease-in-out forwards',
+				smallSpinner: 'smallSpinner 1s linear infinite',
 				circleExpand: 'circleExpand 1s ease-in-out forwards',
 				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
 				textShown: 'textShown 1s ease-in-out forwards',
@@ -137,6 +138,14 @@ const config: Config = {
 					'100%': {
 						opacity: '0.1',
 						display: 'none',
+					},
+				},
+				smallSpinner: {
+					'0%': {
+						transform: 'rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg)',
 					},
 				},
 				circleExpand: {

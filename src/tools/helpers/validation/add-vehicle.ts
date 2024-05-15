@@ -10,6 +10,7 @@ export type AddVehicleState = {
 
 const AddVehicleField = z.object({
 	vehicle: z.string().min(4, 'Vehicle number should be at least of 4 symbols'),
+	vehicleType: z.string({ message: 'Please select vehicle type...' }),
 });
 
 export async function addVehicle(
@@ -18,6 +19,7 @@ export async function addVehicle(
 ) {
 	const fieldsToValidate = AddVehicleField.safeParse({
 		vehicle: formData.get('vehicle'),
+		vehicleType: formData.get('vehicleType'),
 	});
 
 	if (!fieldsToValidate.success) {
@@ -26,8 +28,10 @@ export async function addVehicle(
 			message: 'Fields validation not success !',
 		};
 	}
+
 	const vehicleToCheck = AddVehicleField.parse({
 		vehicle: formData.get('vehicle'),
+		vehicleType: formData.get('vehicleType'),
 	});
 
 	return { validatedData: vehicleToCheck };

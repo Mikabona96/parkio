@@ -249,7 +249,10 @@
 		"menu-items-4": "Invoices",
 		"My-vehicles": "My vehicles",
 		"input": "New registration number",
-		"button": "Add Vehicle"
+		"button": "Add Vehicle",
+		"car": "Car",
+		"motorcycle": "Motorcycle",
+		"no-vehicles": "You have not added vehicles"
 	},
 	"Account-profile": {
 		"form-1-title": "Profile",

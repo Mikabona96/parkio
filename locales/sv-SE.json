@@ -249,7 +249,10 @@
 		"menu-items-4": "Fakturor",
 		"My-vehicles": "Mina fordon",
 		"input": "Nytt registreringsnummer",
-		"button": "Lägg till fordon"
+		"button": "Lägg till fordon",
+		"car": "Bil",
+		"motorcycle": "Motorcykel",
+		"no-vehicles": "Du har inte lagt till fordon"
 	},
 	"Account-profile": {
 		"form-1-title": "Profil",
