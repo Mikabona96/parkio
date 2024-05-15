@@ -1,11 +1,14 @@
 'use client';
 import { ADD_VEHICLE } from '@/app/graphql/mutations/addVehicle';
+import { REMOVE_VEHICLE } from '@/app/graphql/mutations/removeVehicle';
+import { GET_VEHICLES } from '@/app/graphql/queries/getVehicles';
 import { TrashIcon } from '@/elements';
 import { SmallSpinner } from '@/elements/smallSpinner';
 import { addVehicle as addVehicleValidator } from '@/tools/helpers/validation';
 import { useAuthContext } from '@/tools/hooks';
-import { useMutation } from '@apollo/client';
-import { VehicleType } from '@prisma/client';
+import { cn } from '@/tools/utils/cn';
+import { useLazyQuery, useMutation, useQuery } from '@apollo/client';
+import { Vehicle, VehicleType } from '@prisma/client';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,6 +31,10 @@ type AddVehicleVariablesType = {
 	};
 };
 
+type GET_VEHICLES_TYPE = { getVehicles: Vehicle[] };
+type ADD_VEHICLE_TYPE = { addVehicle: Vehicle };
+type REMOVE_VEHICLE_TYPE = { removeVehicle: Vehicle };
+
 function AccountLayout({
 	children,
 	params: { locale },
@@ -37,12 +44,75 @@ function AccountLayout({
 	const [state, dispatch] = useFormState(addVehicleValidator, undefined);
 	const auth = useAuthContext();
 	const formRef = useRef<HTMLFormElement>(null);
+	const [removeVehicle, { data: removedVehicle }] =
+		useMutation<REMOVE_VEHICLE_TYPE>(REMOVE_VEHICLE, {
+			errorPolicy: 'all',
+			update(cache, { data }) {
+				//+ Vehicle to remove
+				const { removeVehicle } = data as REMOVE_VEHICLE_TYPE;
+
+				//+ All vehicles
+				const { getVehicles } = cache.readQuery<GET_VEHICLES_TYPE>({
+					query: GET_VEHICLES,
+					variables: { getVehiclesId: auth?.user?.id },
+				}) as GET_VEHICLES_TYPE;
+
+				//+ writing cache... adding new vehicle to cache
+				cache.writeQuery({
+					query: GET_VEHICLES,
+					variables: { getVehiclesId: auth?.user?.id },
+					data: {
+						getVehicles: [
+							...getVehicles.filter(
+								(vehicle) => vehicle.id !== removeVehicle.id,
+							),
+						],
+					},
+				});
+			},
+		});
+
 	const [addVehicle, { data, loading, error }] = useMutation<
-		boolean,
+		ADD_VEHICLE_TYPE,
 		AddVehicleVariablesType
 	>(ADD_VEHICLE, {
 		errorPolicy: 'all',
+		//+ Updating cache and put new vehicle to cache
+		update(cache, { data }) {
+			//+ Vehicle to add
+			const { addVehicle } = data as ADD_VEHICLE_TYPE;
+
+			//+ All vehicles
+			const { getVehicles } = cache.readQuery<GET_VEHICLES_TYPE>({
+				query: GET_VEHICLES,
+				variables: { getVehiclesId: auth?.user?.id },
+			}) as GET_VEHICLES_TYPE;
+
+			//+ writing cache... adding new vehicle to cache
+			cache.writeQuery({
+				query: GET_VEHICLES,
+				variables: { getVehiclesId: auth?.user?.id },
+				data: {
+					getVehicles: [addVehicle, ...getVehicles],
+				},
+			});
+		},
 	});
+
+	const [
+		getVehicles,
+		{ data: vehicles, loading: vehiclesLoading, error: vehiclesError },
+	] = useLazyQuery<GET_VEHICLES_TYPE>(GET_VEHICLES, {
+		errorPolicy: 'all',
+	});
+
+	useEffect(() => {
+		getVehicles({
+			variables: {
+				getVehiclesId: auth?.user?.id,
+			},
+		});
+	}, [auth?.user?.id]);
 
 	useEffect(() => {
 		if (state?.validatedData && auth?.user) {
@@ -95,23 +165,70 @@ function AccountLayout({
 					</ul>
 					<div className="mt-2 h-[1px] w-full bg-gray-300"></div>
 					<div className="flex-flex-col mt-6">
-						{/* <h3>{t('no-vehicles')}</h3> */}
-						<>
-							<h3>{t('My-vehicles')}</h3>
-							<div className="mt-4 flex w-full items-center rounded-[4px] bg-gray-100 px-3 py-4">
-								<Image
-									width={24}
-									height={24}
-									className="mr-2"
-									alt="car-icon.svg"
-									src={'/car-icon.svg'}
-								/>
-								71664
-								<span className="ml-auto cursor-pointer">
-									<TrashIcon color="#FFA1A3" />
-								</span>
-							</div>
-						</>
+						{!vehicles?.getVehicles.length && !vehiclesLoading && (
+							<h3>{t('no-vehicles')}</h3>
+						)}
+						{vehiclesLoading && (
+							<>
+								<div
+									className={
+										'animate-vehicleSkeleton relative flex h-14 w-full items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
+									}
+								></div>
+								<div
+									className={
+										'animate-vehicleSkeleton relative mt-4 flex h-14 w-full items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
+									}
+								></div>
+							</>
+						)}
+						{vehicles?.getVehicles.length && (
+							<>
+								<h3>{t('My-vehicles')}</h3>
+								<div className="scroll mt-4 h-fit max-h-[210px] overflow-y-auto">
+									{vehicles.getVehicles.map((vehicle, idx) => (
+										<div
+											key={vehicle.id}
+											className={cn(
+												'flex w-full items-center rounded-[4px] bg-gray-100 px-3 py-4',
+												{
+													'mt-4': idx > 0,
+												},
+											)}
+										>
+											<Image
+												width={24}
+												height={24}
+												className="mr-2"
+												alt={
+													vehicle.vehicleType === 'CAR'
+														? 'car-icon.svg'
+														: 'motorcycle.svg'
+												}
+												src={
+													vehicle.vehicleType === 'CAR'
+														? '/car-icon.svg'
+														: '/motorcycle.svg'
+												}
+											/>
+											{vehicle.vehicleNumber}
+											<span
+												onClick={() => {
+													removeVehicle({
+														variables: {
+															removeVehicleId: vehicle.id,
+														},
+													});
+												}}
+												className="ml-auto cursor-pointer"
+											>
+												<TrashIcon color="#FFA1A3" />
+											</span>
+										</div>
+									))}
+								</div>
+							</>
+						)}
 						<form
 							ref={formRef}
 							action={dispatch}

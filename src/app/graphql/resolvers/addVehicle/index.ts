@@ -14,14 +14,14 @@ export const addVehicle = async (_: unknown, args: ArgsData) => {
 	const { userId, vehicleNumber, vehicleType } = args.data;
 
 	try {
-		await prisma.vehicle.create({
+		const vehicle = await prisma.vehicle.create({
 			data: {
 				userId,
 				vehicleNumber,
 				vehicleType,
 			},
 		});
-		return true;
+		return vehicle;
 	} catch (error) {
 		console.error(error);
 		throw new GraphQLError(`Something went wromng...`, {

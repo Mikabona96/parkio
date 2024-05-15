@@ -70,6 +70,7 @@ const config: Config = {
 				appearence: 'appearence .5s ease-in-out forwards',
 				vanish: 'vanish .5s ease-in-out forwards',
 				smallSpinner: 'smallSpinner 1s linear infinite',
+				vehicleSkeleton: 'vehicleSkeleton 2s ease-in-out 0.5s infinite',
 				circleExpand: 'circleExpand 1s ease-in-out forwards',
 				circleCollapse: 'circleCollapse 1s ease-in-out forwards',
 				textShown: 'textShown 1s ease-in-out forwards',
@@ -146,6 +147,17 @@ const config: Config = {
 					},
 					'100%': {
 						transform: 'rotate(360deg)',
+					},
+				},
+				vehicleSkeleton: {
+					'0%': {
+						opacity: '1',
+					},
+					'50%': {
+						opacity: '0.4',
+					},
+					'100%': {
+						opacity: '1',
 					},
 				},
 				circleExpand: {

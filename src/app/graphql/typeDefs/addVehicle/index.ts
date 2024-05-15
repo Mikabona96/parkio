@@ -6,7 +6,13 @@ export const addVehicleTypeDef = gql`
 		vehicleNumber: String
 		vehicleType: String
 	}
+	type AddVehiclesResponse {
+		id: String
+		userId: Int
+		vehicleNumber: String
+		vehicleType: String
+	}
 	type Mutation {
-		addVehicle(data: Data): Boolean
+		addVehicle(data: Data): AddVehiclesResponse
 	}
 `;
