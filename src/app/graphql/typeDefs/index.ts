@@ -6,6 +6,8 @@ import { checkUserSessionStatusTypeDef } from './checkUserSessionStatus';
 import { addVehicleTypeDef } from './addVehicle';
 import { getVehiclesTypeDef } from './getVehicles';
 import { removeVehicleTypeDef } from './removeVehicle';
+import { changeProfileTypeDef } from './changeProfile';
+import { changePasswordTypeDef } from './changePassword';
 
 export const typeDefs = gql`
 	type Query {
@@ -18,4 +20,6 @@ export const typeDefs = gql`
 	${addVehicleTypeDef}
 	${getVehiclesTypeDef}
 	${removeVehicleTypeDef}
+	${changeProfileTypeDef}
+	${changePasswordTypeDef}
 `;

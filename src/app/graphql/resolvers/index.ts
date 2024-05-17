@@ -5,6 +5,8 @@ import { checkUserSessionStatus } from './checkUserSessionStatus';
 import { addVehicle } from './addVehicle';
 import { getVehicles } from './getVehicles';
 import { removeVehicle } from './removeVehicle';
+import { changeProfile } from './changeProfile';
+import { changePassword } from './changePassword';
 
 export const resolvers = {
 	Query: {
@@ -18,5 +20,7 @@ export const resolvers = {
 		signin,
 		addVehicle,
 		removeVehicle,
+		changeProfile,
+		changePassword,
 	},
 };

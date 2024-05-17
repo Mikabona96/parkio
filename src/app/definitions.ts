@@ -1,4 +1,4 @@
-export type SignupFields = {
+export type ProfileFields = {
 	name: string;
 	lastname: string;
 	email: string;
@@ -6,9 +6,14 @@ export type SignupFields = {
 	street: string;
 	code: number;
 	city: string;
+};
+
+export type PasswordFields = {
 	password: string;
 	confirmpassword: string;
 };
+
+export type SignupFields = ProfileFields & PasswordFields;
 
 export type SigninFields = {
 	email?: string;

@@ -172,12 +172,12 @@ function AccountLayout({
 							<>
 								<div
 									className={
-										'animate-vehicleSkeleton relative flex h-14 w-full items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
+										'relative flex h-14 w-full animate-vehicleSkeleton items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
 									}
 								></div>
 								<div
 									className={
-										'animate-vehicleSkeleton relative mt-4 flex h-14 w-full items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
+										'relative mt-4 flex h-14 w-full animate-vehicleSkeleton items-center overflow-hidden rounded-[4px] bg-[#0000001c] px-3 py-4'
 									}
 								></div>
 							</>
@@ -244,7 +244,7 @@ function AccountLayout({
 								{state?.errors?.vehicle}
 							</p>
 							<div className="flex w-full justify-between">
-								<div className="flex gap-2">
+								<label className="flex cursor-pointer gap-2">
 									<Image
 										width={24}
 										height={24}
@@ -252,17 +252,18 @@ function AccountLayout({
 										alt="car-icon.svg"
 										src={'/car-icon.svg'}
 									/>
-									<label className="relative mt-1 flex h-4 w-4 items-center justify-center rounded-[50%] border border-gray-500 before:absolute before:left-[50%] before:top-[50%] before:h-2 before:w-2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-[50%] before:bg-gradient-to-bl before:from-gradient-1 before:to-gradient-3 before:opacity-0 has-[:checked]:border-gradient-1 before:has-[:checked]:opacity-100">
+									<div className="relative mt-1 flex h-4 w-4 items-center justify-center rounded-[50%] border border-gray-500 before:absolute before:left-[50%] before:top-[50%] before:h-2 before:w-2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-[50%] before:bg-gradient-to-bl before:from-gradient-1 before:to-gradient-3 before:opacity-0 has-[:checked]:border-gradient-1 before:has-[:checked]:opacity-100">
 										<input
 											className="h-6 w-5 cursor-pointer opacity-0"
 											type="radio"
+											defaultChecked
 											value={'CAR'}
 											name="vehicleType"
 										/>
-									</label>
+									</div>
 									<span>{t('car')}</span>
-								</div>
-								<div className="flex gap-2">
+								</label>
+								<label className="flex cursor-pointer gap-2">
 									<Image
 										width={24}
 										height={24}
@@ -270,16 +271,16 @@ function AccountLayout({
 										alt="motorcycle.svg"
 										src={'/motorcycle.svg'}
 									/>
-									<label className="relative mt-1 flex h-4 w-4 items-center justify-center rounded-[50%] border border-gray-500 before:absolute before:left-[50%] before:top-[50%] before:h-2 before:w-2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-[50%] before:bg-gradient-to-bl before:from-gradient-1 before:to-gradient-3 before:opacity-0 has-[:checked]:border-gradient-1 before:has-[:checked]:opacity-100">
+									<div className="relative mt-1 flex h-4 w-4 items-center justify-center rounded-[50%] border border-gray-500 before:absolute before:left-[50%] before:top-[50%] before:h-2 before:w-2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-[50%] before:bg-gradient-to-bl before:from-gradient-1 before:to-gradient-3 before:opacity-0 has-[:checked]:border-gradient-1 before:has-[:checked]:opacity-100">
 										<input
 											className="h-6 w-5 cursor-pointer opacity-0"
 											type="radio"
 											value={'MOTORCYCLE'}
 											name="vehicleType"
 										/>
-									</label>
+									</div>
 									<span>{t('motorcycle')}</span>
-								</div>
+								</label>
 							</div>
 							<p className="mt-1 px-4 text-xs text-[#ff898b]">
 								{state?.errors?.vehicleType}
