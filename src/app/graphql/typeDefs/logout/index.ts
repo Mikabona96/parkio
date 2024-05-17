@@ -1,7 +1,7 @@
 import { gql } from 'graphql-tag';
 
 export const logoutTypeDef = gql`
-	type Query {
+	type Mutation {
 		logout(email: String): Boolean
 	}
 `;

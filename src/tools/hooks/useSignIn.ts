@@ -1,9 +1,9 @@
 import { SigninFields } from '@/app/definitions';
-import { useAuthContext } from './useAuthContext';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@apollo/client';
 import { useEffect } from 'react';
 import { SIGN_IN } from '@/app/graphql/mutations/sign-in';
+import { CHECK_USER_SESSION_STATUS } from '@/app/graphql/queries/checkUserSessionStatus';
 
 type MutationResponseType = {
 	signin: {
@@ -32,7 +32,6 @@ export const useSignIn = (
 			errorPolicy: 'all',
 		},
 	);
-	const auth = useAuthContext();
 	const router = useRouter();
 
 	useEffect(() => {
@@ -41,13 +40,12 @@ export const useSignIn = (
 				variables: {
 					fieldsValue: validatedData,
 				},
+				refetchQueries: [{ query: CHECK_USER_SESSION_STATUS }],
 			});
 		}
 	}, [validatedData]);
 
 	if (data) {
-		const user = (data as MutationResponseType)?.signin?.user;
-		auth?.setUser(user);
 		router.push(redirectTo);
 	}
 

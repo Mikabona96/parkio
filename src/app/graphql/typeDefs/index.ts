@@ -8,6 +8,7 @@ import { getVehiclesTypeDef } from './getVehicles';
 import { removeVehicleTypeDef } from './removeVehicle';
 import { changeProfileTypeDef } from './changeProfile';
 import { changePasswordTypeDef } from './changePassword';
+import { removeProfileTypeDef } from './removeProfile';
 
 export const typeDefs = gql`
 	type Query {
@@ -22,4 +23,5 @@ export const typeDefs = gql`
 	${removeVehicleTypeDef}
 	${changeProfileTypeDef}
 	${changePasswordTypeDef}
+	${removeProfileTypeDef}
 `;

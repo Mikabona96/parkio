@@ -7,9 +7,10 @@ import { ChevronIcon } from './ChevronIcon';
 import { cn } from '@/tools/utils/cn';
 import { useAuthContext } from '@/tools/hooks';
 import { useRouter } from 'next/navigation';
-import { useLazyQuery } from '@apollo/client';
-import { LOG_OUT } from '@/app/graphql/queries/logout';
+import { useMutation } from '@apollo/client';
+import { LOG_OUT } from '@/app/graphql/mutations/logout';
 import { deleteCookies } from '@/app/actions';
+import { CHECK_USER_SESSION_STATUS } from '@/app/graphql/queries/checkUserSessionStatus';
 
 interface IProps {
 	locale: string;
@@ -20,7 +21,7 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 	const [profileMenu, setProfileMenu] = useState(false);
 	const auth = useAuthContext();
 	const router = useRouter();
-	const [logout, { loading, error, data }] = useLazyQuery(LOG_OUT);
+	const [logout, { loading, error, data }] = useMutation(LOG_OUT);
 
 	useEffect(() => {
 		const onClickOutsideHandler = (event: MouseEvent) => {
@@ -81,20 +82,28 @@ export const ProfileMenu: FC<IProps> = ({ locale }) => {
 						<li className="p-[4px]">Invoices</li>
 					</Link>
 					<li className="h-[1px] w-full bg-gray-300"></li>
-					<li
-						onClick={async () => {
-							await logout({
+					<Link
+						href={`/${locale}/sign-in`}
+						onClick={() => {
+							deleteCookies();
+							logout({
 								variables: { email: `${auth?.user?.email}` },
+								update(cache, { data }) {
+									cache.writeQuery({
+										query: CHECK_USER_SESSION_STATUS,
+										data: {
+											checkUserSessionStatus: null,
+										},
+									});
+								},
+								// refetchQueries: [{ query: CHECK_USER_SESSION_STATUS }],
 							});
-							await deleteCookies();
-							auth?.setUser(null);
-							router.push(`/${locale}/sign-in`);
 						}}
 						className="group flex items-center gap-2 p-[4px] transition-all hover:text-[#ff5558]"
 					>
 						<span>Logout</span>
 						<ExitIcon />
-					</li>
+					</Link>
 				</ul>
 			)}
 		</button>

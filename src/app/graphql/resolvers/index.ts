@@ -7,20 +7,22 @@ import { getVehicles } from './getVehicles';
 import { removeVehicle } from './removeVehicle';
 import { changeProfile } from './changeProfile';
 import { changePassword } from './changePassword';
+import { removeProfile } from './removeProfile';
 
 export const resolvers = {
 	Query: {
 		hello: () => 'Hello world!',
 		checkUserSessionStatus,
-		logout,
 		getVehicles,
 	},
 	Mutation: {
 		signup,
 		signin,
 		addVehicle,
+		logout,
 		removeVehicle,
 		changeProfile,
 		changePassword,
+		removeProfile,
 	},
 };
